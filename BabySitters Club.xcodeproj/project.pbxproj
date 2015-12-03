@@ -1,0 +1,311 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		927E54AD1C0FEB9F00843E0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E54AC1C0FEB9F00843E0D /* AppDelegate.swift */; };
+		927E54AF1C0FEB9F00843E0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E54AE1C0FEB9F00843E0D /* ViewController.swift */; };
+		927E54B21C0FEB9F00843E0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 927E54B01C0FEB9F00843E0D /* Main.storyboard */; };
+		927E54B51C0FEB9F00843E0D /* BabySitters_Club.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 927E54B31C0FEB9F00843E0D /* BabySitters_Club.xcdatamodeld */; };
+		927E54B71C0FEBA000843E0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 927E54B61C0FEBA000843E0D /* Assets.xcassets */; };
+		927E54BA1C0FEBA000843E0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 927E54B81C0FEBA000843E0D /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		927E54A91C0FEB9F00843E0D /* BabySitters Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BabySitters Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		927E54AC1C0FEB9F00843E0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		927E54AE1C0FEB9F00843E0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		927E54B11C0FEB9F00843E0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		927E54B41C0FEB9F00843E0D /* BabySitters_Club.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BabySitters_Club.xcdatamodel; sourceTree = "<group>"; };
+		927E54B61C0FEBA000843E0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		927E54B91C0FEBA000843E0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		927E54BB1C0FEBA000843E0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		927E54A61C0FEB9F00843E0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		927E54A01C0FEB9F00843E0D = {
+			isa = PBXGroup;
+			children = (
+				927E54AB1C0FEB9F00843E0D /* BabySitters Club */,
+				927E54AA1C0FEB9F00843E0D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		927E54AA1C0FEB9F00843E0D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				927E54A91C0FEB9F00843E0D /* BabySitters Club.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		927E54AB1C0FEB9F00843E0D /* BabySitters Club */ = {
+			isa = PBXGroup;
+			children = (
+				927E54AC1C0FEB9F00843E0D /* AppDelegate.swift */,
+				927E54AE1C0FEB9F00843E0D /* ViewController.swift */,
+				927E54B01C0FEB9F00843E0D /* Main.storyboard */,
+				927E54B61C0FEBA000843E0D /* Assets.xcassets */,
+				927E54B81C0FEBA000843E0D /* LaunchScreen.storyboard */,
+				927E54BB1C0FEBA000843E0D /* Info.plist */,
+				927E54B31C0FEB9F00843E0D /* BabySitters_Club.xcdatamodeld */,
+			);
+			path = "BabySitters Club";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		927E54A81C0FEB9F00843E0D /* BabySitters Club */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 927E54BE1C0FEBA000843E0D /* Build configuration list for PBXNativeTarget "BabySitters Club" */;
+			buildPhases = (
+				927E54A51C0FEB9F00843E0D /* Sources */,
+				927E54A61C0FEB9F00843E0D /* Frameworks */,
+				927E54A71C0FEB9F00843E0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BabySitters Club";
+			productName = "BabySitters Club";
+			productReference = 927E54A91C0FEB9F00843E0D /* BabySitters Club.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		927E54A11C0FEB9F00843E0D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Jon Harlan";
+				TargetAttributes = {
+					927E54A81C0FEB9F00843E0D = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 2A3HCCKAKW;
+					};
+				};
+			};
+			buildConfigurationList = 927E54A41C0FEB9F00843E0D /* Build configuration list for PBXProject "BabySitters Club" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 927E54A01C0FEB9F00843E0D;
+			productRefGroup = 927E54AA1C0FEB9F00843E0D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				927E54A81C0FEB9F00843E0D /* BabySitters Club */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		927E54A71C0FEB9F00843E0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				927E54BA1C0FEBA000843E0D /* LaunchScreen.storyboard in Resources */,
+				927E54B71C0FEBA000843E0D /* Assets.xcassets in Resources */,
+				927E54B21C0FEB9F00843E0D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		927E54A51C0FEB9F00843E0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				927E54AF1C0FEB9F00843E0D /* ViewController.swift in Sources */,
+				927E54AD1C0FEB9F00843E0D /* AppDelegate.swift in Sources */,
+				927E54B51C0FEB9F00843E0D /* BabySitters_Club.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		927E54B01C0FEB9F00843E0D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				927E54B11C0FEB9F00843E0D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		927E54B81C0FEBA000843E0D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				927E54B91C0FEBA000843E0D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		927E54BC1C0FEBA000843E0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		927E54BD1C0FEBA000843E0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		927E54BF1C0FEBA000843E0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "BabySitters Club/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "RydeHQ.BabySitters-Club";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		927E54C01C0FEBA000843E0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "BabySitters Club/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "RydeHQ.BabySitters-Club";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		927E54A41C0FEB9F00843E0D /* Build configuration list for PBXProject "BabySitters Club" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				927E54BC1C0FEBA000843E0D /* Debug */,
+				927E54BD1C0FEBA000843E0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		927E54BE1C0FEBA000843E0D /* Build configuration list for PBXNativeTarget "BabySitters Club" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				927E54BF1C0FEBA000843E0D /* Debug */,
+				927E54C01C0FEBA000843E0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		927E54B31C0FEB9F00843E0D /* BabySitters_Club.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				927E54B41C0FEB9F00843E0D /* BabySitters_Club.xcdatamodel */,
+			);
+			currentVersion = 927E54B41C0FEB9F00843E0D /* BabySitters_Club.xcdatamodel */;
+			path = BabySitters_Club.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 927E54A11C0FEB9F00843E0D /* Project object */;
+}
