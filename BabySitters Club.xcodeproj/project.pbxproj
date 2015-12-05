@@ -13,6 +13,9 @@
 		927E54B51C0FEB9F00843E0D /* BabySitters_Club.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 927E54B31C0FEB9F00843E0D /* BabySitters_Club.xcdatamodeld */; };
 		927E54B71C0FEBA000843E0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 927E54B61C0FEBA000843E0D /* Assets.xcassets */; };
 		927E54BA1C0FEBA000843E0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 927E54B81C0FEBA000843E0D /* LaunchScreen.storyboard */; };
+		927E54C41C0FEE0200843E0D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927E54C11C0FEE0200843E0D /* FBSDKCoreKit.framework */; };
+		927E54C51C0FEE0200843E0D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927E54C21C0FEE0200843E0D /* FBSDKLoginKit.framework */; };
+		927E54C61C0FEE0200843E0D /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927E54C31C0FEE0200843E0D /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,10 @@
 		927E54B61C0FEBA000843E0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		927E54B91C0FEBA000843E0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		927E54BB1C0FEBA000843E0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		927E54C11C0FEE0200843E0D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../../../Documents/FacebookSDKs-iOS-20151111/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		927E54C21C0FEE0200843E0D /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../../Documents/FacebookSDKs-iOS-20151111/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		927E54C31C0FEE0200843E0D /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../../../../Documents/FacebookSDKs-iOS-20151111/FBSDKShareKit.framework"; sourceTree = "<group>"; };
+		927E54C81C0FF70400843E0D /* BabySitters Club-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BabySitters Club-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				927E54C41C0FEE0200843E0D /* FBSDKCoreKit.framework in Frameworks */,
+				927E54C51C0FEE0200843E0D /* FBSDKLoginKit.framework in Frameworks */,
+				927E54C61C0FEE0200843E0D /* FBSDKShareKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +50,7 @@
 		927E54A01C0FEB9F00843E0D = {
 			isa = PBXGroup;
 			children = (
+				927E54C71C0FEFCF00843E0D /* Frameworks */,
 				927E54AB1C0FEB9F00843E0D /* BabySitters Club */,
 				927E54AA1C0FEB9F00843E0D /* Products */,
 			);
@@ -63,8 +74,19 @@
 				927E54B81C0FEBA000843E0D /* LaunchScreen.storyboard */,
 				927E54BB1C0FEBA000843E0D /* Info.plist */,
 				927E54B31C0FEB9F00843E0D /* BabySitters_Club.xcdatamodeld */,
+				927E54C81C0FF70400843E0D /* BabySitters Club-Bridging-Header.h */,
 			);
 			path = "BabySitters Club";
+			sourceTree = "<group>";
+		};
+		927E54C71C0FEFCF00843E0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				927E54C11C0FEE0200843E0D /* FBSDKCoreKit.framework */,
+				927E54C21C0FEE0200843E0D /* FBSDKLoginKit.framework */,
+				927E54C31C0FEE0200843E0D /* FBSDKShareKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,10 +276,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = "/Users/jonharlan/Documents/FacebookSDKs-iOS-20151111";
 				INFOPLIST_FILE = "BabySitters Club/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "RydeHQ.BabySitters-Club";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BabySitters Club/BabySitters Club-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -265,10 +291,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = "/Users/jonharlan/Documents/FacebookSDKs-iOS-20151111";
 				INFOPLIST_FILE = "BabySitters Club/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "RydeHQ.BabySitters-Club";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BabySitters Club/BabySitters Club-Bridging-Header.h";
 			};
 			name = Release;
 		};
