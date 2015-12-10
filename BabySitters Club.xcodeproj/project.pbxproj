@@ -47,6 +47,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		926E217A1C1908160067C071 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				927E54B31C0FEB9F00843E0D /* BabySitters_Club.xcdatamodeld */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		926E217B1C1908590067C071 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				927E54B01C0FEB9F00843E0D /* Main.storyboard */,
+				927E54B81C0FEBA000843E0D /* LaunchScreen.storyboard */,
+			);
+			name = StoryBoards;
+			sourceTree = "<group>";
+		};
+		926E217C1C19089A0067C071 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				927E54AC1C0FEB9F00843E0D /* AppDelegate.swift */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
+		926E217D1C1908B30067C071 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				927E54AE1C0FEB9F00843E0D /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		926E217E1C1908BF0067C071 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				927E54B61C0FEBA000843E0D /* Assets.xcassets */,
+				927E54C81C0FF70400843E0D /* BabySitters Club-Bridging-Header.h */,
+				927E54BB1C0FEBA000843E0D /* Info.plist */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		927E54A01C0FEB9F00843E0D = {
 			isa = PBXGroup;
 			children = (
@@ -67,14 +110,11 @@
 		927E54AB1C0FEB9F00843E0D /* BabySitters Club */ = {
 			isa = PBXGroup;
 			children = (
-				927E54AC1C0FEB9F00843E0D /* AppDelegate.swift */,
-				927E54AE1C0FEB9F00843E0D /* ViewController.swift */,
-				927E54B01C0FEB9F00843E0D /* Main.storyboard */,
-				927E54B61C0FEBA000843E0D /* Assets.xcassets */,
-				927E54B81C0FEBA000843E0D /* LaunchScreen.storyboard */,
-				927E54BB1C0FEBA000843E0D /* Info.plist */,
-				927E54B31C0FEB9F00843E0D /* BabySitters_Club.xcdatamodeld */,
-				927E54C81C0FF70400843E0D /* BabySitters Club-Bridging-Header.h */,
+				926E217B1C1908590067C071 /* StoryBoards */,
+				926E217D1C1908B30067C071 /* ViewControllers */,
+				926E217A1C1908160067C071 /* Models */,
+				926E217C1C19089A0067C071 /* Delegates */,
+				926E217E1C1908BF0067C071 /* Assets */,
 			);
 			path = "BabySitters Club";
 			sourceTree = "<group>";
@@ -320,6 +360,7 @@
 				927E54C01C0FEBA000843E0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
