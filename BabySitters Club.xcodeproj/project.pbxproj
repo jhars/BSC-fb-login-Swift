@@ -319,6 +319,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = "/Users/jonharlan/Documents/FacebookSDKs-iOS-20151111";
 				INFOPLIST_FILE = "BabySitters Club/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "RydeHQ.BabySitters-Club";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -334,6 +335,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = "/Users/jonharlan/Documents/FacebookSDKs-iOS-20151111";
 				INFOPLIST_FILE = "BabySitters Club/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "RydeHQ.BabySitters-Club";
 				PRODUCT_NAME = "$(TARGET_NAME)";
