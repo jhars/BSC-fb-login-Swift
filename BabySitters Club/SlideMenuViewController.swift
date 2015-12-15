@@ -21,6 +21,8 @@ class SlideMenuViewController: UIViewController {
         Open.target = revealViewController()
         Open.action = Selector("revealToggle:")
         
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        
     }
 
     override func didReceiveMemoryWarning() {
