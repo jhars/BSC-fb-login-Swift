@@ -30,4 +30,22 @@ class BackTableVC: UITableViewController {
         
         return cell
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var DestVC = segue.destinationViewController as! SlideMenuViewController
+        var indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow!
+        
+        DestVC.varView = indexPath.row
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

@@ -11,8 +11,10 @@ import UIKit
 
 class SlideMenuViewController: UIViewController {
 
-    
+    @IBOutlet weak var Label: UILabel!
     @IBOutlet weak var Open: UIBarButtonItem!
+    
+    var varView = Int()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,12 @@ class SlideMenuViewController: UIViewController {
         Open.action = Selector("revealToggle:")
         
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        
+        if (varView == 0) {
+            Label.text = "Strings"
+        } else {
+            Label.text = "Others"
+        }
         
     }
 

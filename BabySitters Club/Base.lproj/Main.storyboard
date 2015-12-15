@@ -809,12 +809,21 @@
                     <view key="view" contentMode="scaleToFill" id="oAu-Zh-jgM">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8h-sP-jPt">
+                                <rect key="frame" x="279" y="289" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Yek-uL-PJM">
                         <barButtonItem key="leftBarButtonItem" title="Open" id="hEz-Ry-kVb"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="Label" destination="N8h-sP-jPt" id="YQG-je-6eZ"/>
                         <outlet property="Open" destination="hEz-Ry-kVb" id="yXt-e6-O4W"/>
                     </connections>
                 </viewController>
