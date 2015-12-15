@@ -100,7 +100,6 @@
 			children = (
 				92F3DE0F1C1FAD1200B4A3C2 /* SWRevealViewController.h */,
 				92F3DE101C1FAD1200B4A3C2 /* SWRevealViewController.m */,
-				927E54B61C0FEBA000843E0D /* Assets.xcassets */,
 				927E54C81C0FF70400843E0D /* BabySitters Club-Bridging-Header.h */,
 				927E54BB1C0FEBA000843E0D /* Info.plist */,
 			);
@@ -127,6 +126,7 @@
 		927E54AB1C0FEB9F00843E0D /* BabySitters Club */ = {
 			isa = PBXGroup;
 			children = (
+				927E54B61C0FEBA000843E0D /* Assets.xcassets */,
 				926E217B1C1908590067C071 /* StoryBoards */,
 				926E217D1C1908B30067C071 /* ViewControllers */,
 				926E217A1C1908160067C071 /* Models */,
