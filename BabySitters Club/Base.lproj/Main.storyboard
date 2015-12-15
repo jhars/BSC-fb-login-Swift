@@ -780,7 +780,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K3t-dP-5si" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2216" y="810"/>
+            <point key="canvasLocation" x="536" y="818"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xGN-G0-ImG">
@@ -796,11 +796,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4IU-LJ-w1z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2216" y="1566"/>
+            <point key="canvasLocation" x="536" y="1630"/>
         </scene>
         <!--Slide Menu View Controller-->
         <scene sceneID="eQN-je-M1h">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EVm-fV-7sK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="qsx-lt-XzY" customClass="SlideMenuViewController" customModule="BabySitters_Club" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yKf-4K-3sE"/>
@@ -827,9 +828,8 @@
                         <outlet property="Open" destination="hEz-Ry-kVb" id="yXt-e6-O4W"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EVm-fV-7sK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3098" y="1566"/>
+            <point key="canvasLocation" x="1386" y="1210"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="O0v-Sv-82Z">
@@ -929,7 +929,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vsJ-j8-uqM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1224" y="1311"/>
+            <point key="canvasLocation" x="-272" y="1259"/>
         </scene>
     </scenes>
     <resources>
@@ -939,7 +939,7 @@
         <image name="match-msg" width="138" height="125"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BVJ-Eh-hOm"/>
+        <segue reference="PcP-n3-eZP"/>
         <segue reference="wbn-Zo-TeA"/>
         <segue reference="r4o-e1-aUW"/>
     </inferredMetricsTieBreakers>

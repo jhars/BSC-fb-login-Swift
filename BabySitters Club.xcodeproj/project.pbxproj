@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		92103CE31C1FFCBA00E89B32 /* BackTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92103CE21C1FFCB900E89B32 /* BackTableVC.swift */; };
+		92103CE51C200ADB00E89B32 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92103CE41C200ADB00E89B32 /* Home.swift */; };
+		92103CE71C200BE600E89B32 /* Browse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92103CE61C200BE600E89B32 /* Browse.swift */; };
 		927E54AD1C0FEB9F00843E0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E54AC1C0FEB9F00843E0D /* AppDelegate.swift */; };
 		927E54AF1C0FEB9F00843E0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E54AE1C0FEB9F00843E0D /* ViewController.swift */; };
 		927E54B21C0FEB9F00843E0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 927E54B01C0FEB9F00843E0D /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		92103CE21C1FFCB900E89B32 /* BackTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackTableVC.swift; sourceTree = "<group>"; };
+		92103CE41C200ADB00E89B32 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		92103CE61C200BE600E89B32 /* Browse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Browse.swift; sourceTree = "<group>"; };
 		927E54A91C0FEB9F00843E0D /* BabySitters Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BabySitters Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		927E54AC1C0FEB9F00843E0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		927E54AE1C0FEB9F00843E0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 				927E54AE1C0FEB9F00843E0D /* ViewController.swift */,
 				92F3DE121C1FAEE800B4A3C2 /* SlideMenuViewController.swift */,
 				92103CE21C1FFCB900E89B32 /* BackTableVC.swift */,
+				92103CE41C200ADB00E89B32 /* Home.swift */,
+				92103CE61C200BE600E89B32 /* Browse.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -213,11 +219,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				92F3DE131C1FAEE800B4A3C2 /* SlideMenuViewController.swift in Sources */,
+				92103CE71C200BE600E89B32 /* Browse.swift in Sources */,
 				927E54AF1C0FEB9F00843E0D /* ViewController.swift in Sources */,
 				92103CE31C1FFCBA00E89B32 /* BackTableVC.swift in Sources */,
 				927E54AD1C0FEB9F00843E0D /* AppDelegate.swift in Sources */,
 				927E54B51C0FEB9F00843E0D /* BabySitters_Club.xcdatamodeld in Sources */,
 				92F3DE111C1FAD1200B4A3C2 /* SWRevealViewController.m in Sources */,
+				92103CE51C200ADB00E89B32 /* Home.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
