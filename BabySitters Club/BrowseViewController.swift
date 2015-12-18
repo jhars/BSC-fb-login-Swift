@@ -1,5 +1,5 @@
 //
-//  Home.swift
+//  BrowseViewController.swift
 //  BabySitters Club
 //
 //  Created by Jon Harlan on 12/15/15.
@@ -8,10 +8,11 @@
 
 import Foundation
 
-class Home : UIViewController {
+class Browser : UIViewController {
     override func viewDidLoad() {
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-         print ("the pan")
+                self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
-   
 }
+    
+
+    
