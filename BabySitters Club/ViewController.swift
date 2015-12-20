@@ -6,27 +6,14 @@
 //  Copyright © 2015 Jon Harlan. All rights reserved.
 //
 
-//import UIKit
-//import FBSDKLoginKit
-//
-//class ViewController: UIViewController {
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//
-//        let loginButton = FBSDKLoginButton()
-//        loginButton.center = view.center
-//        view.addSubview(loginButton)
-//        
-//    }
-
-
 
 import UIKit
 //import FBSDKLoginKit
 
 class ViewController: UIViewController, FBSDKLoginButtonDelegate {
+    
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +57,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
 //                self.returnUserData()
                 self.performSegueWithIdentifier("showNew", sender: self)
 //                self.returnUserData()
+                returnUserData()
               
                 
             }
@@ -80,6 +68,16 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         print("User Logged Out")
     }
     
+
+    
+    func sendFacebookDATAtoFireBaseDB () {
+        //            var msg = msgInput.text
+        //
+        //            var postRef = self.ref.childByAppendingPath("Posts")
+        //            var newMsgValue = msg as String!
+        //            var newPostRef = postRef.childByAutoId()
+        //            newPostRef.setValue(newMsgValue)
+    }
     
     func returnUserData()
     {
@@ -94,10 +92,11 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
             else
             {
                 print("fetched user: \(result)")
-                let userName : NSString = result.valueForKey("name") as! NSString
-                print("User Name is: \(userName)")
-                let userEmail : NSString = result.valueForKey("email") as! NSString
-                print("User Email is: \(userEmail)")
+//                let userName : NSString = result.valueForKey("name") as! NSString
+//                print("User Name is: \(userName)")
+//                let userEmail : NSString = result.valueForKey("email") as! NSString
+//                print("User Email is: \(userEmail)")
+
             }
         })
     }

@@ -67,6 +67,9 @@
                                 </state>
                                 <connections>
                                     <action selector="userFbData:" destination="wpI-vJ-xia" eventType="touchUpInside" id="PoH-0P-oim"/>
+                                    <segue destination="sUC-E8-u73" kind="popoverPresentation" popoverAnchorView="BcU-sG-bYI" id="vvA-J4-7fu">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>

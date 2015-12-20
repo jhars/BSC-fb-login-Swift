@@ -21,6 +21,13 @@
 		927E54C51C0FEE0200843E0D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927E54C21C0FEE0200843E0D /* FBSDKLoginKit.framework */; };
 		927E54C61C0FEE0200843E0D /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927E54C31C0FEE0200843E0D /* FBSDKShareKit.framework */; };
 		929CB2011C22B0D0000961DB /* fbLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929CB2001C22B0D0000961DB /* fbLoginViewController.swift */; };
+		92C8F0A11C2740F3005C0799 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8F0A01C2740F3005C0799 /* Firebase.framework */; };
+		92C8F0A41C274102005C0799 /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8F0A21C274102005C0799 /* libc++.1.dylib */; };
+		92C8F0A51C274102005C0799 /* libicucore.A.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8F0A31C274102005C0799 /* libicucore.A.dylib */; };
+		92C8F0A71C27410B005C0799 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8F0A61C27410B005C0799 /* SystemConfiguration.framework */; };
+		92C8F0A91C274116005C0799 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8F0A81C274116005C0799 /* Security.framework */; };
+		92C8F0AB1C274148005C0799 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8F0AA1C274148005C0799 /* CFNetwork.framework */; };
+		92C8F0AD1C2742C5005C0799 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8F0AC1C2742C5005C0799 /* Firebase.framework */; };
 		92F3DE111C1FAD1200B4A3C2 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F3DE101C1FAD1200B4A3C2 /* SWRevealViewController.m */; };
 		92F3DE131C1FAEE800B4A3C2 /* SlideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F3DE121C1FAEE800B4A3C2 /* SlideMenuViewController.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +50,13 @@
 		927E54C31C0FEE0200843E0D /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../../../../Documents/FacebookSDKs-iOS-20151111/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		927E54C81C0FF70400843E0D /* BabySitters Club-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BabySitters Club-Bridging-Header.h"; sourceTree = "<group>"; };
 		929CB2001C22B0D0000961DB /* fbLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fbLoginViewController.swift; sourceTree = "<group>"; };
+		92C8F0A01C2740F3005C0799 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = "../../Supporting Files/Firebase.framework"; sourceTree = "<group>"; };
+		92C8F0A21C274102005C0799 /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "../libc++.1.dylib"; sourceTree = "<group>"; };
+		92C8F0A31C274102005C0799 /* libicucore.A.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.A.dylib; path = ../libicucore.A.dylib; sourceTree = "<group>"; };
+		92C8F0A61C27410B005C0799 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		92C8F0A81C274116005C0799 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		92C8F0AA1C274148005C0799 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		92C8F0AC1C2742C5005C0799 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 		92F3DE0F1C1FAD1200B4A3C2 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		92F3DE101C1FAD1200B4A3C2 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		92F3DE121C1FAEE800B4A3C2 /* SlideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +67,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92C8F0A71C27410B005C0799 /* SystemConfiguration.framework in Frameworks */,
+				92C8F0A91C274116005C0799 /* Security.framework in Frameworks */,
+				92C8F0AB1C274148005C0799 /* CFNetwork.framework in Frameworks */,
+				92C8F0A41C274102005C0799 /* libc++.1.dylib in Frameworks */,
+				92C8F0A51C274102005C0799 /* libicucore.A.dylib in Frameworks */,
+				92C8F0AD1C2742C5005C0799 /* Firebase.framework in Frameworks */,
+				92C8F0A11C2740F3005C0799 /* Firebase.framework in Frameworks */,
 				927E54C41C0FEE0200843E0D /* FBSDKCoreKit.framework in Frameworks */,
 				927E54C51C0FEE0200843E0D /* FBSDKLoginKit.framework in Frameworks */,
 				927E54C61C0FEE0200843E0D /* FBSDKShareKit.framework in Frameworks */,
@@ -74,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				927E54B01C0FEB9F00843E0D /* Main.storyboard */,
-				927E54B81C0FEBA000843E0D /* LaunchScreen.storyboard */,
 			);
 			name = StoryBoards;
 			sourceTree = "<group>";
@@ -102,8 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				927E54B61C0FEBA000843E0D /* Assets.xcassets */,
-				92F3DE0F1C1FAD1200B4A3C2 /* SWRevealViewController.h */,
-				92F3DE101C1FAD1200B4A3C2 /* SWRevealViewController.m */,
+				92C8F09F1C274080005C0799 /* Nav-SideMenu */,
+				927E54B81C0FEBA000843E0D /* LaunchScreen.storyboard */,
 				927E54C81C0FF70400843E0D /* BabySitters Club-Bridging-Header.h */,
 				927E54BB1C0FEBA000843E0D /* Info.plist */,
 			);
@@ -142,9 +162,16 @@
 		927E54C71C0FEFCF00843E0D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				92C8F0AA1C274148005C0799 /* CFNetwork.framework */,
+				92C8F0A81C274116005C0799 /* Security.framework */,
+				92C8F0A61C27410B005C0799 /* SystemConfiguration.framework */,
+				92C8F0A21C274102005C0799 /* libc++.1.dylib */,
+				92C8F0A31C274102005C0799 /* libicucore.A.dylib */,
+				92C8F0A01C2740F3005C0799 /* Firebase.framework */,
 				927E54C11C0FEE0200843E0D /* FBSDKCoreKit.framework */,
 				927E54C21C0FEE0200843E0D /* FBSDKLoginKit.framework */,
 				927E54C31C0FEE0200843E0D /* FBSDKShareKit.framework */,
+				92C8F0AC1C2742C5005C0799 /* Firebase.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -166,6 +193,15 @@
 				92103CE81C201F4E00E89B32 /* BrowseViewController.swift */,
 			);
 			name = Drafts;
+			sourceTree = "<group>";
+		};
+		92C8F09F1C274080005C0799 /* Nav-SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				92F3DE0F1C1FAD1200B4A3C2 /* SWRevealViewController.h */,
+				92F3DE101C1FAD1200B4A3C2 /* SWRevealViewController.m */,
+			);
+			name = "Nav-SideMenu";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,10 +399,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = "/Users/jonharlan/Documents/FacebookSDKs-iOS-20151111";
+				FRAMEWORK_SEARCH_PATHS = (
+					"/Users/jonharlan/Documents/FacebookSDKs-iOS-20151111",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "BabySitters Club/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "RydeHQ.BabySitters-Club";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BabySitters Club/BabySitters Club-Bridging-Header.h";
@@ -379,10 +419,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = "/Users/jonharlan/Documents/FacebookSDKs-iOS-20151111";
+				FRAMEWORK_SEARCH_PATHS = (
+					"/Users/jonharlan/Documents/FacebookSDKs-iOS-20151111",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "BabySitters Club/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "RydeHQ.BabySitters-Club";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BabySitters Club/BabySitters Club-Bridging-Header.h";
