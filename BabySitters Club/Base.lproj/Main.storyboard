@@ -53,14 +53,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WE ARE IN!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1i-Mg-bKl">
-                                <rect key="frame" x="20" y="289" width="560" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Zip Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vUA-Pa-yCu">
+                                <rect key="frame" x="20" y="285" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LXi-e6-KNM">
+                                <rect key="frame" x="20" y="213" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcU-sG-bYI">
-                                <rect key="frame" x="20" y="459" width="560" height="65"/>
+                                <rect key="frame" x="20" y="44" width="560" height="65"/>
                                 <color key="backgroundColor" red="0.96679055661320767" green="0.99804312269555195" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Print My User Info in the Console">
                                     <color key="titleColor" red="0.1244093417" green="0.31610690790000001" blue="0.77349668559999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -75,14 +79,22 @@
                         </subviews>
                         <color key="backgroundColor" red="0.9634864447" green="1" blue="0.5342192536" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="o1i-Mg-bKl" firstAttribute="centerY" secondItem="G93-zW-1K0" secondAttribute="centerY" id="8I8-ax-PcL"/>
-                            <constraint firstItem="RBr-S0-3f3" firstAttribute="top" secondItem="BcU-sG-bYI" secondAttribute="bottom" constant="76" id="IGF-V8-bG5"/>
-                            <constraint firstItem="o1i-Mg-bKl" firstAttribute="trailing" secondItem="G93-zW-1K0" secondAttribute="trailingMargin" id="KZb-JZ-Ilh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LXi-e6-KNM" secondAttribute="trailing" id="Cq7-ZP-AFC"/>
+                            <constraint firstItem="BcU-sG-bYI" firstAttribute="top" secondItem="zJs-UC-R6b" secondAttribute="bottom" constant="24" id="JUi-s1-0sY"/>
+                            <constraint firstItem="vUA-Pa-yCu" firstAttribute="top" secondItem="LXi-e6-KNM" secondAttribute="bottom" constant="42" id="Ram-Kd-OFi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BcU-sG-bYI" secondAttribute="trailing" id="WCw-e9-L39"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="vUA-Pa-yCu" secondAttribute="leading" id="ZRW-0p-wm4"/>
                             <constraint firstAttribute="leadingMargin" secondItem="BcU-sG-bYI" secondAttribute="leading" id="eBI-lx-PNc"/>
-                            <constraint firstItem="o1i-Mg-bKl" firstAttribute="leading" secondItem="G93-zW-1K0" secondAttribute="leadingMargin" id="ylQ-jc-zYy"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="LXi-e6-KNM" secondAttribute="leading" id="oBL-PG-YzN"/>
+                            <constraint firstItem="vUA-Pa-yCu" firstAttribute="centerY" secondItem="G93-zW-1K0" secondAttribute="centerY" id="tyD-lt-yOt"/>
+                            <constraint firstItem="vUA-Pa-yCu" firstAttribute="centerX" secondItem="G93-zW-1K0" secondAttribute="centerX" id="w8V-m6-y5G"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vUA-Pa-yCu" secondAttribute="trailing" id="zMU-qn-PP2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="LXi-e6-KNM" id="r3V-j9-lGW"/>
+                        <outlet property="zipTextField" destination="vUA-Pa-yCu" id="9Y4-Po-yCs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cL-R1-TMD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

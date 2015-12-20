@@ -18,6 +18,8 @@ class fbLoginViewController: UIViewController {
         print(userFbookData)
         print("data here 02")
     }
+
+
 //#1
         
 // =========== Client User Object ============ //
@@ -78,9 +80,15 @@ class fbLoginViewController: UIViewController {
     // __________________________________________________________________________ //
     
     var ref = Firebase(url: "https://sitterbookapi.firebaseio.com/")
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var zipTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
     
     
     func returnUserData()
@@ -95,9 +103,7 @@ class fbLoginViewController: UIViewController {
             }
             else
             {
-                print("fbloginVC01")
                 print("fetched user: \(result)")
-                print("fbloginVC02")
 
                 let userID : NSString = result.valueForKey("id") as! NSString
                 print("User ID is is: \(userID)")
@@ -107,18 +113,98 @@ class fbLoginViewController: UIViewController {
                 var newDataValue = newData as String!
                 var newPostRef = postRef.childByAutoId()
                 newPostRef.setValue(newDataValue)
-                
                 let userName : NSString = result.valueForKey("name") as! NSString
                 print("User Name is: \(userName)")
-//
-
+//                let fbUserName = userName as! String
                 
-//                let userFriends : NSString = result.valueForKey("user_friends") as! NSString
-//                print("User ID is is: \(userFriends)")
+                //Create New User SignUp/Login on FireBase
+                
+                var userEmail = self.emailTextField.text! as String
+                var userZip = self.zipTextField.text! as String
+                
 
-            }
-        })
+            self.ref.createUser(userEmail, password: "1111", withValueCompletionBlock:{(result) -> Void in
+                    print("success sign up!")
+//                    var userID = result.uid
+                    print(result)
+                    print("result above")
+
+                                            
+                self.ref.authUser(userEmail, password:"1111", withCompletionBlock: { (authData) -> Void in
+//                    var userId = authData.uid
+                    let newUser = [
+                        "provider": "1111",
+                        "email": userEmail as String,
+                        "fbID": userName as String
+                    ]
+                    // ===== BREAKING POINT =========== //
+//                    
+//                    let fakePost = [
+//                        "\(NSDate())" : "this is my 1st fake post"
+//                    ]
+                    self.ref.childByAppendingPath("users").childByAppendingPath(userID as String).setValue(userName as String)
+                    
+                    self.ref.childByAppendingPath("users/\(userID as String)/name").setValue(userName as String)
+                    
+                    self.ref.childByAppendingPath("users/\(userID as String)/zip").setValue(userZip as String)
+                    
+                })
+            })
+        }
+    })
     }
+        
+                
+    // ********************************************************** //
+    // ******************* LOGIN / SIGN-UP ********************** //
+    // - - - - - - -  - - - - -  - - - - - -  - - - - - -  - - -  //
+    
+    
+    
+//    override func viewDidAppear(animated: Bool) {
+//        if ref.authData != nil {
+//            print("there is a user already signed in")
+//            self.performSegueWithIdentifier("loginAndSignUpComplete", sender: self)
+//        } else {
+//            print("you will have to sign in first")
+//        }
+//    }
+    
+//    func login(sender: AnyObject) {
+//  ====      if emailTextField.text == "" || passwordTextField.text == "" {
+// ====           print("make sure to fill in all text fields")
+//====        } else {
+//            ref.authUser(emailTextField.text, password: "1111", withCompletionBlock: { (error, authData) -> Void in
+//                if error != nil {
+//                    print(error)
+//                    print("ther is an error with the givin input-JH")
+//                } else {
+//                    print("login succesful :)")
+//                    self.performSegueWithIdentifier("loginAndSignUpComplete", sender: self)
+//                }
+//            })
+//====        }
+//    }
+    
+    
+    func signUp(sender: AnyObject) {
+        
+//        if emailTextField.text == "" || passwordTextField.text == "" {
+//            print("make sure to enter in each textfield")
+//        } else {
+            // ===== Sign Up Logic Here ======== //
+        }
+        
+//    }
+    
+    
+    
+    
+    
+    
+    // - - - - - - -  - - - - -  - - - - - -  - - - - - -  - - -  //
+    // ******************* LOGIN / SIGN-UP ********************** //
+    // ********************************************************** //
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
