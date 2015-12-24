@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9263501E1C28F99D00197383 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9263501C1C28F99D00197383 /* Main.storyboard */; };
+		9279C0571C2BECA0007D9B55 /* BrowseSittersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9279C0561C2BECA0007D9B55 /* BrowseSittersViewController.swift */; };
+		9279C05B1C2BF43A007D9B55 /* ReadSitterDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9279C05A1C2BF43A007D9B55 /* ReadSitterDataTableViewController.swift */; };
 		927E54AD1C0FEB9F00843E0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E54AC1C0FEB9F00843E0D /* AppDelegate.swift */; };
 		927E54AF1C0FEB9F00843E0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E54AE1C0FEB9F00843E0D /* ViewController.swift */; };
 		927E54B51C0FEB9F00843E0D /* BabySitters_Club.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 927E54B31C0FEB9F00843E0D /* BabySitters_Club.xcdatamodeld */; };
@@ -19,7 +21,6 @@
 		928D81231C2BB3C700AC9182 /* orangeControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D81221C2BB3C700AC9182 /* orangeControllerViewController.swift */; };
 		928D81261C2BB42200AC9182 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D81241C2BB42200AC9182 /* SideBar.swift */; };
 		928D81271C2BB42200AC9182 /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D81251C2BB42200AC9182 /* SideBarTableViewController.swift */; };
-		928D812D1C2BE90C00AC9182 /* BrowseSittersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D812C1C2BE90C00AC9182 /* BrowseSittersViewController.swift */; };
 		929CB2011C22B0D0000961DB /* fbLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929CB2001C22B0D0000961DB /* fbLoginViewController.swift */; };
 		92C8F0A11C2740F3005C0799 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8F0A01C2740F3005C0799 /* Firebase.framework */; };
 		92C8F0A41C274102005C0799 /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8F0A21C274102005C0799 /* libc++.1.dylib */; };
@@ -32,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		9263501D1C28F99D00197383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9279C0561C2BECA0007D9B55 /* BrowseSittersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseSittersViewController.swift; sourceTree = "<group>"; };
+		9279C05A1C2BF43A007D9B55 /* ReadSitterDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadSitterDataTableViewController.swift; sourceTree = "<group>"; };
 		927E54A91C0FEB9F00843E0D /* BabySitters Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BabySitters Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		927E54AC1C0FEB9F00843E0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		927E54AE1C0FEB9F00843E0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +49,6 @@
 		928D81221C2BB3C700AC9182 /* orangeControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = orangeControllerViewController.swift; sourceTree = "<group>"; };
 		928D81241C2BB42200AC9182 /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		928D81251C2BB42200AC9182 /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
-		928D812C1C2BE90C00AC9182 /* BrowseSittersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseSittersViewController.swift; sourceTree = "<group>"; };
 		929CB2001C22B0D0000961DB /* fbLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fbLoginViewController.swift; sourceTree = "<group>"; };
 		92C8F0A01C2740F3005C0799 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = "../../Supporting Files/Firebase.framework"; sourceTree = "<group>"; };
 		92C8F0A21C274102005C0799 /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "../libc++.1.dylib"; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			children = (
 				926E217B1C1908590067C071 /* StoryBoards */,
 				928D81291C2BBE9100AC9182 /* View Controllers */,
+				9279C0561C2BECA0007D9B55 /* BrowseSittersViewController.swift */,
 				926E217E1C1908BF0067C071 /* Supporting Files */,
 			);
 			path = "BabySitters Club";
@@ -174,7 +177,6 @@
 				928D81241C2BB42200AC9182 /* SideBar.swift */,
 				928D81251C2BB42200AC9182 /* SideBarTableViewController.swift */,
 				928D81221C2BB3C700AC9182 /* orangeControllerViewController.swift */,
-				928D812C1C2BE90C00AC9182 /* BrowseSittersViewController.swift */,
 			);
 			name = sideMenuViewControllers;
 			sourceTree = "<group>";
@@ -182,6 +184,7 @@
 		928D81291C2BBE9100AC9182 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9279C05A1C2BF43A007D9B55 /* ReadSitterDataTableViewController.swift */,
 				928D81281C2BBE7300AC9182 /* sideMenuViewControllers */,
 				926E217D1C1908B30067C071 /* facebook-ViewControllers */,
 			);
@@ -261,10 +264,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				928D81271C2BB42200AC9182 /* SideBarTableViewController.swift in Sources */,
-				928D812D1C2BE90C00AC9182 /* BrowseSittersViewController.swift in Sources */,
+				9279C0571C2BECA0007D9B55 /* BrowseSittersViewController.swift in Sources */,
 				928D81231C2BB3C700AC9182 /* orangeControllerViewController.swift in Sources */,
 				929CB2011C22B0D0000961DB /* fbLoginViewController.swift in Sources */,
 				927E54AF1C0FEB9F00843E0D /* ViewController.swift in Sources */,
+				9279C05B1C2BF43A007D9B55 /* ReadSitterDataTableViewController.swift in Sources */,
 				927E54AD1C0FEB9F00843E0D /* AppDelegate.swift in Sources */,
 				928D81261C2BB42200AC9182 /* SideBar.swift in Sources */,
 				927E54B51C0FEB9F00843E0D /* BabySitters_Club.xcdatamodeld in Sources */,

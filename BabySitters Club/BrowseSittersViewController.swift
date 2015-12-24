@@ -8,12 +8,15 @@
 
 import UIKit
 
-class BrowseSittersViewController: UIViewController {
-
+class BrowseSittersViewController: UIViewController , SideBarDelegate {
+    var sideBar:SideBar = SideBar()
+    var menuItemArray = ["first item","Second Item","3rd Team"]
+    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        imageView.image = UIImage(named: "pack-BG")
+        sideBar = SideBar(sourceView: view, menuItems: menuItemArray )
+        sideBar.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +25,19 @@ class BrowseSittersViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func sideBarDidSelectButtonAtIndex(index:Int){
+        if index == 0 {
+            imageView.backgroundColor = UIColor.redColor()
+            imageView.image = nil
+        } else if index == 1 {
+            imageView.backgroundColor = UIColor.clearColor()
+            imageView.image = UIImage(named: "side-panel")
+        } else if index == 2 {
+            imageView.backgroundColor = UIColor.clearColor()
+            imageView.image = UIImage(named: "pack-BG")
+//            pop
+        }
+        
     }
-    */
 
 }

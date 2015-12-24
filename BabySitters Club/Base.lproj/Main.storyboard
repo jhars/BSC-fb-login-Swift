@@ -183,29 +183,32 @@
                                 <rect key="frame" x="20" y="551" width="560" height="41"/>
                                 <color key="backgroundColor" red="0.017576685175299644" green="0.7457769513130188" blue="0.96681493520736694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="eRP-dn-HOd"/>
+                                    <constraint firstAttribute="height" constant="41" id="GZo-yE-sjg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
                                 <state key="normal" title="Browse SitterBook">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="oqY-ZA-thj" kind="presentation" id="m1t-vO-xwx"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CNm-WH-kTe">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="533"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="469"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.96959985179999997" blue="0.32636351250000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="biP-Y6-7yL" firstAttribute="leading" secondItem="JWf-af-VOT" secondAttribute="leadingMargin" id="1iq-Zi-hog"/>
-                            <constraint firstAttribute="trailing" secondItem="bMC-b7-qMJ" secondAttribute="trailing" id="4ih-Fh-9wG"/>
-                            <constraint firstItem="tZR-3O-Czx" firstAttribute="top" secondItem="biP-Y6-7yL" secondAttribute="bottom" constant="8" symbolic="YES" id="HWM-MR-gyk"/>
-                            <constraint firstItem="biP-Y6-7yL" firstAttribute="centerX" secondItem="bMC-b7-qMJ" secondAttribute="centerX" id="HjZ-oF-c89"/>
-                            <constraint firstItem="bMC-b7-qMJ" firstAttribute="leading" secondItem="JWf-af-VOT" secondAttribute="leading" id="Hpf-R6-khy"/>
-                            <constraint firstItem="CNm-WH-kTe" firstAttribute="top" secondItem="JWf-af-VOT" secondAttribute="top" id="Qzx-Op-Q0T"/>
-                            <constraint firstItem="biP-Y6-7yL" firstAttribute="top" secondItem="CNm-WH-kTe" secondAttribute="bottom" constant="18" id="VoO-GQ-gvF"/>
-                            <constraint firstItem="bMC-b7-qMJ" firstAttribute="trailing" secondItem="CNm-WH-kTe" secondAttribute="trailing" id="cAF-uQ-1g0"/>
-                            <constraint firstItem="bMC-b7-qMJ" firstAttribute="leading" secondItem="CNm-WH-kTe" secondAttribute="leading" id="fVA-FF-r0y"/>
-                            <constraint firstItem="bMC-b7-qMJ" firstAttribute="top" secondItem="cDq-pH-z5y" secondAttribute="bottom" id="rq9-ez-rp4"/>
+                            <constraint firstItem="bMC-b7-qMJ" firstAttribute="top" secondItem="cDq-pH-z5y" secondAttribute="bottom" id="6wL-g0-9cn"/>
+                            <constraint firstItem="CNm-WH-kTe" firstAttribute="top" secondItem="bMC-b7-qMJ" secondAttribute="bottom" id="AzX-Nv-oDu"/>
+                            <constraint firstItem="tZR-3O-Czx" firstAttribute="top" secondItem="biP-Y6-7yL" secondAttribute="bottom" constant="8" symbolic="YES" id="EJN-CY-t23"/>
+                            <constraint firstItem="bMC-b7-qMJ" firstAttribute="leading" secondItem="CNm-WH-kTe" secondAttribute="leading" id="FOc-Zc-Ngd"/>
+                            <constraint firstItem="biP-Y6-7yL" firstAttribute="top" secondItem="CNm-WH-kTe" secondAttribute="bottom" constant="18" id="LBQ-dV-rDb"/>
+                            <constraint firstAttribute="trailing" secondItem="bMC-b7-qMJ" secondAttribute="trailing" id="OfS-EO-JJm"/>
+                            <constraint firstItem="biP-Y6-7yL" firstAttribute="leading" secondItem="JWf-af-VOT" secondAttribute="leadingMargin" id="T6w-tF-n3y"/>
+                            <constraint firstItem="bMC-b7-qMJ" firstAttribute="centerX" secondItem="biP-Y6-7yL" secondAttribute="centerX" id="eum-f1-yW4"/>
+                            <constraint firstItem="CNm-WH-kTe" firstAttribute="trailing" secondItem="bMC-b7-qMJ" secondAttribute="trailing" id="lpI-Eo-DMt"/>
+                            <constraint firstItem="bMC-b7-qMJ" firstAttribute="leading" secondItem="JWf-af-VOT" secondAttribute="leading" id="qfd-8I-9dt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MAI-rf-9XJ"/>
@@ -216,6 +219,100 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dE3-kR-wYS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="518" y="371"/>
+        </scene>
+        <!--Read Sitter Data Table View Controller-->
+        <scene sceneID="5H8-xQ-gCB">
+            <objects>
+                <tableViewController id="oqY-ZA-thj" customClass="ReadSitterDataTableViewController" customModule="BabySitters_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="kpn-NK-TBD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="NWv-JU-PXs">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="SitterBrowse" id="lBk-YJ-Yao">
+                                    <barButtonItem key="leftBarButtonItem" title="Back" id="RxW-Xn-v9C">
+                                        <connections>
+                                            <segue destination="8KM-MP-zlj" kind="presentation" id="Sa3-pL-ghL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="ecN-gE-wyY">
+                                        <connections>
+                                            <action selector="refreshSitters:" destination="oqY-ZA-thj" id="cKi-rr-hmJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="zUO-7T-cIj">
+                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zUO-7T-cIj" id="CzJ-TM-GT4">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oqY-ZA-thj" id="F36-Eh-tCe"/>
+                            <outlet property="delegate" destination="oqY-ZA-thj" id="8Zq-Du-5AO"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z0F-Eg-vyg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="518" y="1113"/>
+        </scene>
+        <!--Browse Sitters View Controller-->
+        <scene sceneID="npi-5v-dFj">
+            <objects>
+                <viewController id="Ubj-mk-Rmc" customClass="BrowseSittersViewController" customModule="BabySitters_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cgb-ol-tAZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="iYk-dK-8nQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PiM-1F-Ipr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6WZ-Is-hHs">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Browse Sitters Via [ Social-Context &amp; Zip ]" id="HP1-gD-fLp">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="M09-tH-dY2">
+                                            <connections>
+                                                <segue destination="8KM-MP-zlj" kind="popoverPresentation" popoverAnchorBarButtonItem="M09-tH-dY2" id="y2P-lG-XDt">
+                                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                </segue>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H3m-mg-UEC">
+                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H3m-mg-UEC" firstAttribute="top" secondItem="cgb-ol-tAZ" secondAttribute="bottom" constant="216" id="137-Zt-bQz"/>
+                            <constraint firstItem="6WZ-Is-hHs" firstAttribute="leading" secondItem="PiM-1F-Ipr" secondAttribute="leadingMargin" constant="-20" id="525-Am-6jW"/>
+                            <constraint firstItem="H3m-mg-UEC" firstAttribute="centerX" secondItem="PiM-1F-Ipr" secondAttribute="centerX" id="Ei0-6h-6Rk"/>
+                            <constraint firstItem="iYk-dK-8nQ" firstAttribute="top" secondItem="H3m-mg-UEC" secondAttribute="bottom" constant="236" id="IQQ-Ld-mwY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6WZ-Is-hHs" secondAttribute="trailing" constant="-20" id="SLo-GU-Pma"/>
+                            <constraint firstItem="H3m-mg-UEC" firstAttribute="centerY" secondItem="PiM-1F-Ipr" secondAttribute="centerY" id="xI0-Rw-kIk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="H3m-mg-UEC" id="M0h-MA-RDo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Wv-qV-NqS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1231" y="371"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="57q-No-d4a">
@@ -1018,9 +1115,9 @@
         <image name="pages-2" width="107" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="saH-NZ-dzG"/>
+        <segue reference="Sa3-pL-ghL"/>
         <segue reference="r4o-e1-aUW"/>
         <segue reference="wbn-Zo-TeA"/>
-        <segue reference="uMs-6k-s0N"/>
-        <segue reference="Olh-5b-cnB"/>
     </inferredMetricsTieBreakers>
 </document>
