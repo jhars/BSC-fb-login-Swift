@@ -25,6 +25,7 @@ class SlideMenuViewController: UIViewController {
         
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
+        
         if (varView == 0) {
             Label.text = "Strings"
         } else {
@@ -38,15 +39,14 @@ class SlideMenuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
+//        segue.destinationViewController.performSegueWithIdentifier("data", sender: self)
         // Pass the selected object to the new view controller.
-    }
-    */
+//    }
+
 
 }

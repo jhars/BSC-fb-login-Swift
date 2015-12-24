@@ -1,77 +1,13 @@
-//
-//  fbLoginViewController.swift
-//  BabySitters Club
-//
-//  Created by Jon Harlan on 12/17/15.
-//  Copyright © 2015 Jon Harlan. All rights reserved.
-//
-
 import UIKit
 
 class fbLoginViewController: UIViewController {
 
-    
-    
     @IBAction func userFbData(sender: UIButton) {
         print("data here")
         var userFbookData = self.returnUserData()
         print(userFbookData)
         print("data here 02")
     }
-
-
-//#1
-        
-// =========== Client User Object ============ //
-//USER OBJECT:
-// => ID + Name (from fb) -- new User
-// => package w/ Zip-Code (from user-input)
-// (initial) var UserObj == [
-//            {"name" : "Jon Harlan" },
-//            {"id" : "10205360690837256"},
-//            {"zip" : "94117"}
-//            ] (possibly a sitBookID too..)
-// =========== Client User Object ============ //
-        
-        
-        
-//#2
-//Feed Data to NodeJS server from this Client (this Device)
-        
-// =========== NODE SERVER: ================ //
-//REQUEST: User-Social-Context (Fs, FoFs, 3dF)
-//RESPONSE: User-Social-Context (Fs, FoFs, 3dF)
-// =========== NODE SERVER: ================ //
-
-//POST Data to Internal API after this
-// How do we Bridge this Gap?
-        // Internal API?
-        // Amazon S3?
-        // Ruby?
-        
-        // ... Google It.
-        
-//#3
-        // => hit URL... sitterbook.com/user/:id
-        // => Simoultaneously send Data to:
-        //      a- Feed fb-ID through NodeJS Server (Request)
-        //      b- GET User-Social-Context (Fs, FoFs, 3dF)
-
-        
-        // ON SERVER
-        // Server Imports
-        // Imports Internal API info (id, name, zip)
-
-// __________________________________________________ //
-        
-        // ==== PACAKAGE ===== //
-        // client-object (id, zip)
-        //       WITH
-        // server-object (friends)
-        //- - - - - - - - - - - //
-        // =================== //
-        //var userOBJ === [name, fbID, zip]
-        // = [NAME, ID, ZIP] = //
 
     // ______________________VIEW DID LOAD_______________________________________ //
     // __________________________________________________________________________ //

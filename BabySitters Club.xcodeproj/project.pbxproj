@@ -11,15 +11,16 @@
 		92103CE51C200ADB00E89B32 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92103CE41C200ADB00E89B32 /* Home.swift */; };
 		92103CE71C200BE600E89B32 /* Browse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92103CE61C200BE600E89B32 /* Browse.swift */; };
 		92103CE91C201F4E00E89B32 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92103CE81C201F4E00E89B32 /* BrowseViewController.swift */; };
+		9263501E1C28F99D00197383 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9263501C1C28F99D00197383 /* Main.storyboard */; };
 		927E54AD1C0FEB9F00843E0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E54AC1C0FEB9F00843E0D /* AppDelegate.swift */; };
 		927E54AF1C0FEB9F00843E0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E54AE1C0FEB9F00843E0D /* ViewController.swift */; };
-		927E54B21C0FEB9F00843E0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 927E54B01C0FEB9F00843E0D /* Main.storyboard */; };
 		927E54B51C0FEB9F00843E0D /* BabySitters_Club.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 927E54B31C0FEB9F00843E0D /* BabySitters_Club.xcdatamodeld */; };
 		927E54B71C0FEBA000843E0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 927E54B61C0FEBA000843E0D /* Assets.xcassets */; };
 		927E54BA1C0FEBA000843E0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 927E54B81C0FEBA000843E0D /* LaunchScreen.storyboard */; };
 		927E54C41C0FEE0200843E0D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927E54C11C0FEE0200843E0D /* FBSDKCoreKit.framework */; };
 		927E54C51C0FEE0200843E0D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927E54C21C0FEE0200843E0D /* FBSDKLoginKit.framework */; };
 		927E54C61C0FEE0200843E0D /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927E54C31C0FEE0200843E0D /* FBSDKShareKit.framework */; };
+		929AFA6D1C28F036001D4A06 /* DataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929AFA6C1C28F036001D4A06 /* DataTableViewController.swift */; };
 		929CB2011C22B0D0000961DB /* fbLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929CB2001C22B0D0000961DB /* fbLoginViewController.swift */; };
 		92C8F0A11C2740F3005C0799 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8F0A01C2740F3005C0799 /* Firebase.framework */; };
 		92C8F0A41C274102005C0799 /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8F0A21C274102005C0799 /* libc++.1.dylib */; };
@@ -37,10 +38,10 @@
 		92103CE41C200ADB00E89B32 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		92103CE61C200BE600E89B32 /* Browse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Browse.swift; sourceTree = "<group>"; };
 		92103CE81C201F4E00E89B32 /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
+		9263501D1C28F99D00197383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		927E54A91C0FEB9F00843E0D /* BabySitters Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BabySitters Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		927E54AC1C0FEB9F00843E0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		927E54AE1C0FEB9F00843E0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		927E54B11C0FEB9F00843E0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		927E54B41C0FEB9F00843E0D /* BabySitters_Club.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BabySitters_Club.xcdatamodel; sourceTree = "<group>"; };
 		927E54B61C0FEBA000843E0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		927E54B91C0FEBA000843E0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		927E54C21C0FEE0200843E0D /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../../Documents/FacebookSDKs-iOS-20151111/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		927E54C31C0FEE0200843E0D /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../../../../Documents/FacebookSDKs-iOS-20151111/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		927E54C81C0FF70400843E0D /* BabySitters Club-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BabySitters Club-Bridging-Header.h"; sourceTree = "<group>"; };
+		929AFA6C1C28F036001D4A06 /* DataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTableViewController.swift; sourceTree = "<group>"; };
 		929CB2001C22B0D0000961DB /* fbLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fbLoginViewController.swift; sourceTree = "<group>"; };
 		92C8F0A01C2740F3005C0799 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = "../../Supporting Files/Firebase.framework"; sourceTree = "<group>"; };
 		92C8F0A21C274102005C0799 /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "../libc++.1.dylib"; sourceTree = "<group>"; };
@@ -94,7 +96,7 @@
 		926E217B1C1908590067C071 /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
-				927E54B01C0FEB9F00843E0D /* Main.storyboard */,
+				9263501C1C28F99D00197383 /* Main.storyboard */,
 			);
 			name = StoryBoards;
 			sourceTree = "<group>";
@@ -114,6 +116,7 @@
 				929CB2001C22B0D0000961DB /* fbLoginViewController.swift */,
 				929CB1FE1C22B019000961DB /* SlideMenu */,
 				929CB1FF1C22B025000961DB /* Drafts */,
+				929AFA6C1C28F036001D4A06 /* DataTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -121,8 +124,8 @@
 		926E217E1C1908BF0067C071 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				927E54B61C0FEBA000843E0D /* Assets.xcassets */,
 				92C8F09F1C274080005C0799 /* Nav-SideMenu */,
+				927E54B61C0FEBA000843E0D /* Assets.xcassets */,
 				927E54B81C0FEBA000843E0D /* LaunchScreen.storyboard */,
 				927E54C81C0FF70400843E0D /* BabySitters Club-Bridging-Header.h */,
 				927E54BB1C0FEBA000843E0D /* Info.plist */,
@@ -263,9 +266,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9263501E1C28F99D00197383 /* Main.storyboard in Resources */,
 				927E54BA1C0FEBA000843E0D /* LaunchScreen.storyboard in Resources */,
 				927E54B71C0FEBA000843E0D /* Assets.xcassets in Resources */,
-				927E54B21C0FEB9F00843E0D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +285,7 @@
 				927E54AF1C0FEB9F00843E0D /* ViewController.swift in Sources */,
 				92103CE31C1FFCBA00E89B32 /* BackTableVC.swift in Sources */,
 				927E54AD1C0FEB9F00843E0D /* AppDelegate.swift in Sources */,
+				929AFA6D1C28F036001D4A06 /* DataTableViewController.swift in Sources */,
 				927E54B51C0FEB9F00843E0D /* BabySitters_Club.xcdatamodeld in Sources */,
 				92103CE91C201F4E00E89B32 /* BrowseViewController.swift in Sources */,
 				92F3DE111C1FAD1200B4A3C2 /* SWRevealViewController.m in Sources */,
@@ -292,10 +296,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		927E54B01C0FEB9F00843E0D /* Main.storyboard */ = {
+		9263501C1C28F99D00197383 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				927E54B11C0FEB9F00843E0D /* Base */,
+				9263501D1C28F99D00197383 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

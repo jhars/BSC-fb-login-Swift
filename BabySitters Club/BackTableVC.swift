@@ -16,7 +16,7 @@ class BackTableVC: UITableViewController {
     var TableArray = [String]()
     
     override func viewDidLoad() {
-        TableArray = ["Home","Browse Sitters","Favorites List","Matches + Messaging"]
+        TableArray = ["Home","Browse Sitters","Favorites List","Matches + Messaging", "data"]
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
