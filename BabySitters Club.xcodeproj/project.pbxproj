@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		92103CE31C1FFCBA00E89B32 /* BackTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92103CE21C1FFCB900E89B32 /* BackTableVC.swift */; };
-		92103CE51C200ADB00E89B32 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92103CE41C200ADB00E89B32 /* Home.swift */; };
-		92103CE71C200BE600E89B32 /* Browse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92103CE61C200BE600E89B32 /* Browse.swift */; };
-		92103CE91C201F4E00E89B32 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92103CE81C201F4E00E89B32 /* BrowseViewController.swift */; };
 		9263501E1C28F99D00197383 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9263501C1C28F99D00197383 /* Main.storyboard */; };
 		927E54AD1C0FEB9F00843E0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E54AC1C0FEB9F00843E0D /* AppDelegate.swift */; };
 		927E54AF1C0FEB9F00843E0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E54AE1C0FEB9F00843E0D /* ViewController.swift */; };
@@ -20,7 +16,9 @@
 		927E54C41C0FEE0200843E0D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927E54C11C0FEE0200843E0D /* FBSDKCoreKit.framework */; };
 		927E54C51C0FEE0200843E0D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927E54C21C0FEE0200843E0D /* FBSDKLoginKit.framework */; };
 		927E54C61C0FEE0200843E0D /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927E54C31C0FEE0200843E0D /* FBSDKShareKit.framework */; };
-		929AFA6D1C28F036001D4A06 /* DataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929AFA6C1C28F036001D4A06 /* DataTableViewController.swift */; };
+		928D81231C2BB3C700AC9182 /* orangeControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D81221C2BB3C700AC9182 /* orangeControllerViewController.swift */; };
+		928D81261C2BB42200AC9182 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D81241C2BB42200AC9182 /* SideBar.swift */; };
+		928D81271C2BB42200AC9182 /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D81251C2BB42200AC9182 /* SideBarTableViewController.swift */; };
 		929CB2011C22B0D0000961DB /* fbLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929CB2001C22B0D0000961DB /* fbLoginViewController.swift */; };
 		92C8F0A11C2740F3005C0799 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8F0A01C2740F3005C0799 /* Firebase.framework */; };
 		92C8F0A41C274102005C0799 /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8F0A21C274102005C0799 /* libc++.1.dylib */; };
@@ -29,15 +27,9 @@
 		92C8F0A91C274116005C0799 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8F0A81C274116005C0799 /* Security.framework */; };
 		92C8F0AB1C274148005C0799 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8F0AA1C274148005C0799 /* CFNetwork.framework */; };
 		92C8F0AD1C2742C5005C0799 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8F0AC1C2742C5005C0799 /* Firebase.framework */; };
-		92F3DE111C1FAD1200B4A3C2 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F3DE101C1FAD1200B4A3C2 /* SWRevealViewController.m */; };
-		92F3DE131C1FAEE800B4A3C2 /* SlideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F3DE121C1FAEE800B4A3C2 /* SlideMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		92103CE21C1FFCB900E89B32 /* BackTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackTableVC.swift; sourceTree = "<group>"; };
-		92103CE41C200ADB00E89B32 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		92103CE61C200BE600E89B32 /* Browse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Browse.swift; sourceTree = "<group>"; };
-		92103CE81C201F4E00E89B32 /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
 		9263501D1C28F99D00197383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		927E54A91C0FEB9F00843E0D /* BabySitters Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BabySitters Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		927E54AC1C0FEB9F00843E0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +42,9 @@
 		927E54C21C0FEE0200843E0D /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../../Documents/FacebookSDKs-iOS-20151111/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		927E54C31C0FEE0200843E0D /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../../../../Documents/FacebookSDKs-iOS-20151111/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		927E54C81C0FF70400843E0D /* BabySitters Club-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BabySitters Club-Bridging-Header.h"; sourceTree = "<group>"; };
-		929AFA6C1C28F036001D4A06 /* DataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTableViewController.swift; sourceTree = "<group>"; };
+		928D81221C2BB3C700AC9182 /* orangeControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = orangeControllerViewController.swift; sourceTree = "<group>"; };
+		928D81241C2BB42200AC9182 /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
+		928D81251C2BB42200AC9182 /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
 		929CB2001C22B0D0000961DB /* fbLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fbLoginViewController.swift; sourceTree = "<group>"; };
 		92C8F0A01C2740F3005C0799 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = "../../Supporting Files/Firebase.framework"; sourceTree = "<group>"; };
 		92C8F0A21C274102005C0799 /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "../libc++.1.dylib"; sourceTree = "<group>"; };
@@ -59,9 +53,6 @@
 		92C8F0A81C274116005C0799 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		92C8F0AA1C274148005C0799 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		92C8F0AC1C2742C5005C0799 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
-		92F3DE0F1C1FAD1200B4A3C2 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		92F3DE101C1FAD1200B4A3C2 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		92F3DE121C1FAEE800B4A3C2 /* SlideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,23 +100,21 @@
 			name = Delegates;
 			sourceTree = "<group>";
 		};
-		926E217D1C1908B30067C071 /* ViewControllers */ = {
+		926E217D1C1908B30067C071 /* facebook-ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				927E54AE1C0FEB9F00843E0D /* ViewController.swift */,
 				929CB2001C22B0D0000961DB /* fbLoginViewController.swift */,
-				929CB1FE1C22B019000961DB /* SlideMenu */,
-				929CB1FF1C22B025000961DB /* Drafts */,
-				929AFA6C1C28F036001D4A06 /* DataTableViewController.swift */,
 			);
-			name = ViewControllers;
+			name = "facebook-ViewControllers";
 			sourceTree = "<group>";
 		};
 		926E217E1C1908BF0067C071 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				92C8F09F1C274080005C0799 /* Nav-SideMenu */,
 				927E54B61C0FEBA000843E0D /* Assets.xcassets */,
+				926E217C1C19089A0067C071 /* Delegates */,
+				926E217A1C1908160067C071 /* Models */,
 				927E54B81C0FEBA000843E0D /* LaunchScreen.storyboard */,
 				927E54C81C0FF70400843E0D /* BabySitters Club-Bridging-Header.h */,
 				927E54BB1C0FEBA000843E0D /* Info.plist */,
@@ -154,9 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				926E217B1C1908590067C071 /* StoryBoards */,
-				926E217D1C1908B30067C071 /* ViewControllers */,
-				926E217A1C1908160067C071 /* Models */,
-				926E217C1C19089A0067C071 /* Delegates */,
+				928D81291C2BBE9100AC9182 /* View Controllers */,
 				926E217E1C1908BF0067C071 /* Supporting Files */,
 			);
 			path = "BabySitters Club";
@@ -179,32 +166,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		929CB1FE1C22B019000961DB /* SlideMenu */ = {
+		928D81281C2BBE7300AC9182 /* sideMenuViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				92F3DE121C1FAEE800B4A3C2 /* SlideMenuViewController.swift */,
-				92103CE21C1FFCB900E89B32 /* BackTableVC.swift */,
+				928D81241C2BB42200AC9182 /* SideBar.swift */,
+				928D81251C2BB42200AC9182 /* SideBarTableViewController.swift */,
+				928D81221C2BB3C700AC9182 /* orangeControllerViewController.swift */,
 			);
-			name = SlideMenu;
+			name = sideMenuViewControllers;
 			sourceTree = "<group>";
 		};
-		929CB1FF1C22B025000961DB /* Drafts */ = {
+		928D81291C2BBE9100AC9182 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				92103CE41C200ADB00E89B32 /* Home.swift */,
-				92103CE61C200BE600E89B32 /* Browse.swift */,
-				92103CE81C201F4E00E89B32 /* BrowseViewController.swift */,
+				928D81281C2BBE7300AC9182 /* sideMenuViewControllers */,
+				926E217D1C1908B30067C071 /* facebook-ViewControllers */,
 			);
-			name = Drafts;
-			sourceTree = "<group>";
-		};
-		92C8F09F1C274080005C0799 /* Nav-SideMenu */ = {
-			isa = PBXGroup;
-			children = (
-				92F3DE0F1C1FAD1200B4A3C2 /* SWRevealViewController.h */,
-				92F3DE101C1FAD1200B4A3C2 /* SWRevealViewController.m */,
-			);
-			name = "Nav-SideMenu";
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,17 +257,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92F3DE131C1FAEE800B4A3C2 /* SlideMenuViewController.swift in Sources */,
-				92103CE71C200BE600E89B32 /* Browse.swift in Sources */,
+				928D81271C2BB42200AC9182 /* SideBarTableViewController.swift in Sources */,
+				928D81231C2BB3C700AC9182 /* orangeControllerViewController.swift in Sources */,
 				929CB2011C22B0D0000961DB /* fbLoginViewController.swift in Sources */,
 				927E54AF1C0FEB9F00843E0D /* ViewController.swift in Sources */,
-				92103CE31C1FFCBA00E89B32 /* BackTableVC.swift in Sources */,
 				927E54AD1C0FEB9F00843E0D /* AppDelegate.swift in Sources */,
-				929AFA6D1C28F036001D4A06 /* DataTableViewController.swift in Sources */,
+				928D81261C2BB42200AC9182 /* SideBar.swift in Sources */,
 				927E54B51C0FEB9F00843E0D /* BabySitters_Club.xcdatamodeld in Sources */,
-				92103CE91C201F4E00E89B32 /* BrowseViewController.swift in Sources */,
-				92F3DE111C1FAD1200B4A3C2 /* SWRevealViewController.m in Sources */,
-				92103CE51C200ADB00E89B32 /* Home.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

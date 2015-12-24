@@ -45,10 +45,11 @@ class fbLoginViewController: UIViewController {
                 print("User ID is is: \(userID)")
                 
                 var newData = userID
-                var postRef = self.ref.childByAppendingPath("Posts")
-                var newDataValue = newData as String!
-                var newPostRef = postRef.childByAutoId()
-                newPostRef.setValue(newDataValue)
+//                var postRef = self.ref.childByAppendingPath("Posts")
+//                var newDataValue = newData as String!
+//                var newPostRef = postRef.childByAutoId()
+//                newPostRef.setValue(newDataValue)
+                
                 let userName : NSString = result.valueForKey("name") as! NSString
                 print("User Name is: \(userName)")
 //                let fbUserName = userName as! String
@@ -70,8 +71,8 @@ class fbLoginViewController: UIViewController {
 //                    var userId = authData.uid
                     let newUser = [
                         "provider": "1111",
-                        "email": userEmail as String,
-                        "fbID": userName as String
+                        "email": userEmail as? String,
+                        "fbID": userName as? String
                     ]
                     // ===== BREAKING POINT =========== //
 //                    
@@ -95,32 +96,7 @@ class fbLoginViewController: UIViewController {
     // ******************* LOGIN / SIGN-UP ********************** //
     // - - - - - - -  - - - - -  - - - - - -  - - - - - -  - - -  //
     
-    
-    
-//    override func viewDidAppear(animated: Bool) {
-//        if ref.authData != nil {
-//            print("there is a user already signed in")
-//            self.performSegueWithIdentifier("loginAndSignUpComplete", sender: self)
-//        } else {
-//            print("you will have to sign in first")
-//        }
-//    }
-    
-//    func login(sender: AnyObject) {
-//  ====      if emailTextField.text == "" || passwordTextField.text == "" {
-// ====           print("make sure to fill in all text fields")
-//====        } else {
-//            ref.authUser(emailTextField.text, password: "1111", withCompletionBlock: { (error, authData) -> Void in
-//                if error != nil {
-//                    print(error)
-//                    print("ther is an error with the givin input-JH")
-//                } else {
-//                    print("login succesful :)")
-//                    self.performSegueWithIdentifier("loginAndSignUpComplete", sender: self)
-//                }
-//            })
-//====        }
-//    }
+
     
     
     func signUp(sender: AnyObject) {
@@ -129,12 +105,9 @@ class fbLoginViewController: UIViewController {
 //            print("make sure to enter in each textfield")
 //        } else {
             // ===== Sign Up Logic Here ======== //
-        }
+//        }
         
-//    }
-    
-    
-    
+    }
     
     
     

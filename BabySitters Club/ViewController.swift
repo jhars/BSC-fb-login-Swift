@@ -19,21 +19,21 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        if (FBSDKAccessToken.currentAccessToken() != nil)
-        {
+//        if (FBSDKAccessToken.currentAccessToken() != nil)
+//        {
 //             User is already logged in, do work such as go to next view controller.
-            print("already logged in")
+//            print("already logged in")
 //            self.performSegueWithIdentifier("showMenu", sender: self)
-            returnUserData()
-        }
-        else
-        {
+//            returnUserData()
+//        }
+//        else
+//        {
             let loginView : FBSDKLoginButton = FBSDKLoginButton()
             self.view.addSubview(loginView)
             loginView.center = self.view.center
-            loginView.readPermissions = ["public_profile", "email"]
+            loginView.readPermissions = ["public_profile"]
             loginView.delegate = self
-        }
+//        }
     
     }
 
@@ -54,7 +54,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         else {
             // If you ask for multiple permissions at once, you
             // should check if specific permissions missing
-            if result.grantedPermissions.contains("email")
+            if result.grantedPermissions.contains("name")
             {
                 print("email found")
 //                self.returnUserData()
