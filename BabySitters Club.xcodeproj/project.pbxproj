@@ -19,6 +19,7 @@
 		928D81231C2BB3C700AC9182 /* orangeControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D81221C2BB3C700AC9182 /* orangeControllerViewController.swift */; };
 		928D81261C2BB42200AC9182 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D81241C2BB42200AC9182 /* SideBar.swift */; };
 		928D81271C2BB42200AC9182 /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D81251C2BB42200AC9182 /* SideBarTableViewController.swift */; };
+		928D812D1C2BE90C00AC9182 /* BrowseSittersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D812C1C2BE90C00AC9182 /* BrowseSittersViewController.swift */; };
 		929CB2011C22B0D0000961DB /* fbLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929CB2001C22B0D0000961DB /* fbLoginViewController.swift */; };
 		92C8F0A11C2740F3005C0799 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8F0A01C2740F3005C0799 /* Firebase.framework */; };
 		92C8F0A41C274102005C0799 /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8F0A21C274102005C0799 /* libc++.1.dylib */; };
@@ -45,6 +46,7 @@
 		928D81221C2BB3C700AC9182 /* orangeControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = orangeControllerViewController.swift; sourceTree = "<group>"; };
 		928D81241C2BB42200AC9182 /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		928D81251C2BB42200AC9182 /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
+		928D812C1C2BE90C00AC9182 /* BrowseSittersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseSittersViewController.swift; sourceTree = "<group>"; };
 		929CB2001C22B0D0000961DB /* fbLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fbLoginViewController.swift; sourceTree = "<group>"; };
 		92C8F0A01C2740F3005C0799 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = "../../Supporting Files/Firebase.framework"; sourceTree = "<group>"; };
 		92C8F0A21C274102005C0799 /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "../libc++.1.dylib"; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				928D81241C2BB42200AC9182 /* SideBar.swift */,
 				928D81251C2BB42200AC9182 /* SideBarTableViewController.swift */,
 				928D81221C2BB3C700AC9182 /* orangeControllerViewController.swift */,
+				928D812C1C2BE90C00AC9182 /* BrowseSittersViewController.swift */,
 			);
 			name = sideMenuViewControllers;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				928D81271C2BB42200AC9182 /* SideBarTableViewController.swift in Sources */,
+				928D812D1C2BE90C00AC9182 /* BrowseSittersViewController.swift in Sources */,
 				928D81231C2BB3C700AC9182 /* orangeControllerViewController.swift in Sources */,
 				929CB2011C22B0D0000961DB /* fbLoginViewController.swift in Sources */,
 				927E54AF1C0FEB9F00843E0D /* ViewController.swift in Sources */,

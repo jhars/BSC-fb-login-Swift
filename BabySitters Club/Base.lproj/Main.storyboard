@@ -86,7 +86,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ifC-qv-5b4">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
-                                    <navigationItem title="User Data Input" id="Pj5-GP-XAa">
+                                    <navigationItem id="Pj5-GP-XAa">
                                         <barButtonItem key="rightBarButtonItem" title="Main Menu" id="FiS-tH-WxM">
                                             <connections>
                                                 <segue destination="8KM-MP-zlj" kind="popoverPresentation" popoverAnchorBarButtonItem="FiS-tH-WxM" id="3me-AH-yva">
@@ -103,6 +103,9 @@
                                     <segment title="PARENT"/>
                                     <segment title="SITTER"/>
                                 </segments>
+                                <connections>
+                                    <action selector="parentOrSitter:" destination="wpI-vJ-xia" eventType="valueChanged" id="TcH-tS-03a"/>
+                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcU-sG-bYI">
                                 <rect key="frame" x="20" y="88" width="560" height="39"/>
@@ -110,7 +113,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="but-cE-17i"/>
                                 </constraints>
-                                <state key="normal" title="Print My User Info in the Console">
+                                <state key="normal" title="Update My User Data">
                                     <color key="titleColor" red="0.1244093417" green="0.31610690790000001" blue="0.77349668559999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -142,6 +145,7 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="LXi-e6-KNM" id="r3V-j9-lGW"/>
+                        <outlet property="sitterStatus" destination="5Q4-0A-nlB" id="fCu-g6-zhR"/>
                         <outlet property="zipTextField" destination="vUA-Pa-yCu" id="9Y4-Po-yCs"/>
                     </connections>
                 </viewController>
@@ -161,13 +165,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CNm-WH-kTe">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bMC-b7-qMJ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
-                                    <navigationItem title="Main Menu" id="x7t-di-Hic">
+                                    <navigationItem title="SitterBook - Home" id="x7t-di-Hic">
                                         <barButtonItem key="leftBarButtonItem" image="menu-icon" id="fHl-06-4io">
                                             <connections>
                                                 <segue destination="wpI-vJ-xia" kind="popoverPresentation" popoverAnchorBarButtonItem="fHl-06-4io" id="uMs-6k-s0N">
@@ -178,15 +179,33 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biP-Y6-7yL">
+                                <rect key="frame" x="20" y="551" width="560" height="41"/>
+                                <color key="backgroundColor" red="0.017576685175299644" green="0.7457769513130188" blue="0.96681493520736694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="eRP-dn-HOd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                <state key="normal" title="Browse SitterBook">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CNm-WH-kTe">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="533"/>
+                            </imageView>
                         </subviews>
+                        <color key="backgroundColor" red="1" green="0.96959985179999997" blue="0.32636351250000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="bMC-b7-qMJ" firstAttribute="leading" secondItem="JWf-af-VOT" secondAttribute="leading" id="5gw-8F-rQs"/>
-                            <constraint firstAttribute="trailing" secondItem="CNm-WH-kTe" secondAttribute="trailing" id="GJ0-rj-8Ro"/>
-                            <constraint firstItem="CNm-WH-kTe" firstAttribute="trailing" secondItem="bMC-b7-qMJ" secondAttribute="trailing" id="Mfn-O4-Tsl"/>
-                            <constraint firstItem="CNm-WH-kTe" firstAttribute="bottom" secondItem="tZR-3O-Czx" secondAttribute="top" id="TaN-wl-hCq"/>
-                            <constraint firstItem="bMC-b7-qMJ" firstAttribute="top" secondItem="CNm-WH-kTe" secondAttribute="top" id="UwD-2h-k7f"/>
-                            <constraint firstItem="CNm-WH-kTe" firstAttribute="top" secondItem="JWf-af-VOT" secondAttribute="top" id="lua-MY-bW7"/>
-                            <constraint firstItem="bMC-b7-qMJ" firstAttribute="leading" secondItem="CNm-WH-kTe" secondAttribute="leading" id="tdk-9T-esA"/>
+                            <constraint firstItem="biP-Y6-7yL" firstAttribute="leading" secondItem="JWf-af-VOT" secondAttribute="leadingMargin" id="1iq-Zi-hog"/>
+                            <constraint firstAttribute="trailing" secondItem="bMC-b7-qMJ" secondAttribute="trailing" id="4ih-Fh-9wG"/>
+                            <constraint firstItem="tZR-3O-Czx" firstAttribute="top" secondItem="biP-Y6-7yL" secondAttribute="bottom" constant="8" symbolic="YES" id="HWM-MR-gyk"/>
+                            <constraint firstItem="biP-Y6-7yL" firstAttribute="centerX" secondItem="bMC-b7-qMJ" secondAttribute="centerX" id="HjZ-oF-c89"/>
+                            <constraint firstItem="bMC-b7-qMJ" firstAttribute="leading" secondItem="JWf-af-VOT" secondAttribute="leading" id="Hpf-R6-khy"/>
+                            <constraint firstItem="CNm-WH-kTe" firstAttribute="top" secondItem="JWf-af-VOT" secondAttribute="top" id="Qzx-Op-Q0T"/>
+                            <constraint firstItem="biP-Y6-7yL" firstAttribute="top" secondItem="CNm-WH-kTe" secondAttribute="bottom" constant="18" id="VoO-GQ-gvF"/>
+                            <constraint firstItem="bMC-b7-qMJ" firstAttribute="trailing" secondItem="CNm-WH-kTe" secondAttribute="trailing" id="cAF-uQ-1g0"/>
+                            <constraint firstItem="bMC-b7-qMJ" firstAttribute="leading" secondItem="CNm-WH-kTe" secondAttribute="leading" id="fVA-FF-r0y"/>
+                            <constraint firstItem="bMC-b7-qMJ" firstAttribute="top" secondItem="cDq-pH-z5y" secondAttribute="bottom" id="rq9-ez-rp4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MAI-rf-9XJ"/>
@@ -1001,7 +1020,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="r4o-e1-aUW"/>
         <segue reference="wbn-Zo-TeA"/>
-        <segue reference="saH-NZ-dzG"/>
+        <segue reference="uMs-6k-s0N"/>
         <segue reference="Olh-5b-cnB"/>
     </inferredMetricsTieBreakers>
 </document>
