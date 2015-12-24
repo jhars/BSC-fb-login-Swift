@@ -10,7 +10,7 @@ class fbLoginViewController: UIViewController {
     @IBOutlet weak var zipTextField: UITextField!
     @IBOutlet weak var sitterStatus: UISegmentedControl!
 
-    var sitterOrNot:Bool = true
+    var sitterOrNot:Bool = false
     var currentDate = NSDate()
 //  FIREBASE
     var ref = Firebase(url: "https://sitterbookapi.firebaseio.com/")
