@@ -174,8 +174,8 @@
 		928D81281C2BBE7300AC9182 /* sideMenuViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				928D81241C2BB42200AC9182 /* SideBar.swift */,
 				928D81251C2BB42200AC9182 /* SideBarTableViewController.swift */,
+				928D81241C2BB42200AC9182 /* SideBar.swift */,
 				928D81221C2BB3C700AC9182 /* orangeControllerViewController.swift */,
 			);
 			name = sideMenuViewControllers;

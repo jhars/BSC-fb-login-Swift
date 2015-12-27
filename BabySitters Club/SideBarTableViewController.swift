@@ -16,6 +16,8 @@ class SideBarTableViewController: UITableViewController {
 
     // MARK: - Table view data source
     var delegate:SideBarTableViewControllerDelegate?
+    //is this variable accessible / settable by other classes (VCs) using the SBTVCDelegate?
+    //
     var tableData = [String]()
     
 

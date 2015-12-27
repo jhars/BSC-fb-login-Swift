@@ -246,6 +246,10 @@
                                 </navigationItem>
                             </items>
                         </navigationBar>
+                        <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="H11-qk-ivV">
+                            <rect key="frame" x="0.0" y="116" width="600" height="485"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="zUO-7T-cIj">
                                 <rect key="frame" x="0.0" y="72" width="600" height="44"/>
@@ -261,6 +265,9 @@
                             <outlet property="delegate" destination="oqY-ZA-thj" id="8Zq-Du-5AO"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="testImage" destination="H11-qk-ivV" id="AaD-qU-AP6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0F-Eg-vyg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

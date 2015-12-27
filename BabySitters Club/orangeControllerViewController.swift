@@ -12,8 +12,8 @@ class orangeController: UIViewController, SideBarDelegate {
     
     var sideBar:SideBar = SideBar()
     var menuItemArray = ["first item","Second Item","3rd Team"]
-    
     @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         imageView.image = UIImage(named: "pack-BG")
