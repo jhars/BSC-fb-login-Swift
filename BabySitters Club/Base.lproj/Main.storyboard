@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3xd-5a-vHb">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -272,6 +272,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0F-Eg-vyg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="518" y="1113"/>
+        </scene>
+        <!--Alamo Fire ImageVC-->
+        <scene sceneID="ghP-KN-lT6">
+            <objects>
+                <viewController id="3xd-5a-vHb" customClass="AlamoFireImageVC" customModule="BabySitters_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GXF-wE-Qpi"/>
+                        <viewControllerLayoutGuide type="bottom" id="hjs-oy-h6q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gAd-X1-HY7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fxZ-V5-Esj">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fxZ-V5-Esj" firstAttribute="top" secondItem="gAd-X1-HY7" secondAttribute="top" id="2ld-zC-yJh"/>
+                            <constraint firstItem="fxZ-V5-Esj" firstAttribute="bottom" secondItem="hjs-oy-h6q" secondAttribute="top" id="PoU-Vy-EJx"/>
+                            <constraint firstItem="fxZ-V5-Esj" firstAttribute="leading" secondItem="gAd-X1-HY7" secondAttribute="leading" id="eh0-QN-IwI"/>
+                            <constraint firstAttribute="trailing" secondItem="fxZ-V5-Esj" secondAttribute="trailing" id="yNV-Uz-1Wl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="AlamoImage" destination="fxZ-V5-Esj" id="FJC-tg-oYf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BGT-6a-lvF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="521" y="1794"/>
         </scene>
         <!--Browse Sitters View Controller-->
         <scene sceneID="npi-5v-dFj">
@@ -1124,7 +1156,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="saH-NZ-dzG"/>
         <segue reference="Sa3-pL-ghL"/>
-        <segue reference="r4o-e1-aUW"/>
         <segue reference="wbn-Zo-TeA"/>
+        <segue reference="r4o-e1-aUW"/>
     </inferredMetricsTieBreakers>
 </document>
