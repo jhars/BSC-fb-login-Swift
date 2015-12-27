@@ -33,7 +33,9 @@ class ReadSitterDataTableViewController: UITableViewController {
     // URL -> IMAGE:LOADER  //
     @IBOutlet weak var testImage: UIImageView!
     //----------------------//
-    let AlamoRef = Alamofire.request(.GET, "https://scontent.xx.fbcdn.net/hprofile-xpt1/v/t1.0-1/p50x50/12190919_10102581058954074_1908735207991004359_n.jpg?oh=2e458b46499f38c47d50a324a30c0ad8&oe=5716104D")
+//    var imageUrl:String
+//Need to get the URL as variable
+    var AlamoRef = Alamofire.request(.GET, "https://scontent.xx.fbcdn.net/hprofile-xft1/v/t1.0-1/p50x50/11407034_10101087548346204_123630956942363426_n.jpg?oh=ad875d6df62556e88ae38d02887d403c&oe=5700342F")
     
 //    var sitterArrayUrl:Array = [String]()
 
@@ -55,7 +57,9 @@ class ReadSitterDataTableViewController: UITableViewController {
         }
         //=================== DELEGATABLE ========================//
             print("image Urls???")
-            getSitterData("https://sitterbookapi.firebaseio.com/users/1734329503463628/fbfriends/first-degree/0")
+            getSitterData("https://sitterbookapi.firebaseio.com/users/10205360690837256/fbfriends/first-degree/0")
+            getSitterData("https://sitterbookapi.firebaseio.com/users/10205360690837256/fbfriends/first-degree/1")
+            getSitterData("https://sitterbookapi.firebaseio.com/users/10205360690837256/fbfriends/first-degree/2")
         
     }
     
@@ -67,7 +71,7 @@ class ReadSitterDataTableViewController: UITableViewController {
         
         testRef.observeEventType(.Value, withBlock: { snapshot in
 //            print(snapshot.value)
-            var userData = snapshot.value
+            var userData = snapshot.value.objectForKey("picture")?.objectForKey("data")?.objectForKey("url")
             print(userData)
             
             }, withCancelBlock: { error in
