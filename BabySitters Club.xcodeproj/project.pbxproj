@@ -23,6 +23,8 @@
 		928D81261C2BB42200AC9182 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D81241C2BB42200AC9182 /* SideBar.swift */; };
 		928D81271C2BB42200AC9182 /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D81251C2BB42200AC9182 /* SideBarTableViewController.swift */; };
 		929CB2011C22B0D0000961DB /* fbLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929CB2001C22B0D0000961DB /* fbLoginViewController.swift */; };
+		92A61F081C315F2900E63ACE /* SitterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A61F071C315F2900E63ACE /* SitterCollectionViewCell.swift */; };
+		92A61F0A1C31603000E63ACE /* SitterDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A61F091C31603000E63ACE /* SitterDataViewController.swift */; };
 		92C8F0A11C2740F3005C0799 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8F0A01C2740F3005C0799 /* Firebase.framework */; };
 		92C8F0A41C274102005C0799 /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8F0A21C274102005C0799 /* libc++.1.dylib */; };
 		92C8F0A51C274102005C0799 /* libicucore.A.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8F0A31C274102005C0799 /* libicucore.A.dylib */; };
@@ -55,6 +57,8 @@
 		928D81241C2BB42200AC9182 /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		928D81251C2BB42200AC9182 /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
 		929CB2001C22B0D0000961DB /* fbLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fbLoginViewController.swift; sourceTree = "<group>"; };
+		92A61F071C315F2900E63ACE /* SitterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SitterCollectionViewCell.swift; sourceTree = "<group>"; };
+		92A61F091C31603000E63ACE /* SitterDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SitterDataViewController.swift; sourceTree = "<group>"; };
 		92C8F0A01C2740F3005C0799 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = "../../Supporting Files/Firebase.framework"; sourceTree = "<group>"; };
 		92C8F0A21C274102005C0799 /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "../libc++.1.dylib"; sourceTree = "<group>"; };
 		92C8F0A31C274102005C0799 /* libicucore.A.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.A.dylib; path = ../libicucore.A.dylib; sourceTree = "<group>"; };
@@ -203,6 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				9279C05A1C2BF43A007D9B55 /* ReadSitterDataTableViewController.swift */,
+				92A61F071C315F2900E63ACE /* SitterCollectionViewCell.swift */,
+				92A61F091C31603000E63ACE /* SitterDataViewController.swift */,
 				928D81281C2BBE7300AC9182 /* sideMenuViewControllers */,
 				926E217D1C1908B30067C071 /* facebook-ViewControllers */,
 				927ED7121C2FD78500F5BDC2 /* AlamoFireImageVC.swift */,
@@ -342,7 +348,9 @@
 				9279C05B1C2BF43A007D9B55 /* ReadSitterDataTableViewController.swift in Sources */,
 				927E54AD1C0FEB9F00843E0D /* AppDelegate.swift in Sources */,
 				928D81261C2BB42200AC9182 /* SideBar.swift in Sources */,
+				92A61F0A1C31603000E63ACE /* SitterDataViewController.swift in Sources */,
 				927E54B51C0FEB9F00843E0D /* BabySitters_Club.xcdatamodeld in Sources */,
+				92A61F081C315F2900E63ACE /* SitterCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

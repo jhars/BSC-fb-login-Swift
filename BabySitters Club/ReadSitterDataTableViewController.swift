@@ -2,9 +2,12 @@
 //  ReadSitterDataTableViewController.swift
 //  BabySitters Club
 //
-//  Created by Jon Harlan on 12/24/15.
-//  Copyright © 2015 Jon Harlan. All rights reserved.
-//
+//  1. Query FireBase using UserID for Image Urls
+//  2. Load Image Urls into Array
+//  3. For Each ImageUrl - LoadImages
+
+
+
 import Alamofire
 import AlamofireImage
 import UIKit
@@ -12,23 +15,16 @@ import UIKit
 class ReadSitterDataTableViewController: UITableViewController {
 
     var currentUserId:String = ""
-    
     var tempFireBaseUrlForCurrentUser:String = ""
-    
     var cnxImageUrl:String = ""
+    var tableData = [UIImage]()
+    //---------------------- /
     
-    var tableData = [String]()
-    
-    
-    
-    //---------------------- //
     // URL -> IMAGE:LOADER  //
-    @IBOutlet weak var testImage: UIImageView!
     //----------------------//
-
-
     //   INITIALIZER (Action)
     @IBAction func refreshSitters(sender: AnyObject) {
+        print("refresh")
     }
     
     func getImgFromFireBaseUrl(imgUrlString:String) {
@@ -59,86 +55,48 @@ class ReadSitterDataTableViewController: UITableViewController {
     
     func getAllImagUrlsFromFireBase (firebaseUserId:String){
         var currentUserPath = self.tempFireBaseUrlForCurrentUser
+
+//         + "/sitter-list"
+//              var child: FDataSnapshot? = querySnapshot.children.nextObject() as? FDataSnapshot
+//                  print("child is ==  \(child?.value)");
+
+        var firebaseRef = Firebase(url:(currentUserPath as String) + "/sitter-list")
         
-        var firebaseRef = Firebase(url:(currentUserPath as String))
-        
-//        print (firebaseRef)
-        var queryRef = firebaseRef.queryOrderedByValue()
-        
-        queryRef.observeEventType(.ChildAdded, withBlock: { querySnapshot in
-                print(querySnapshot.value)
-            
-            var child: FDataSnapshot? = querySnapshot.children.nextObject() as? FDataSnapshot
-            
-            print("child is ==  \(child?.key)");
-//                queryRef.observeEventType(.ChildAdded, withBlock: { snapshot in
-//            
-//                )}
+        firebaseRef.queryOrderedByValue().observeEventType(.ChildAdded, withBlock: { snapshot in
+            var sitterObjDict = snapshot.value as! NSDictionary
+            self.getJpgImagesFromUrl(sitterObjDict)
             })
-        
-            
-//            .observeEventType(.Value, withBlock: { stegosaurusHeightSnapshot in
-//                if let favoriteDinoHeight = stegosaurusHeightSnapshot.value as? Double {
-//                    let queryRef = ref.queryOrderedByChild("height").queryEndingAtValue(favoriteDinoHeight).queryLimitedToLast(2)
-//                        queryRef.observeSingleEventOfType(.Value, withBlock: { querySnapshot in
-//                            }, withCancelBlock: { error in
-//                                print(error.description)
-
-        
-//        firebaseRef.observeEventType(.Value, withBlock: { snapshot in
-//            var userData = snapshot.value.objectForKey("sitter-list")
-//            print(userData)
-//            }, withCancelBlock: { error in
-//                print(error.description)
-//        })
-        //  1. Query FireBase using UserID for Image Urls
-        //  2. Load Image Urls into Array
-        //  3. For Each ImageUrl - LoadImages
-        
-        
-            var tempUrlForJpg = "https://scontent.xx.fbcdn.net/hprofile-xpt1/v/t1.0-1/p50x50/12190919_10102581058954074_1908735207991004359_n.jpg?oh=2e458b46499f38c47d50a324a30c0ad8&oe=5716104D"
-        
-            self.getJpgImagesFromUrl(tempUrlForJpg)
     }
-//   var AlamoRef = Alamofire.request(.GET, "\(tempFireBaseUrlForCurrentUser as String)")
-    func getJpgImagesFromUrl (imgPageUrl:String) {
-//        var AlamoRef = Alamofire.request(.GET, "\(imgPageUrl as String)")
-//       
-//        AlamoRef.responseImage { (Response, NSError>) -> Void in
-//            
-//                AlamoRef.responseImage { response in
-//                debugPrint(response)
-//                print(response.request)
-//                print(response.response)
-//                debugPrint(response.result)
-//                  
-                print("finished thread on -> getJpgImageFromUrl {func} ")
-//            
-//                if let image = response.result.value {
-//            
-//                self.testImage.image = image
-//                print("image loaded!")
-//                }
-//                }
-//                print("image Urls???")
-//        }
+
+    func getJpgImagesFromUrl (objDictionary:NSDictionary) {
+
+                var data = objDictionary.valueForKey("image-url") as! String
+        
+                var AlamofireRef = data
+
+        Alamofire.request(.GET, data)
+                .responseImage { response in
+                    debugPrint(response)
+                
+                    print(response.request)
+                print(response.response)
+                debugPrint(response.result)
+                
+                if let image = response.result.value {
+//                    print("image downloaded: \(image)")
+
+//                    self.imgProtoOne.image = image
+                    self.tableData.append(image as UIImage)
+                }
+        }
+                print(self.tableData)
+
     }
     
-    
-
-//    
-//    if let image = response.result.value {
-//    
-//    self.testImage.image = image
-//    print("image loaded!")
-//    }
-//    }
-//    print("image Urls???")
 
     
     
-    
-    
+
     
     override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
         return 1
@@ -148,34 +106,25 @@ class ReadSitterDataTableViewController: UITableViewController {
         return tableData.count
     }
     
-    
-    //= = = =  = = =  = = =  = = = = =  = = = = =//
-    
-    
 
+    
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        //            cell.imageView?.image = self.imageArray[indexPath.row]
+//        cell.textLabel?.text = contacts[indexPath.row]
+        cell.imageView?.image = self.tableData[indexPath.row]
+        return cell
+    }
+    
+    
+    
+    
+    
 //   INITIALIZER (Action)
     override func viewDidLoad() {
         super.viewDidLoad()
-//        var fbUserData = self.returnUserData()
         findFaceBookId()
-        
-
-        
-//        var testRef = Firebase(url:cnxImageUrl)
-//        testRef.observeEventType(.Value, withBlock: { snapshot in
-//            var userData = snapshot.value
-//            print(userData)
-//            //            var userData = snapshot.value.objectForKey("picture")?.objectForKey("data")?.objectForKey("url")
-//            }, withCancelBlock: { error in
-//                print(error.description)
-//        })
-        
-        
-//        var imgToLoad = getImgUrlFromFireBase(cnxImageUrl)
-//        var FirebaseRef = Firebase(url: cnxImageUrl)
-        
-        
-
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
