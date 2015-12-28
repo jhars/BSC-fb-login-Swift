@@ -45,8 +45,8 @@ class ReadSitterDataTableViewController: UITableViewController {
         //=================== DELEGATABLE ========================//
         AlamoRef.responseImage { response in
             debugPrint(response)
-//            print(response.request)
-//            print(response.response)
+            print(response.request)
+            print(response.response)
             debugPrint(response.result)
             
             if let image = response.result.value {
@@ -57,9 +57,14 @@ class ReadSitterDataTableViewController: UITableViewController {
         }
         //=================== DELEGATABLE ========================//
             print("image Urls???")
-            getSitterData("https://sitterbookapi.firebaseio.com/users/10205360690837256/fbfriends/first-degree/0")
-            getSitterData("https://sitterbookapi.firebaseio.com/users/10205360690837256/fbfriends/first-degree/1")
-            getSitterData("https://sitterbookapi.firebaseio.com/users/10205360690837256/fbfriends/first-degree/2")
+        
+        //For Each User in sittersList (FireBase |db|)
+        //-> GET:
+            //-> name , image-url , shared-connections data
+                //->
+        
+        
+            getSitterData("https://sitterbookapi.firebaseio.com/users/10205360690837256/sitter-list/10153702169405690/image-url")
         
     }
     
@@ -70,10 +75,9 @@ class ReadSitterDataTableViewController: UITableViewController {
         let testRef = Firebase(url:imgUrlString)
         
         testRef.observeEventType(.Value, withBlock: { snapshot in
-//            print(snapshot.value)
-            var userData = snapshot.value.objectForKey("picture")?.objectForKey("data")?.objectForKey("url")
+            var userData = snapshot.value
             print(userData)
-            
+//            var userData = snapshot.value.objectForKey("picture")?.objectForKey("data")?.objectForKey("url")
             }, withCancelBlock: { error in
                 print(error.description)
         })

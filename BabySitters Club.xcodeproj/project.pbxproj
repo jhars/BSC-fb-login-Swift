@@ -165,7 +165,6 @@
 			children = (
 				926E217B1C1908590067C071 /* StoryBoards */,
 				928D81291C2BBE9100AC9182 /* View Controllers */,
-				9279C0561C2BECA0007D9B55 /* BrowseSittersViewController.swift */,
 				926E217E1C1908BF0067C071 /* Supporting Files */,
 			);
 			path = "BabySitters Club";
@@ -195,6 +194,7 @@
 				928D81251C2BB42200AC9182 /* SideBarTableViewController.swift */,
 				928D81241C2BB42200AC9182 /* SideBar.swift */,
 				928D81221C2BB3C700AC9182 /* orangeControllerViewController.swift */,
+				9279C0561C2BECA0007D9B55 /* BrowseSittersViewController.swift */,
 			);
 			name = sideMenuViewControllers;
 			sourceTree = "<group>";

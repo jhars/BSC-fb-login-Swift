@@ -25,7 +25,7 @@
                                 <color key="backgroundColor" red="1" green="0.96784758486233635" blue="0.069831897680110555" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Go To App">
-                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="wpI-vJ-xia" kind="presentation" id="Kuj-fg-3fe"/>
@@ -34,7 +34,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SitterBook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIP-6r-F7c">
                                 <rect key="frame" x="20" y="55" width="560" height="65"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="44"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pages-2" translatesAutoresizingMaskIntoConstraints="NO" id="x4D-R7-3H8">
@@ -272,86 +272,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0F-Eg-vyg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="518" y="1113"/>
-        </scene>
-        <!--Alamo Fire ImageVC-->
-        <scene sceneID="ghP-KN-lT6">
-            <objects>
-                <viewController id="3xd-5a-vHb" customClass="AlamoFireImageVC" customModule="BabySitters_Club" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="GXF-wE-Qpi"/>
-                        <viewControllerLayoutGuide type="bottom" id="hjs-oy-h6q"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gAd-X1-HY7">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fxZ-V5-Esj">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="fxZ-V5-Esj" firstAttribute="top" secondItem="gAd-X1-HY7" secondAttribute="top" id="2ld-zC-yJh"/>
-                            <constraint firstItem="fxZ-V5-Esj" firstAttribute="bottom" secondItem="hjs-oy-h6q" secondAttribute="top" id="PoU-Vy-EJx"/>
-                            <constraint firstItem="fxZ-V5-Esj" firstAttribute="leading" secondItem="gAd-X1-HY7" secondAttribute="leading" id="eh0-QN-IwI"/>
-                            <constraint firstAttribute="trailing" secondItem="fxZ-V5-Esj" secondAttribute="trailing" id="yNV-Uz-1Wl"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="AlamoImage" destination="fxZ-V5-Esj" id="FJC-tg-oYf"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BGT-6a-lvF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="521" y="1794"/>
-        </scene>
-        <!--Browse Sitters View Controller-->
-        <scene sceneID="npi-5v-dFj">
-            <objects>
-                <viewController id="Ubj-mk-Rmc" customClass="BrowseSittersViewController" customModule="BabySitters_Club" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cgb-ol-tAZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="iYk-dK-8nQ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="PiM-1F-Ipr">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6WZ-Is-hHs">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Browse Sitters Via [ Social-Context &amp; Zip ]" id="HP1-gD-fLp">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="M09-tH-dY2">
-                                            <connections>
-                                                <segue destination="8KM-MP-zlj" kind="popoverPresentation" popoverAnchorBarButtonItem="M09-tH-dY2" id="y2P-lG-XDt">
-                                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                                </segue>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H3m-mg-UEC">
-                                <rect key="frame" x="180" y="236" width="240" height="128"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="H3m-mg-UEC" firstAttribute="top" secondItem="cgb-ol-tAZ" secondAttribute="bottom" constant="216" id="137-Zt-bQz"/>
-                            <constraint firstItem="6WZ-Is-hHs" firstAttribute="leading" secondItem="PiM-1F-Ipr" secondAttribute="leadingMargin" constant="-20" id="525-Am-6jW"/>
-                            <constraint firstItem="H3m-mg-UEC" firstAttribute="centerX" secondItem="PiM-1F-Ipr" secondAttribute="centerX" id="Ei0-6h-6Rk"/>
-                            <constraint firstItem="iYk-dK-8nQ" firstAttribute="top" secondItem="H3m-mg-UEC" secondAttribute="bottom" constant="236" id="IQQ-Ld-mwY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="6WZ-Is-hHs" secondAttribute="trailing" constant="-20" id="SLo-GU-Pma"/>
-                            <constraint firstItem="H3m-mg-UEC" firstAttribute="centerY" secondItem="PiM-1F-Ipr" secondAttribute="centerY" id="xI0-Rw-kIk"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="imageView" destination="H3m-mg-UEC" id="M0h-MA-RDo"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Wv-qV-NqS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1231" y="371"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="57q-No-d4a">
@@ -1154,9 +1074,9 @@
         <image name="pages-2" width="107" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="saH-NZ-dzG"/>
         <segue reference="Sa3-pL-ghL"/>
         <segue reference="wbn-Zo-TeA"/>
         <segue reference="r4o-e1-aUW"/>
+        <segue reference="saH-NZ-dzG"/>
     </inferredMetricsTieBreakers>
 </document>
