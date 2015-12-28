@@ -9,86 +9,33 @@ import Alamofire
 import AlamofireImage
 import UIKit
 
-//protocol ReadSitterDataTVCDelegate {
-//    func returnUserData()
-//}
 class ReadSitterDataTableViewController: UITableViewController {
 
-//    var urlBaseRef = "h ttps://sitterbookapi.firebaseio.com/users/10205360690837256/fbfriends/first-degree/"
+    var currentUserId:String = ""
     
-
-//    let testRef02 = Firebase(url:urlBaseRef + "23")
-//    let testRef03 = Firebase(url:urlBaseRef + "27")
-//    let testRef04 = Firebase(url:urlBaseRef + "33")
-//    let testRef05 = Firebase(url:urlBaseRef + "34")
-//    let testRef06 = Firebase(url:urlBaseRef + "35")
-//    let testRef07 = Firebase(url:urlBaseRef + "39")
-//    let testRef08 = Firebase(url:urlBaseRef + "40")
+    var tempFireBaseUrlForCurrentUser:String = ""
+    
+    var cnxImageUrl:String = ""
+    
+    var tableData = [String]()
     
     
-    
-
     
     //---------------------- //
     // URL -> IMAGE:LOADER  //
     @IBOutlet weak var testImage: UIImageView!
     //----------------------//
-//    var imageUrl:String
-//Need to get the URL as variable
-    var AlamoRef = Alamofire.request(.GET, "https://scontent.xx.fbcdn.net/hprofile-xft1/v/t1.0-1/p50x50/11407034_10101087548346204_123630956942363426_n.jpg?oh=ad875d6df62556e88ae38d02887d403c&oe=5700342F")
-    
-//    var sitterArrayUrl:Array = [String]()
+
 
     //   INITIALIZER (Action)
     @IBAction func refreshSitters(sender: AnyObject) {
-
-        //=================== DELEGATABLE ========================//
-        AlamoRef.responseImage { response in
-            debugPrint(response)
-            print(response.request)
-            print(response.response)
-            debugPrint(response.result)
-            
-            if let image = response.result.value {
-//                print("image downloaded: \(image)")
-                self.testImage.image = image
-                print("image loaded!")
-            }
-        }
-        //=================== DELEGATABLE ========================//
-            print("image Urls???")
-        
-        //For Each User in sittersList (FireBase |db|)
-        //-> GET:
-            //-> name , image-url , shared-connections data
-                //->
-        
-        
-            getSitterData("https://sitterbookapi.firebaseio.com/users/10205360690837256/sitter-list/10153702169405690/image-url")
-        
     }
     
-
-    
-    func getSitterData(imgUrlString:String) {
+    func getImgFromFireBaseUrl(imgUrlString:String) {
         
-        let testRef = Firebase(url:imgUrlString)
-        
-        testRef.observeEventType(.Value, withBlock: { snapshot in
-            var userData = snapshot.value
-            print(userData)
-//            var userData = snapshot.value.objectForKey("picture")?.objectForKey("data")?.objectForKey("url")
-            }, withCancelBlock: { error in
-                print(error.description)
-        })
     }
-    
-    
-//    this could be my Array of Initial URL Strings
-    var tableData = [String]()
-    
     //============= Facebook Data - User ID ================= //
-    func returnUserData() {
+    func findFaceBookId() {
         let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
             
@@ -99,10 +46,79 @@ class ReadSitterDataTableViewController: UITableViewController {
                 
                 let userID : NSString = result.valueForKey("id") as! NSString
                 print("User ID is is: \(userID)")
+                self.currentUserId = userID as String
+                self.tempFireBaseUrlForCurrentUser = "https://sitterbookapi.firebaseio.com/users/" + (userID as String)
+                
+                
+                //RUN NEXT FUNCTION
+                self.getAllImagUrlsFromFireBase(self.tempFireBaseUrlForCurrentUser)
             }
         })
     }
     //============= Facebook Data ================= //
+    
+    func getAllImagUrlsFromFireBase (firebaseUserId:String){
+        var currentUserPath = self.tempFireBaseUrlForCurrentUser
+        
+        var firebaseRef = Firebase(url:(currentUserPath as String))
+        
+        print (firebaseRef)
+        
+        firebaseRef.observeEventType(.Value, withBlock: { snapshot in
+            var userData = snapshot.value.objectForKey("sitter-list")
+            print(userData)
+            //            var userData = snapshot.value.objectForKey("picture")?.objectForKey("data")?.objectForKey("url")
+            }, withCancelBlock: { error in
+                print(error.description)
+        })
+        //  1. Query FireBase using UserID for Image Urls
+        //  2. Load Image Urls into Array
+        //  3. For Each ImageUrl - LoadImages
+        
+        
+            var tempUrlForJpg = "https://scontent.xx.fbcdn.net/hprofile-xpt1/v/t1.0-1/p50x50/12190919_10102581058954074_1908735207991004359_n.jpg?oh=2e458b46499f38c47d50a324a30c0ad8&oe=5716104D"
+        
+            self.getJpgImagesFromUrl(tempUrlForJpg)
+    }
+//   var AlamoRef = Alamofire.request(.GET, "\(tempFireBaseUrlForCurrentUser as String)")
+    func getJpgImagesFromUrl (imgPageUrl:String) {
+//        var AlamoRef = Alamofire.request(.GET, "\(imgPageUrl as String)")
+//       
+//        AlamoRef.responseImage { (Response, NSError>) -> Void in
+//            
+//                AlamoRef.responseImage { response in
+//                debugPrint(response)
+//                print(response.request)
+//                print(response.response)
+//                debugPrint(response.result)
+//                  
+                print("finished thread on -> getJpgImageFromUrl {func} ")
+//            
+//                if let image = response.result.value {
+//            
+//                self.testImage.image = image
+//                print("image loaded!")
+//                }
+//                }
+//                print("image Urls???")
+//        }
+    }
+    
+    
+
+//    
+//    if let image = response.result.value {
+//    
+//    self.testImage.image = image
+//    print("image loaded!")
+//    }
+//    }
+//    print("image Urls???")
+
+    
+    
+    
+    
     
     override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
         return 1
@@ -113,21 +129,32 @@ class ReadSitterDataTableViewController: UITableViewController {
     }
     
     
-    //========================================//
-//    var ref = Firebase(url: "h ttps://sitterbookapi.firebaseio.com/")
-    //========================================//
-    //  1. Query FireBase using UserID for Image Urls
-    //  2. Load Image Urls into Array
-    //  3. For Each ImageUrl - LoadImages
+    //= = = =  = = =  = = =  = = = = =  = = = = =//
     
-    //Also Need Access to Photos on Device (iPhone)
+    
 
 //   INITIALIZER (Action)
     override func viewDidLoad() {
         super.viewDidLoad()
+//        var fbUserData = self.returnUserData()
+        findFaceBookId()
         
-        var fbUserData = self.returnUserData()
 
+        
+//        var testRef = Firebase(url:cnxImageUrl)
+//        testRef.observeEventType(.Value, withBlock: { snapshot in
+//            var userData = snapshot.value
+//            print(userData)
+//            //            var userData = snapshot.value.objectForKey("picture")?.objectForKey("data")?.objectForKey("url")
+//            }, withCancelBlock: { error in
+//                print(error.description)
+//        })
+        
+        
+//        var imgToLoad = getImgUrlFromFireBase(cnxImageUrl)
+//        var FirebaseRef = Firebase(url: cnxImageUrl)
+        
+        
 
     }
     override func didReceiveMemoryWarning() {
