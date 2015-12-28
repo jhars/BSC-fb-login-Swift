@@ -62,15 +62,35 @@ class ReadSitterDataTableViewController: UITableViewController {
         
         var firebaseRef = Firebase(url:(currentUserPath as String))
         
-        print (firebaseRef)
+//        print (firebaseRef)
+        var queryRef = firebaseRef.queryOrderedByValue()
         
-        firebaseRef.observeEventType(.Value, withBlock: { snapshot in
-            var userData = snapshot.value.objectForKey("sitter-list")
-            print(userData)
-            //            var userData = snapshot.value.objectForKey("picture")?.objectForKey("data")?.objectForKey("url")
-            }, withCancelBlock: { error in
-                print(error.description)
-        })
+        queryRef.observeEventType(.ChildAdded, withBlock: { querySnapshot in
+                print(querySnapshot.value)
+            
+            var child: FDataSnapshot? = querySnapshot.children.nextObject() as? FDataSnapshot
+            
+            print("child is ==  \(child?.key)");
+//                queryRef.observeEventType(.ChildAdded, withBlock: { snapshot in
+//            
+//                )}
+            })
+        
+            
+//            .observeEventType(.Value, withBlock: { stegosaurusHeightSnapshot in
+//                if let favoriteDinoHeight = stegosaurusHeightSnapshot.value as? Double {
+//                    let queryRef = ref.queryOrderedByChild("height").queryEndingAtValue(favoriteDinoHeight).queryLimitedToLast(2)
+//                        queryRef.observeSingleEventOfType(.Value, withBlock: { querySnapshot in
+//                            }, withCancelBlock: { error in
+//                                print(error.description)
+
+        
+//        firebaseRef.observeEventType(.Value, withBlock: { snapshot in
+//            var userData = snapshot.value.objectForKey("sitter-list")
+//            print(userData)
+//            }, withCancelBlock: { error in
+//                print(error.description)
+//        })
         //  1. Query FireBase using UserID for Image Urls
         //  2. Load Image Urls into Array
         //  3. For Each ImageUrl - LoadImages
