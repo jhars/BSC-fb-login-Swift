@@ -11,12 +11,13 @@ import Foundation
 class googleArticle {
     var title:String?
     var publisher:String?
-    //    var relatedStories:NSArray
+//    var imageData:UIImage?
+//    var image:
     
-    init(title:String, publisher:String) { //relatedStories:NSArray
+//    init(title:String, publisher:String, imageData:UIImage) { //relatedStories:NSArray
+    init(title:String, publisher:String) {
         self.title = title
         self.publisher = publisher
-        //        self.relatedStories = relatedStories
     }
     
 }
