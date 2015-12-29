@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9263501E1C28F99D00197383 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9263501C1C28F99D00197383 /* Main.storyboard */; };
+		9206621B1C326773009533C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 920662191C326773009533C8 /* Main.storyboard */; };
+		920EBFEB1C32A07E00E11412 /* googleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920EBFEA1C32A07E00E11412 /* googleViewController.swift */; };
+		920EBFEF1C32A0FB00E11412 /* googleArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920EBFEE1C32A0FB00E11412 /* googleArticle.swift */; };
+		920EBFF11C32A14A00E11412 /* googleNewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920EBFF01C32A14A00E11412 /* googleNewsTableViewController.swift */; };
 		9279C0571C2BECA0007D9B55 /* BrowseSittersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9279C0561C2BECA0007D9B55 /* BrowseSittersViewController.swift */; };
 		9279C05B1C2BF43A007D9B55 /* ReadSitterDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9279C05A1C2BF43A007D9B55 /* ReadSitterDataTableViewController.swift */; };
 		927E54AD1C0FEB9F00843E0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E54AC1C0FEB9F00843E0D /* AppDelegate.swift */; };
@@ -19,6 +22,9 @@
 		927E54C51C0FEE0200843E0D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927E54C21C0FEE0200843E0D /* FBSDKLoginKit.framework */; };
 		927E54C61C0FEE0200843E0D /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927E54C31C0FEE0200843E0D /* FBSDKShareKit.framework */; };
 		927ED7131C2FD78500F5BDC2 /* AlamoFireImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927ED7121C2FD78500F5BDC2 /* AlamoFireImageVC.swift */; };
+		928D065F1C31F25000E29416 /* sitterImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D065E1C31F25000E29416 /* sitterImageCollectionViewCell.swift */; };
+		928D06611C31F26F00E29416 /* sitterImageNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D06601C31F26F00E29416 /* sitterImageNewViewController.swift */; };
+		928D06631C31F58600E29416 /* sitterImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D06621C31F58600E29416 /* sitterImageViewController.swift */; };
 		928D81231C2BB3C700AC9182 /* orangeControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D81221C2BB3C700AC9182 /* orangeControllerViewController.swift */; };
 		928D81261C2BB42200AC9182 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D81241C2BB42200AC9182 /* SideBar.swift */; };
 		928D81271C2BB42200AC9182 /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D81251C2BB42200AC9182 /* SideBarTableViewController.swift */; };
@@ -32,13 +38,18 @@
 		92C8F0A91C274116005C0799 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8F0A81C274116005C0799 /* Security.framework */; };
 		92C8F0AB1C274148005C0799 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8F0AA1C274148005C0799 /* CFNetwork.framework */; };
 		92C8F0AD1C2742C5005C0799 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8F0AC1C2742C5005C0799 /* Firebase.framework */; };
+		92E2795F1C32349F00AE386D /* CatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E2795E1C32349F00AE386D /* CatsViewController.swift */; };
+		92E279611C3235C400AE386D /* CatsMyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E279601C3235C400AE386D /* CatsMyCollectionViewCell.swift */; };
 		C9BEACF665154657EED9886D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC4082825938DCF17A6230CF /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4CD76EB66B314F424F5B3004 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		527EEC5E8D1BD3B1BF6F2E91 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		9263501D1C28F99D00197383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9206621A1C326773009533C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		920EBFEA1C32A07E00E11412 /* googleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = googleViewController.swift; sourceTree = "<group>"; };
+		920EBFEE1C32A0FB00E11412 /* googleArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = googleArticle.swift; sourceTree = "<group>"; };
+		920EBFF01C32A14A00E11412 /* googleNewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = googleNewsTableViewController.swift; sourceTree = "<group>"; };
 		9279C0561C2BECA0007D9B55 /* BrowseSittersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseSittersViewController.swift; sourceTree = "<group>"; };
 		9279C05A1C2BF43A007D9B55 /* ReadSitterDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadSitterDataTableViewController.swift; sourceTree = "<group>"; };
 		927E54A91C0FEB9F00843E0D /* BabySitters Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BabySitters Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +64,9 @@
 		927E54C31C0FEE0200843E0D /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../../../../Documents/FacebookSDKs-iOS-20151111/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		927E54C81C0FF70400843E0D /* BabySitters Club-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BabySitters Club-Bridging-Header.h"; sourceTree = "<group>"; };
 		927ED7121C2FD78500F5BDC2 /* AlamoFireImageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamoFireImageVC.swift; sourceTree = "<group>"; };
+		928D065E1C31F25000E29416 /* sitterImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sitterImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		928D06601C31F26F00E29416 /* sitterImageNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sitterImageNewViewController.swift; sourceTree = "<group>"; };
+		928D06621C31F58600E29416 /* sitterImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sitterImageViewController.swift; sourceTree = "<group>"; };
 		928D81221C2BB3C700AC9182 /* orangeControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = orangeControllerViewController.swift; sourceTree = "<group>"; };
 		928D81241C2BB42200AC9182 /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		928D81251C2BB42200AC9182 /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +80,8 @@
 		92C8F0A81C274116005C0799 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		92C8F0AA1C274148005C0799 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		92C8F0AC1C2742C5005C0799 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		92E2795E1C32349F00AE386D /* CatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatsViewController.swift; sourceTree = "<group>"; };
+		92E279601C3235C400AE386D /* CatsMyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatsMyCollectionViewCell.swift; sourceTree = "<group>"; };
 		DC4082825938DCF17A6230CF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -100,20 +116,30 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9214F54B1C3288F000DB4862 /* Cats */ = {
+			isa = PBXGroup;
+			children = (
+				92E2795E1C32349F00AE386D /* CatsViewController.swift */,
+				92E279601C3235C400AE386D /* CatsMyCollectionViewCell.swift */,
+			);
+			name = Cats;
+			sourceTree = "<group>";
+		};
+		9214F54C1C32891300DB4862 /* Drafts */ = {
+			isa = PBXGroup;
+			children = (
+				9214F54B1C3288F000DB4862 /* Cats */,
+				928D06641C32094E00E29416 /* SI-Collection */,
+			);
+			name = Drafts;
+			sourceTree = "<group>";
+		};
 		926E217A1C1908160067C071 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				927E54B31C0FEB9F00843E0D /* BabySitters_Club.xcdatamodeld */,
 			);
 			name = Models;
-			sourceTree = "<group>";
-		};
-		926E217B1C1908590067C071 /* StoryBoards */ = {
-			isa = PBXGroup;
-			children = (
-				9263501C1C28F99D00197383 /* Main.storyboard */,
-			);
-			name = StoryBoards;
 			sourceTree = "<group>";
 		};
 		926E217C1C19089A0067C071 /* Delegates */ = {
@@ -136,7 +162,6 @@
 		926E217E1C1908BF0067C071 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				927E54B61C0FEBA000843E0D /* Assets.xcassets */,
 				926E217C1C19089A0067C071 /* Delegates */,
 				926E217A1C1908160067C071 /* Models */,
 				927E54B81C0FEBA000843E0D /* LaunchScreen.storyboard */,
@@ -144,6 +169,7 @@
 				927E54BB1C0FEBA000843E0D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			path = "BabySitters Club";
 			sourceTree = "<group>";
 		};
 		927E54A01C0FEB9F00843E0D = {
@@ -151,6 +177,7 @@
 			children = (
 				927E54C71C0FEFCF00843E0D /* Frameworks */,
 				927E54AB1C0FEB9F00843E0D /* BabySitters Club */,
+				926E217E1C1908BF0067C071 /* Supporting Files */,
 				927E54AA1C0FEB9F00843E0D /* Products */,
 				3325EB748391FDF19EFC4102 /* Pods */,
 			);
@@ -167,9 +194,9 @@
 		927E54AB1C0FEB9F00843E0D /* BabySitters Club */ = {
 			isa = PBXGroup;
 			children = (
-				926E217B1C1908590067C071 /* StoryBoards */,
+				920662191C326773009533C8 /* Main.storyboard */,
+				927E54B61C0FEBA000843E0D /* Assets.xcassets */,
 				928D81291C2BBE9100AC9182 /* View Controllers */,
-				926E217E1C1908BF0067C071 /* Supporting Files */,
 			);
 			path = "BabySitters Club";
 			sourceTree = "<group>";
@@ -192,6 +219,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		928D065D1C31F1C700E29416 /* SitterData Import VC Drafts */ = {
+			isa = PBXGroup;
+			children = (
+				9279C05A1C2BF43A007D9B55 /* ReadSitterDataTableViewController.swift */,
+				92A61F071C315F2900E63ACE /* SitterCollectionViewCell.swift */,
+				92A61F091C31603000E63ACE /* SitterDataViewController.swift */,
+				927ED7121C2FD78500F5BDC2 /* AlamoFireImageVC.swift */,
+			);
+			name = "SitterData Import VC Drafts";
+			sourceTree = "<group>";
+		};
+		928D06641C32094E00E29416 /* SI-Collection */ = {
+			isa = PBXGroup;
+			children = (
+				928D065E1C31F25000E29416 /* sitterImageCollectionViewCell.swift */,
+				928D06621C31F58600E29416 /* sitterImageViewController.swift */,
+				928D06601C31F26F00E29416 /* sitterImageNewViewController.swift */,
+			);
+			name = "SI-Collection";
+			sourceTree = "<group>";
+		};
 		928D81281C2BBE7300AC9182 /* sideMenuViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,12 +254,13 @@
 		928D81291C2BBE9100AC9182 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9279C05A1C2BF43A007D9B55 /* ReadSitterDataTableViewController.swift */,
-				92A61F071C315F2900E63ACE /* SitterCollectionViewCell.swift */,
-				92A61F091C31603000E63ACE /* SitterDataViewController.swift */,
+				920EBFEE1C32A0FB00E11412 /* googleArticle.swift */,
+				920EBFEA1C32A07E00E11412 /* googleViewController.swift */,
+				920EBFF01C32A14A00E11412 /* googleNewsTableViewController.swift */,
+				928D065D1C31F1C700E29416 /* SitterData Import VC Drafts */,
+				9214F54C1C32891300DB4862 /* Drafts */,
 				928D81281C2BBE7300AC9182 /* sideMenuViewControllers */,
 				926E217D1C1908B30067C071 /* facebook-ViewControllers */,
-				927ED7121C2FD78500F5BDC2 /* AlamoFireImageVC.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -278,7 +327,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9263501E1C28F99D00197383 /* Main.storyboard in Resources */,
+				9206621B1C326773009533C8 /* Main.storyboard in Resources */,
 				927E54BA1C0FEBA000843E0D /* LaunchScreen.storyboard in Resources */,
 				927E54B71C0FEBA000843E0D /* Assets.xcassets in Resources */,
 			);
@@ -341,26 +390,34 @@
 			files = (
 				928D81271C2BB42200AC9182 /* SideBarTableViewController.swift in Sources */,
 				9279C0571C2BECA0007D9B55 /* BrowseSittersViewController.swift in Sources */,
+				928D065F1C31F25000E29416 /* sitterImageCollectionViewCell.swift in Sources */,
 				928D81231C2BB3C700AC9182 /* orangeControllerViewController.swift in Sources */,
 				927ED7131C2FD78500F5BDC2 /* AlamoFireImageVC.swift in Sources */,
 				929CB2011C22B0D0000961DB /* fbLoginViewController.swift in Sources */,
+				920EBFEF1C32A0FB00E11412 /* googleArticle.swift in Sources */,
+				920EBFF11C32A14A00E11412 /* googleNewsTableViewController.swift in Sources */,
+				928D06611C31F26F00E29416 /* sitterImageNewViewController.swift in Sources */,
 				927E54AF1C0FEB9F00843E0D /* ViewController.swift in Sources */,
 				9279C05B1C2BF43A007D9B55 /* ReadSitterDataTableViewController.swift in Sources */,
 				927E54AD1C0FEB9F00843E0D /* AppDelegate.swift in Sources */,
 				928D81261C2BB42200AC9182 /* SideBar.swift in Sources */,
 				92A61F0A1C31603000E63ACE /* SitterDataViewController.swift in Sources */,
+				92E279611C3235C400AE386D /* CatsMyCollectionViewCell.swift in Sources */,
+				920EBFEB1C32A07E00E11412 /* googleViewController.swift in Sources */,
 				927E54B51C0FEB9F00843E0D /* BabySitters_Club.xcdatamodeld in Sources */,
+				92E2795F1C32349F00AE386D /* CatsViewController.swift in Sources */,
 				92A61F081C315F2900E63ACE /* SitterCollectionViewCell.swift in Sources */,
+				928D06631C31F58600E29416 /* sitterImageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9263501C1C28F99D00197383 /* Main.storyboard */ = {
+		920662191C326773009533C8 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9263501D1C28F99D00197383 /* Base */,
+				9206621A1C326773009533C8 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

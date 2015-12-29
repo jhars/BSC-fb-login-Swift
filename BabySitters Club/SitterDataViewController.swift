@@ -15,24 +15,37 @@ class SitterDataViewController:  UIViewController, UICollectionViewDelegate, UIC
     // URL -> IMAGE:LOADER  //
     //----------------------//
     
-    @IBOutlet weak var imageCollectionView: UICollectionView!
+
     
     @IBAction func refreshImages(sender: AnyObject) {
                 getAllImagUrlsFromFireBase (tempFireBaseUrlForCurrentUser)
         
     }
+    
+    // -----------------------      VIEW-DID-LOAD   ------------------------ //
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        findFaceBookId()
+        //Break Point
+        //what did they callon the View Did Load (see original collection view demo)
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }  // -----------------------      VIEW-DID-LOAD   ------------------------ //
 
     
-    // =============== DATA ====================//
+    // =============== VARIABLES / DATA ====================//
+    var tableData = [UIImage]()
     var currentUserId:String = ""
     var tempFireBaseUrlForCurrentUser:String = ""
     var cnxImageUrl:String = ""
-    var tableData = [UIImage]()
+
     // =============== DATA ====================//
     
-    
     //***********************************************************************//
-    //                 _________LOGIC__________                             //
+    // ************JUST WATCH COLLECTION VIEW TUTORIAL AGAIN!!! *************//
+    //***********************************************************************//
+    //                 _________LOGIC____Below______                        //
     
     func getImgFromFireBaseUrl(imgUrlString:String) {
 //        print(self.tableData)
@@ -83,29 +96,28 @@ class SitterDataViewController:  UIViewController, UICollectionViewDelegate, UIC
         
         var AlamofireRef = data
         
+
+        
         Alamofire.request(.GET, data)
             .responseImage { response in
 //                debugPrint(response)
-//                
 //                print(response.request)
 //                print(response.response)
 //                debugPrint(response.result)
+//                var imageData:UIImage
+                var imageData = response.result.value! as UIImage
+//                if let image = response.result.value {
+//                    self.tableData.append(image as UIImage
+//                }
                 
-                if let image = response.result.value {
-                    //                    print("image downloaded: \(image)")
-                    
-                    //                    self.imgProtoOne.image = image
-                    self.tableData.append(image as UIImage)
-                }
+                self.tableData.append(imageData)
+                print(self.tableData)
         }
-        print(self.tableData)
+//        print(self.tableData) //[],[]
+
         
     }
-    
-//    func refreshImagesOnPage (imageArray:NSArray) {
-//     getJpgImagesFromUrl(
-//    }
-    //                 _________LOGIC__________                             //
+    //                 _________LOGIC___Above_______                     //
     //***********************************************************************//
     
     // OVERRIDE STUFF -- override dunc tableView(...    //
@@ -116,10 +128,12 @@ class SitterDataViewController:  UIViewController, UICollectionViewDelegate, UIC
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        var cell = imageCollectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! SitterCollectionViewCell
+        var cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! SitterCollectionViewCell
         //Table Data
         
-        cell.imageView!.image = self.tableData[indexPath.row]
+        var imageIndex = self.tableData[indexPath.row]
+        
+        cell.imageView?.image = imageIndex
 //        print(self.tableData)
 
         return cell
@@ -140,15 +154,7 @@ class SitterDataViewController:  UIViewController, UICollectionViewDelegate, UIC
 //    }
     // -----------------------      VIEW-DID-LOAD   ------------------------ //
     //   INITIALIZER (Action)
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        findFaceBookId()
-        //Break Point
-        //what did they callon the View Did Load (see original collection view demo)
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }  // -----------------------      VIEW-DID-LOAD   ------------------------ //
+
 }
 
 

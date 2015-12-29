@@ -27,11 +27,8 @@ class ReadSitterDataTableViewController: UITableViewController {
         print("refresh")
     }
     
-    func getImgFromFireBaseUrl(imgUrlString:String) {
-        
-    }
-    //============= Facebook Data - User ID ================= //
-    func findFaceBookId() {
+    
+    func returnUserData() {
         let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
             
@@ -45,57 +42,43 @@ class ReadSitterDataTableViewController: UITableViewController {
                 self.currentUserId = userID as String
                 self.tempFireBaseUrlForCurrentUser = "https://sitterbookapi.firebaseio.com/users/" + (userID as String)
                 
-                
                 //RUN NEXT FUNCTION
-                self.getAllImagUrlsFromFireBase(self.tempFireBaseUrlForCurrentUser)
+//                self.getAllImagUrlsFromFireBase(self.tempFireBaseUrlForCurrentUser)
+                var currentUserPath = self.tempFireBaseUrlForCurrentUser
+                
+                var firebaseRef = Firebase(url:(currentUserPath as String) + "/sitter-list")
+                
+                firebaseRef.queryOrderedByValue().observeEventType(.ChildAdded, withBlock: { snapshot in
+                    var sitterObjDict = snapshot.value as! NSDictionary
+                    
+                    
+                  //RUN NEXT FUNCTION
+//                    self.getJpgImagesFromUrl(sitterObjDict)
+                    var data = sitterObjDict.valueForKey("image-url") as! String
+                    
+                    var AlamofireRef = data
+                    
+                    Alamofire.request(.GET, data)
+                        .responseImage { response in
+                            debugPrint(response)
+                            
+                            print(response.request)
+                            print(response.response)
+                            debugPrint(response.result)
+                            
+                            if let image = response.result.value {
+                                //                    print("image downloaded: \(image)")
+                                
+                                //                    self.imgProtoOne.image = image
+                                self.tableData.append(image as UIImage)
+                            }
+                    }
+                    print(self.tableData)
+                })
+
             }
         })
     }
-    //============= Facebook Data ================= //
-    
-    func getAllImagUrlsFromFireBase (firebaseUserId:String){
-        var currentUserPath = self.tempFireBaseUrlForCurrentUser
-
-//         + "/sitter-list"
-//              var child: FDataSnapshot? = querySnapshot.children.nextObject() as? FDataSnapshot
-//                  print("child is ==  \(child?.value)");
-
-        var firebaseRef = Firebase(url:(currentUserPath as String) + "/sitter-list")
-        
-        firebaseRef.queryOrderedByValue().observeEventType(.ChildAdded, withBlock: { snapshot in
-            var sitterObjDict = snapshot.value as! NSDictionary
-            self.getJpgImagesFromUrl(sitterObjDict)
-            })
-    }
-
-    func getJpgImagesFromUrl (objDictionary:NSDictionary) {
-
-                var data = objDictionary.valueForKey("image-url") as! String
-        
-                var AlamofireRef = data
-
-        Alamofire.request(.GET, data)
-                .responseImage { response in
-                    debugPrint(response)
-                
-                    print(response.request)
-                print(response.response)
-                debugPrint(response.result)
-                
-                if let image = response.result.value {
-//                    print("image downloaded: \(image)")
-
-//                    self.imgProtoOne.image = image
-                    self.tableData.append(image as UIImage)
-                }
-        }
-                print(self.tableData)
-
-    }
-    
-
-    
-    
 
     
     override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
@@ -105,14 +88,11 @@ class ReadSitterDataTableViewController: UITableViewController {
     override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
         return tableData.count
     }
-    
 
-    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-        //            cell.imageView?.image = self.imageArray[indexPath.row]
-//        cell.textLabel?.text = contacts[indexPath.row]
+
         cell.imageView?.image = self.tableData[indexPath.row]
         return cell
     }
@@ -124,7 +104,7 @@ class ReadSitterDataTableViewController: UITableViewController {
 //   INITIALIZER (Action)
     override func viewDidLoad() {
         super.viewDidLoad()
-        findFaceBookId()
+        returnUserData()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
