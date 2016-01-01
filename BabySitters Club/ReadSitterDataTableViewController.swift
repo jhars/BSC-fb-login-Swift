@@ -13,13 +13,15 @@ import AlamofireImage
 import UIKit
 
 class ReadSitterDataTableViewController: UITableViewController {
-
+    
     var currentUserId:String = ""
     var tempFireBaseUrlForCurrentUser:String = ""
     var cnxImageUrl:String = ""
     var tableData = [UIImage]()
-    //---------------------- /
     
+
+    
+    //---------------------- /
     // URL -> IMAGE:LOADER  //
     //----------------------//
     //   INITIALIZER (Action)
@@ -28,57 +30,17 @@ class ReadSitterDataTableViewController: UITableViewController {
     }
     
     
-    func returnUserData() {
-        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
-        graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
-            
-            if ((error) != nil)
-            {   // Process error
-                print("Error: \(error)")
-            } else {
-                
-                let userID : NSString = result.valueForKey("id") as! NSString
-                print("User ID is is: \(userID)")
-                self.currentUserId = userID as String
-                self.tempFireBaseUrlForCurrentUser = "https://sitterbookapi.firebaseio.com/users/" + (userID as String)
-                
-                //RUN NEXT FUNCTION
-//                self.getAllImagUrlsFromFireBase(self.tempFireBaseUrlForCurrentUser)
-                var currentUserPath = self.tempFireBaseUrlForCurrentUser
-                
-                var firebaseRef = Firebase(url:(currentUserPath as String) + "/sitter-list")
-                
-                firebaseRef.queryOrderedByValue().observeEventType(.ChildAdded, withBlock: { snapshot in
-                    var sitterObjDict = snapshot.value as! NSDictionary
-                    
-                    
-                  //RUN NEXT FUNCTION
-//                    self.getJpgImagesFromUrl(sitterObjDict)
-                    var data = sitterObjDict.valueForKey("image-url") as! String
-                    
-                    var AlamofireRef = data
-                    
-                    Alamofire.request(.GET, data)
-                        .responseImage { response in
-                            debugPrint(response)
-                            
-                            print(response.request)
-                            print(response.response)
-                            debugPrint(response.result)
-                            
-                            if let image = response.result.value {
-                                //                    print("image downloaded: \(image)")
-                                
-                                //                    self.imgProtoOne.image = image
-                                self.tableData.append(image as UIImage)
-                            }
-                    }
-                    print(self.tableData)
-                })
-
-            }
-        })
+    
+    //============================= Refer to GoogleNews API-Reader from course for segue and Model Structurd
+    
+    //   INITIALIZER (Action)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+//        returnUserData()
+//        print(self.tempSitterArr)
     }
+
+
 
     
     override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
@@ -96,17 +58,5 @@ class ReadSitterDataTableViewController: UITableViewController {
         cell.imageView?.image = self.tableData[indexPath.row]
         return cell
     }
-    
-    
-    
-    
-    
-//   INITIALIZER (Action)
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        returnUserData()
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+// ======== V did LOAD =============== //
 }

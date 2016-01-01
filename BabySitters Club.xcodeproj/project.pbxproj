@@ -11,6 +11,9 @@
 		920EBFEB1C32A07E00E11412 /* googleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920EBFEA1C32A07E00E11412 /* googleViewController.swift */; };
 		920EBFEF1C32A0FB00E11412 /* googleArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920EBFEE1C32A0FB00E11412 /* googleArticle.swift */; };
 		920EBFF11C32A14A00E11412 /* googleNewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920EBFF01C32A14A00E11412 /* googleNewsTableViewController.swift */; };
+		920EBFF51C32C6DC00E11412 /* SitterMatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920EBFF41C32C6DC00E11412 /* SitterMatchModel.swift */; };
+		920EBFFA1C32C76900E11412 /* SitterMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920EBFF91C32C76900E11412 /* SitterMatchViewController.swift */; };
+		920EBFFC1C32D25500E11412 /* SitterMatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920EBFFB1C32D25500E11412 /* SitterMatchesTableViewController.swift */; };
 		9279C0571C2BECA0007D9B55 /* BrowseSittersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9279C0561C2BECA0007D9B55 /* BrowseSittersViewController.swift */; };
 		9279C05B1C2BF43A007D9B55 /* ReadSitterDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9279C05A1C2BF43A007D9B55 /* ReadSitterDataTableViewController.swift */; };
 		927E54AD1C0FEB9F00843E0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E54AC1C0FEB9F00843E0D /* AppDelegate.swift */; };
@@ -50,6 +53,9 @@
 		920EBFEA1C32A07E00E11412 /* googleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = googleViewController.swift; sourceTree = "<group>"; };
 		920EBFEE1C32A0FB00E11412 /* googleArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = googleArticle.swift; sourceTree = "<group>"; };
 		920EBFF01C32A14A00E11412 /* googleNewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = googleNewsTableViewController.swift; sourceTree = "<group>"; };
+		920EBFF41C32C6DC00E11412 /* SitterMatchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SitterMatchModel.swift; sourceTree = "<group>"; };
+		920EBFF91C32C76900E11412 /* SitterMatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SitterMatchViewController.swift; sourceTree = "<group>"; };
+		920EBFFB1C32D25500E11412 /* SitterMatchesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SitterMatchesTableViewController.swift; sourceTree = "<group>"; };
 		9279C0561C2BECA0007D9B55 /* BrowseSittersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseSittersViewController.swift; sourceTree = "<group>"; };
 		9279C05A1C2BF43A007D9B55 /* ReadSitterDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadSitterDataTableViewController.swift; sourceTree = "<group>"; };
 		927E54A91C0FEB9F00843E0D /* BabySitters Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BabySitters Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +120,16 @@
 				527EEC5E8D1BD3B1BF6F2E91 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		920EBFF61C32C71900E11412 /* Google */ = {
+			isa = PBXGroup;
+			children = (
+				920EBFEE1C32A0FB00E11412 /* googleArticle.swift */,
+				920EBFEA1C32A07E00E11412 /* googleViewController.swift */,
+				920EBFF01C32A14A00E11412 /* googleNewsTableViewController.swift */,
+			);
+			name = Google;
 			sourceTree = "<group>";
 		};
 		9214F54B1C3288F000DB4862 /* Cats */ = {
@@ -254,9 +270,10 @@
 		928D81291C2BBE9100AC9182 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				920EBFEE1C32A0FB00E11412 /* googleArticle.swift */,
-				920EBFEA1C32A07E00E11412 /* googleViewController.swift */,
-				920EBFF01C32A14A00E11412 /* googleNewsTableViewController.swift */,
+				920EBFF41C32C6DC00E11412 /* SitterMatchModel.swift */,
+				920EBFF91C32C76900E11412 /* SitterMatchViewController.swift */,
+				920EBFFB1C32D25500E11412 /* SitterMatchesTableViewController.swift */,
+				920EBFF61C32C71900E11412 /* Google */,
 				928D065D1C31F1C700E29416 /* SitterData Import VC Drafts */,
 				9214F54C1C32891300DB4862 /* Drafts */,
 				928D81281C2BBE7300AC9182 /* sideMenuViewControllers */,
@@ -395,7 +412,10 @@
 				927ED7131C2FD78500F5BDC2 /* AlamoFireImageVC.swift in Sources */,
 				929CB2011C22B0D0000961DB /* fbLoginViewController.swift in Sources */,
 				920EBFEF1C32A0FB00E11412 /* googleArticle.swift in Sources */,
+				920EBFFA1C32C76900E11412 /* SitterMatchViewController.swift in Sources */,
+				920EBFFC1C32D25500E11412 /* SitterMatchesTableViewController.swift in Sources */,
 				920EBFF11C32A14A00E11412 /* googleNewsTableViewController.swift in Sources */,
+				920EBFF51C32C6DC00E11412 /* SitterMatchModel.swift in Sources */,
 				928D06611C31F26F00E29416 /* sitterImageNewViewController.swift in Sources */,
 				927E54AF1C0FEB9F00843E0D /* ViewController.swift in Sources */,
 				9279C05B1C2BF43A007D9B55 /* ReadSitterDataTableViewController.swift in Sources */,

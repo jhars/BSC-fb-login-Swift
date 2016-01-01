@@ -1,3 +1,7 @@
+
+target 'BabySitters Club' do
+
+
 source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '8.0'
@@ -7,6 +11,6 @@ pod 'Alamofire', '~> 3.0'
 pod 'AlamofireImage', '~> 2.0'
 
 
-#target 'BabySitters Club' do
-#end
+
+end
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8KM-MP-zlj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -193,7 +193,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Wcj-AP-ZaK" kind="popoverPresentation" popoverAnchorView="biP-Y6-7yL" id="9CZ-tS-2H1">
+                                    <segue destination="rzx-8l-PgG" kind="popoverPresentation" popoverAnchorView="biP-Y6-7yL" id="5Vc-eA-SDp">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
@@ -222,10 +222,38 @@
             </objects>
             <point key="canvasLocation" x="518" y="371"/>
         </scene>
-        <!--Google View Controller-->
+        <!--Sitter Match View Controller-->
+        <scene sceneID="2f2-wG-lHj">
+            <objects>
+                <viewController id="rzx-8l-PgG" customClass="SitterMatchViewController" customModule="BabySitters_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="shI-Er-5so"/>
+                        <viewControllerLayoutGuide type="bottom" id="mWw-Wb-uN0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cjE-Vc-bO6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="SGr-53-wPD">
+                                <rect key="frame" x="150" y="230" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="activityWheel" destination="SGr-53-wPD" id="HJm-46-Jvb"/>
+                        <segue destination="yKG-Ry-GeA" kind="show" identifier="showSitter" id="gVr-rs-I32"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6gY-Zy-qmJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047" y="336"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="ymG-YJ-IF2">
             <objects>
-                <viewController id="Wcj-AP-ZaK" customClass="googleViewController" customModule="BabySitters_Club" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Wcj-AP-ZaK" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3u1-WO-fjD"/>
                         <viewControllerLayoutGuide type="bottom" id="rdI-Sv-h42"/>
@@ -233,7 +261,21 @@
                     <view key="view" contentMode="scaleToFill" id="ib9-fm-eby">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SitterMatch ViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wk-ig-1zT">
+                                <rect key="frame" x="20" y="271" width="280" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.90011342029999997" blue="0.59256631910000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2Wk-ig-1zT" firstAttribute="centerY" secondItem="ib9-fm-eby" secondAttribute="centerY" id="3bu-z3-rgd"/>
+                            <constraint firstItem="2Wk-ig-1zT" firstAttribute="leading" secondItem="ib9-fm-eby" secondAttribute="leadingMargin" constant="4" id="foZ-Di-pSb"/>
+                            <constraint firstItem="2Wk-ig-1zT" firstAttribute="top" secondItem="3u1-WO-fjD" secondAttribute="bottom" constant="251" id="wF0-gZ-TZl"/>
+                            <constraint firstItem="2Wk-ig-1zT" firstAttribute="centerX" secondItem="ib9-fm-eby" secondAttribute="centerX" id="zCx-rA-DQY"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -242,18 +284,63 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k8D-LN-Ng0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="393" y="1369"/>
+            <point key="canvasLocation" x="1041" y="915"/>
         </scene>
-        <!--Google News Table View Controller-->
+        <!--Sitter Matches Table View Controller-->
+        <scene sceneID="arg-sO-2E4">
+            <objects>
+                <tableViewController id="yKG-Ry-GeA" customClass="SitterMatchesTableViewController" customModule="BabySitters_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hvh-IP-YCZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="sitterCell" textLabel="4YL-rH-nPH" detailTextLabel="dee-Nr-za0" style="IBUITableViewCellStyleSubtitle" id="kB5-n4-rre">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kB5-n4-rre" id="qaz-N8-eDs">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4YL-rH-nPH">
+                                            <rect key="frame" x="15" y="5" width="32" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dee-Nr-za0">
+                                            <rect key="frame" x="15" y="25" width="41" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yKG-Ry-GeA" id="TQy-xS-BnX"/>
+                            <outlet property="delegate" destination="yKG-Ry-GeA" id="euQ-m0-r0R"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QTM-x2-N0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1507" y="330"/>
+        </scene>
+        <!--Table View Controller-->
         <scene sceneID="wUG-bV-FP5">
             <objects>
-                <tableViewController id="tdY-zJ-Ox8" customClass="googleNewsTableViewController" customModule="BabySitters_Club" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="tdY-zJ-Ox8" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="tWs-A9-phu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" textLabel="JKO-Mj-LuK" detailTextLabel="0pK-S2-GHq" style="IBUITableViewCellStyleSubtitle" id="O9g-UK-eor">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="sitterCell" textLabel="JKO-Mj-LuK" detailTextLabel="U8i-of-eim" style="IBUITableViewCellStyleSubtitle" id="O9g-UK-eor">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O9g-UK-eor" id="6bR-1s-wFW">
@@ -264,14 +351,14 @@
                                             <rect key="frame" x="15" y="5" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0pK-S2-GHq">
-                                            <rect key="frame" x="15" y="25" width="41" height="14"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U8i-of-eim">
+                                            <rect key="frame" x="15" y="25" width="31" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -287,7 +374,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3RM-HL-agB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="871" y="1369"/>
+            <point key="canvasLocation" x="1513" y="915"/>
         </scene>
         <!--Read Sitter Data Table View Controller-->
         <scene sceneID="5H8-xQ-gCB">
@@ -341,7 +428,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0F-Eg-vyg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2029" y="1472"/>
+            <point key="canvasLocation" x="285" y="1387"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="57q-No-d4a">
@@ -1201,7 +1288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qk8-Bg-285" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2381" y="-81"/>
+            <point key="canvasLocation" x="6485" y="-1574"/>
         </scene>
         <!--Show Images-->
         <scene sceneID="b3z-4u-yQm">
@@ -1241,7 +1328,7 @@
                                                         <constraint firstAttribute="height" constant="31" id="9au-wY-8Yd"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1287,7 +1374,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xrm-rw-2TQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2019" y="644"/>
+            <point key="canvasLocation" x="6123" y="-849"/>
         </scene>
         <!--Sitter Image New View Controller-->
         <scene sceneID="k5r-mU-KLS">
@@ -1319,7 +1406,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NLv-aC-qQ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2482" y="644"/>
+            <point key="canvasLocation" x="6586" y="-849"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jWC-2j-xoF">
@@ -1338,7 +1425,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I8B-dA-dP8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1559" y="644"/>
+            <point key="canvasLocation" x="5663" y="-849"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uge-QL-byN">
@@ -1357,7 +1444,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NPx-u1-LBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1937" y="-89"/>
+            <point key="canvasLocation" x="6041" y="-1582"/>
         </scene>
     </scenes>
     <resources>
@@ -1369,9 +1456,9 @@
         <image name="pages-2" width="107" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uMs-6k-s0N"/>
-        <segue reference="Sa3-pL-ghL"/>
         <segue reference="wbn-Zo-TeA"/>
         <segue reference="r4o-e1-aUW"/>
+        <segue reference="uMs-6k-s0N"/>
+        <segue reference="Sa3-pL-ghL"/>
     </inferredMetricsTieBreakers>
 </document>

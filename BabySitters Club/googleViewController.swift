@@ -30,21 +30,21 @@ class googleViewController: UIViewController {
         
         Alamofire.request(.GET, url, parameters: parameters)
             .responseJSON { response in
-                // gets the json
-//                if let JSON = response.result.value {
-                    //                    print("JSON: \(JSON)")
+//                 gets the json
+                if let JSON = response.result.value {
+                                        print("JSON: \(JSON)")
                     
-                    //GET list of Single Articles
-//                    let articleDictionaries = JSON.valueForKey("responseData")?.valueForKey("results") as! [NSDictionary]
+//                    GET list of Single Articles
+                    let articleDictionaries = JSON.valueForKey("responseData")?.valueForKey("results") as! [NSDictionary]
                     
-                    //extracts SPECIFIC DATA we want
-//                    self.articles = articleDictionaries.map {
-//                        googleArticle(title: $0["titleNoFormatting"] as! String, publisher: $0["publisher"] as! String)
-//                    }
-//                    print(self.articles[1].publisher)
+//                    extracts SPECIFIC DATA we want
+                    self.articles = articleDictionaries.map {
+                        googleArticle(title: $0["titleNoFormatting"] as! String, publisher: $0["publisher"] as! String)
+                    }
+                    print(self.articles[1].publisher)
                 
-//                    self.performSegueWithIdentifier("showNewsSegue", sender: nil)
-//                }
+                    self.performSegueWithIdentifier("showNewsSegue", sender: nil)
+                }
         }
     }
     func returnUserData() {
@@ -115,10 +115,10 @@ class googleViewController: UIViewController {
     }
 
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        let newsTVC = segue.destinationViewController as! googleNewsTableViewController
-//        newsTVC.articles = articles
-//    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let newsTVC = segue.destinationViewController as! googleNewsTableViewController
+        newsTVC.articles = articles
+    }
     
     
 }
