@@ -35,7 +35,7 @@ class SitterMatchesTableViewController: UITableViewController {
         let model = sitterModelObjects[indexPath.row]
         
         cell.textLabel?.text = model.name
-        cell.detailTextLabel?.text = String(model.cnxScore)
+        cell.detailTextLabel?.text = "Cnx Strength: " + String(model.cnxScore!)
         cell.imageView?.image = model.img
 
         return cell
