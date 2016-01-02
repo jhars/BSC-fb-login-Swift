@@ -8,16 +8,14 @@
 
 import Foundation
 
-class SitterMatchModel {
+class SitterMatchModel: NSObject {
     var name:String?
     var cnxScore:Int?
-    var imgUrl:UIImage?
+    var img:UIImage?
     
-    init(name:String, cnxScore:Int,imgUrl:UIImage) {
-//    init(name:String, imgUrl:String) {
-//    init(name:String) {
+    init(name:String, cnxScore:Int,img:UIImage) {
         self.name = name
         self.cnxScore = cnxScore
-        self.imgUrl = imgUrl
+        self.img = img
     }
 }

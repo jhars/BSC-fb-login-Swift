@@ -7,11 +7,7 @@ import AlamofireImage
 
 var sitterMatchModelName = [String]()
 var sitterMatchModelScore = [Int]()
-var sitterMatchModelImage = [String]()
-var imageArray = [UIImage]()
-var sitterObject = [NSDictionary]()
-
-
+var sitterModelObjects = [SitterMatchModel]()
 
 class SitterMatchViewController: UIViewController {
 
@@ -22,19 +18,19 @@ class SitterMatchViewController: UIViewController {
     var cnxImageUrl:String = ""
     
 
-    
-//    var models = [SitterMatchModel]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        sitterMatchModelImage.removeAll()
+        sitterModelObjects.removeAll()
         returnUserData()
         }
 //=================================================================\\
     func returnUserData() {
         
+        
+        
         let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
-        graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
+        let task = graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
             
             if ((error) != nil)
             {   // Process error
@@ -50,31 +46,10 @@ class SitterMatchViewController: UIViewController {
                 
                 firebaseRef.queryOrderedByValue().observeEventType(.ChildAdded, withBlock: { snapshot in
                     let sitterObjDict = snapshot.value as! NSDictionary
-                    print(sitterObjDict)
-                    sitterObject.append(sitterObjDict)
-                    
-                    sitterMatchModelName.append(sitterObjDict["name"] as! String)
-//                    sitterObj["name"] = sitterObjDict["name"] as! String
-//                    self.models[0].name = sitterObjDict["name"] as! String
-                    
-                    let  cnxScoreModel = sitterObjDict["cnx-score"]!
-                    print(cnxScoreModel)
-                    sitterMatchModelScore.append(cnxScoreModel as! Int)
-//                    self.models[0].cnxScore = cnxScoreModel as! Int
                     //=================================================================\\
-                    var imgUrlModel = sitterObjDict["image-url"] as! String
+                    let imgUrlModel = sitterObjDict["image-url"] as! String
 
-
-//                    self.cnxImageUrl = imgUrlModel
-//                    sitterMatchModelImage.append(imgUrlModel)
-                    
-//                    print(sitterObjDict["name"] as! String)
-//                    var tempImage:UIImage
-                    
-//                    for IMAGEURL in sitterMatchModelImage{
-//                        print(IMAGEURL)
-                    
-                        var AlamoRef = Alamofire.request(.GET, imgUrlModel)
+                        let AlamoRef = Alamofire.request(.GET, imgUrlModel)
                         AlamoRef.responseImage { response in
                             debugPrint(response)
                             
@@ -83,24 +58,30 @@ class SitterMatchViewController: UIViewController {
                             debugPrint(response.result)
                             
                             if let image = response.result.value {
-                                var imageAsUIImage = image as! UIImage
-                                imageArray.append(imageAsUIImage)
-                                print(imageAsUIImage)
-//                                self.models[0].imgUrl = imageAsUIImage
-
+                                let sitterImageModel = image as! UIImage
+                                let sitterNameModel = sitterObjDict["name"] as! String
+                                let sitterScoreModel = sitterObjDict["cnx-score"] as! Int
+                                let SitterObject = SitterMatchModel(name: sitterNameModel, cnxScore: sitterScoreModel, img: sitterImageModel)
+                                sitterModelObjects.append(SitterObject)
+                                self.performSegueWithIdentifier("showSitter", sender: nil)
                             }
-                            
+                            AlamoRef.resume()
                         }
-//                }
-    
                 })
-            }
+            } // ----- END 'else' Statement --------------//
+//Steps
+//0. Nested entire model creation unser AlamofireRef
+//1. Fixed Placement of Pepare For Sewgue
+//2. Made Array of Sitter Objects a Global Variable, which I appended at end of Alamofire Response
+//3. added AlamoRef.resume() -- not sure if I actually need this, but it works
+//4. Under ViewDidLoad() -->> inserted 'sitterModelObjects.removeAll()' above returnUserData()
+//5. Accessed Global Array of SitterObjects in TVC
 
-            self.performSegueWithIdentifier("showSitter", sender: nil)
-        })
+        }) // - - - - - - - - END Graph Request - - - - - - - - - - - - - - //
+//                    task.resume()
+    } //============================ END  func returnUserData() ============================== //
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let newsTVC = segue.destinationViewController as! SitterMatchesTableViewController
+        newsTVC.models = sitterModelObjects
     }
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        let newsTVC = segue.destinationViewController as! SitterMatchesTableViewController
-//        newsTVC.sitterImages = imageArray.reverse()
-//    }
 }

@@ -183,7 +183,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		928D81281C2BBE7300AC9182 /* sideMenuViewControllers */ = {
+		928D81281C2BBE7300AC9182 /* SideMenuViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				928D81251C2BB42200AC9182 /* SideBarTableViewController.swift */,
@@ -191,19 +191,35 @@
 				928D81221C2BB3C700AC9182 /* orangeControllerViewController.swift */,
 				9279C0561C2BECA0007D9B55 /* BrowseSittersViewController.swift */,
 			);
-			name = sideMenuViewControllers;
+			name = SideMenuViewControllers;
 			sourceTree = "<group>";
 		};
 		928D81291C2BBE9100AC9182 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				920EBFF41C32C6DC00E11412 /* SitterMatchModel.swift */,
-				920EBFF91C32C76900E11412 /* SitterMatchViewController.swift */,
-				920EBFFB1C32D25500E11412 /* SitterMatchesTableViewController.swift */,
-				928D81281C2BBE7300AC9182 /* sideMenuViewControllers */,
+				92A327091C3845E5007C3728 /* SitterMatchControllers */,
+				928D81281C2BBE7300AC9182 /* SideMenuViewControllers */,
 				926E217D1C1908B30067C071 /* facebook-ViewControllers */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		92A327091C3845E5007C3728 /* SitterMatchControllers */ = {
+			isa = PBXGroup;
+			children = (
+				920EBFF91C32C76900E11412 /* SitterMatchViewController.swift */,
+				920EBFFB1C32D25500E11412 /* SitterMatchesTableViewController.swift */,
+				92A3270A1C384677007C3728 /* Models */,
+			);
+			name = SitterMatchControllers;
+			sourceTree = "<group>";
+		};
+		92A3270A1C384677007C3728 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				920EBFF41C32C6DC00E11412 /* SitterMatchModel.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

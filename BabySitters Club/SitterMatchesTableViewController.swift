@@ -8,23 +8,14 @@ import AlamofireImage
 //var imageArray = [UIImage]()
 
 class SitterMatchesTableViewController: UITableViewController {
+    
+    var models = [SitterMatchModel]()
 
-//    let reverseImgArray:Array = imageArray.reverse()
-    
-//    var models = [SitterMatchModel]()
-    var sitterImages = [UIImage]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        print(models)
-
-
         print("image ARRAY below::--->>>>")
-        
-
-        
-         print("image ARRAY is Above ^^^^^^^")
+        print(sitterModelObjects.count)
+        print("image ARRAY is Above ^^^^^^^")
 }
     
     // MARK: - Table view data source
@@ -33,25 +24,20 @@ class SitterMatchesTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sitterMatchModelName.count
+        return sitterModelObjects.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCellWithIdentifier("sitterCell", forIndexPath: indexPath)
-
-        let name = sitterMatchModelName[indexPath.row]
-        let score = String(sitterMatchModelScore[indexPath.row])
-
-        let img = imageArray[indexPath.row]
-
         
-//        let img = self.reverseImgArray[indexPath.row]
-//        let sitterImg = sitterMatchModelImage[indexPath.row]
+//        let model = models[indexPath.row]
+        let model = sitterModelObjects[indexPath.row]
         
-        cell.textLabel!.text = name
-        cell.detailTextLabel!.text = score
-        cell.imageView!.image = img
+        cell.textLabel?.text = model.name
+        cell.detailTextLabel?.text = String(model.cnxScore)
+        cell.imageView?.image = model.img
+
         return cell
     }
 
