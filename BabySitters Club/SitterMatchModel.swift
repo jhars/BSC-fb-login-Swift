@@ -10,14 +10,14 @@ import Foundation
 
 class SitterMatchModel {
     var name:String?
-//    var cnxScrore:Int?
-//    var imgUrl:String?
+    var cnxScore:Int?
+    var imgUrl:UIImage?
     
-//    init(name:String, cnxScore:Int,imgUrl:
+    init(name:String, cnxScore:Int,imgUrl:UIImage) {
 //    init(name:String, imgUrl:String) {
-    init(name:String) {
+//    init(name:String) {
         self.name = name
-//        self.cnxScrore = cnxScore
-//        self.imgUrl = imgUrl
+        self.cnxScore = cnxScore
+        self.imgUrl = imgUrl
     }
 }

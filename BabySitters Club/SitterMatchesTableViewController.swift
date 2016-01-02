@@ -5,23 +5,27 @@ import UIKit
 import Alamofire
 import AlamofireImage
 
+//var imageArray = [UIImage]()
+
 class SitterMatchesTableViewController: UITableViewController {
 
 //    let reverseImgArray:Array = imageArray.reverse()
     
+//    var models = [SitterMatchModel]()
+    var sitterImages = [UIImage]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 
-    
-//        print(sitterMatchModelScore)
+//        print(models)
+
+
         print("image ARRAY below::--->>>>")
-                print(imageArray)
-        print("image ARRAY is Above ^^^^^^^")
-
         
 
-        }
+        
+         print("image ARRAY is Above ^^^^^^^")
+}
     
     // MARK: - Table view data source
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -38,7 +42,7 @@ class SitterMatchesTableViewController: UITableViewController {
 
         let name = sitterMatchModelName[indexPath.row]
         let score = String(sitterMatchModelScore[indexPath.row])
-        
+
         let img = imageArray[indexPath.row]
 
         

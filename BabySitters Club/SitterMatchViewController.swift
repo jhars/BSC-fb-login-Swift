@@ -7,8 +7,9 @@ import AlamofireImage
 
 var sitterMatchModelName = [String]()
 var sitterMatchModelScore = [Int]()
-
+var sitterMatchModelImage = [String]()
 var imageArray = [UIImage]()
+var sitterObject = [NSDictionary]()
 
 
 
@@ -20,9 +21,13 @@ class SitterMatchViewController: UIViewController {
     var tempFireBaseUrlForCurrentUser:String = ""
     var cnxImageUrl:String = ""
     
+
     
+//    var models = [SitterMatchModel]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+//        sitterMatchModelImage.removeAll()
         returnUserData()
         }
 //=================================================================\\
@@ -46,26 +51,30 @@ class SitterMatchViewController: UIViewController {
                 firebaseRef.queryOrderedByValue().observeEventType(.ChildAdded, withBlock: { snapshot in
                     let sitterObjDict = snapshot.value as! NSDictionary
                     print(sitterObjDict)
+                    sitterObject.append(sitterObjDict)
                     
                     sitterMatchModelName.append(sitterObjDict["name"] as! String)
+//                    sitterObj["name"] = sitterObjDict["name"] as! String
+//                    self.models[0].name = sitterObjDict["name"] as! String
                     
                     let  cnxScoreModel = sitterObjDict["cnx-score"]!
                     print(cnxScoreModel)
                     sitterMatchModelScore.append(cnxScoreModel as! Int)
+//                    self.models[0].cnxScore = cnxScoreModel as! Int
                     //=================================================================\\
-//                    var imgUrlModel = sitterObjDict["image-url"]
+                    var imgUrlModel = sitterObjDict["image-url"] as! String
 
-                    var sitterMatchModelImage = [String]()
-                    
-                    sitterMatchModelImage.append(sitterObjDict["image-url"] as! String)
+
+//                    self.cnxImageUrl = imgUrlModel
+//                    sitterMatchModelImage.append(imgUrlModel)
                     
 //                    print(sitterObjDict["name"] as! String)
+//                    var tempImage:UIImage
                     
-
-                    for IMAGEURL in sitterMatchModelImage{
-                        print(IMAGEURL)
-                        
-                        var AlamoRef = Alamofire.request(.GET, IMAGEURL)
+//                    for IMAGEURL in sitterMatchModelImage{
+//                        print(IMAGEURL)
+                    
+                        var AlamoRef = Alamofire.request(.GET, imgUrlModel)
                         AlamoRef.responseImage { response in
                             debugPrint(response)
                             
@@ -74,31 +83,24 @@ class SitterMatchViewController: UIViewController {
                             debugPrint(response.result)
                             
                             if let image = response.result.value {
-//                                print("image downloaded: \(image)")
-//                                print(image as UIImage)
                                 var imageAsUIImage = image as! UIImage
-//                                imageArray.removeAll()
-//                                imageArray.reverse()
-                                
                                 imageArray.append(imageAsUIImage)
-//                                imageArray.reverse()
-//                                imageArray[0] = imageAsUIImage
                                 print(imageAsUIImage)
-
-//                                imageArray.insert(imageAsUIImage, atIndex: 0)
+//                                self.models[0].imgUrl = imageAsUIImage
 
                             }
-                                
+                            
                         }
-                    }
-
-                    
-                    
-                    
+//                }
+    
                 })
             }
 
             self.performSegueWithIdentifier("showSitter", sender: nil)
         })
     }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        let newsTVC = segue.destinationViewController as! SitterMatchesTableViewController
+//        newsTVC.sitterImages = imageArray.reverse()
+//    }
 }
