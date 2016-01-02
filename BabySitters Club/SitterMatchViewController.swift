@@ -3,8 +3,14 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 
-var sitterMatchModel = [String]()
+var sitterMatchModelName = [String]()
+var sitterMatchModelScore = [Int]()
+
+var imageArray = [UIImage]()
+
+
 
 class SitterMatchViewController: UIViewController {
 
@@ -13,6 +19,7 @@ class SitterMatchViewController: UIViewController {
     var currentUserId:String = ""
     var tempFireBaseUrlForCurrentUser:String = ""
     var cnxImageUrl:String = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,10 +45,59 @@ class SitterMatchViewController: UIViewController {
                 
                 firebaseRef.queryOrderedByValue().observeEventType(.ChildAdded, withBlock: { snapshot in
                     let sitterObjDict = snapshot.value as! NSDictionary
-                    print(sitterObjDict["name"]!)
-                    sitterMatchModel.append(sitterObjDict["name"] as! String)
+                    print(sitterObjDict)
+                    
+                    sitterMatchModelName.append(sitterObjDict["name"] as! String)
+                    
+                    let  cnxScoreModel = sitterObjDict["cnx-score"]!
+                    print(cnxScoreModel)
+                    sitterMatchModelScore.append(cnxScoreModel as! Int)
+                    //=================================================================\\
+//                    var imgUrlModel = sitterObjDict["image-url"]
+
+                    var sitterMatchModelImage = [String]()
+                    
+                    sitterMatchModelImage.append(sitterObjDict["image-url"] as! String)
+                    
+//                    print(sitterObjDict["name"] as! String)
+                    
+
+                    for IMAGEURL in sitterMatchModelImage{
+                        print(IMAGEURL)
+                        
+                        var AlamoRef = Alamofire.request(.GET, IMAGEURL)
+                        AlamoRef.responseImage { response in
+                            debugPrint(response)
+                            
+                            print(response.request)
+                            print(response.response)
+                            debugPrint(response.result)
+                            
+                            if let image = response.result.value {
+//                                print("image downloaded: \(image)")
+//                                print(image as UIImage)
+                                var imageAsUIImage = image as! UIImage
+//                                imageArray.removeAll()
+//                                imageArray.reverse()
+                                
+                                imageArray.append(imageAsUIImage)
+//                                imageArray.reverse()
+//                                imageArray[0] = imageAsUIImage
+                                print(imageAsUIImage)
+
+//                                imageArray.insert(imageAsUIImage, atIndex: 0)
+
+                            }
+                                
+                        }
+                    }
+
+                    
+                    
+                    
                 })
             }
+
             self.performSegueWithIdentifier("showSitter", sender: nil)
         })
     }
