@@ -105,6 +105,15 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		924D62491C38D8CD00526111 /* SitterCollectionViews */ = {
+			isa = PBXGroup;
+			children = (
+				924D62471C38C25D00526111 /* SitterPreviewCollectionCell.swift */,
+				924D62431C38C1E200526111 /* ShowAllSittersVC.swift */,
+			);
+			name = SitterCollectionViews;
+			sourceTree = "<group>";
+		};
 		926E217A1C1908160067C071 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,8 +216,7 @@
 		928D81291C2BBE9100AC9182 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				924D62471C38C25D00526111 /* SitterPreviewCollectionCell.swift */,
-				924D62431C38C1E200526111 /* ShowAllSittersVC.swift */,
+				924D62491C38D8CD00526111 /* SitterCollectionViews */,
 				92A327091C3845E5007C3728 /* SitterMatchControllers */,
 				928D81281C2BBE7300AC9182 /* SideMenuViewControllers */,
 				926E217D1C1908B30067C071 /* facebook-ViewControllers */,

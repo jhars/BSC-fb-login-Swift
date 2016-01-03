@@ -8,6 +8,8 @@
 
 import UIKit
 
+//var hamburgerControl = false
+
 @objc protocol SideBarDelegate {
     func sideBarDidSelectButtonAtIndex(index:Int)
     optional func sideBarWillClose()
@@ -53,7 +55,7 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
     func setupSideBar(){
         
         sideBarContainerView.frame = CGRectMake(-barWidth - 1,  originView.frame.origin.y , barWidth, originView.frame.size.height)
-        sideBarContainerView.backgroundColor = UIColor.clearColor()
+        sideBarContainerView.backgroundColor = UIColor.whiteColor()
         sideBarContainerView.clipsToBounds = false
         
         originView.addSubview(sideBarContainerView)
@@ -66,7 +68,7 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         sideBarTableViewController.tableView.frame = sideBarContainerView.bounds
         sideBarTableViewController.tableView.clipsToBounds = false
         sideBarTableViewController.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
-        sideBarTableViewController.tableView.backgroundColor = UIColor.clearColor()
+        sideBarTableViewController.tableView.backgroundColor = UIColor.groupTableViewBackgroundColor()   //lightGrayColor()   //clearColor()
         sideBarTableViewController.tableView.scrollsToTop = false
         sideBarTableViewController.tableView.contentInset = UIEdgeInsetsMake(sideBarTableViewTopInset, 0, 0, 0)
         
@@ -86,6 +88,14 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
             showSideBar(true)
             delegate?.sideBarWillClose?()
         }
+        
+//        if hamburgerControl == true {
+//            showSideBar(false)
+//            delegate?.sideBarWillOpen?()
+//        } else {
+//            showSideBar(true)
+//            delegate?.sideBarWillClose?()
+//        }
     }
     
     func showSideBar(shouldOpen:Bool){
