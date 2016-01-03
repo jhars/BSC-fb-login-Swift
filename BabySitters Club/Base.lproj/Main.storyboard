@@ -15,49 +15,55 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qz-KK-eew">
-                                <rect key="frame" x="20" y="523" width="560" height="57"/>
-                                <color key="backgroundColor" red="0.9634864447" green="1" blue="0.5342192536" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SitterBook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIP-6r-F7c">
+                                <rect key="frame" x="20" y="55" width="374" height="65"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="44"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pages-2" translatesAutoresizingMaskIntoConstraints="NO" id="x4D-R7-3H8">
+                                <rect key="frame" x="124" y="298" width="166" height="140"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qz-KK-eew">
+                                <rect key="frame" x="57" y="656" width="300" height="60"/>
+                                <color key="backgroundColor" red="0.99607843137254903" green="1" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="UfM-UV-elC"/>
+                                    <constraint firstAttribute="width" constant="300" id="fyW-Vc-KZY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Go To App">
-                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                <state key="normal" title="Enter App">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="wpI-vJ-xia" kind="presentation" id="Kuj-fg-3fe"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SitterBook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIP-6r-F7c">
-                                <rect key="frame" x="20" y="55" width="560" height="65"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pages-2" translatesAutoresizingMaskIntoConstraints="NO" id="x4D-R7-3H8">
-                                <rect key="frame" x="197" y="307" width="207" height="178"/>
-                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="x4D-R7-3H8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1CZ-Dx-Whq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kIP-6r-F7c" secondAttribute="trailing" id="9WE-Zt-46f"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2qz-KK-eew" secondAttribute="trailing" id="Qii-Jt-qDx"/>
+                            <constraint firstItem="x4D-R7-3H8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="D53-3C-1eT"/>
+                            <constraint firstItem="x4D-R7-3H8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wxz-YY-3mD"/>
                             <constraint firstAttribute="leadingMargin" secondItem="kIP-6r-F7c" secondAttribute="leading" id="eOe-5r-gXt"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="2qz-KK-eew" secondAttribute="leading" id="emP-bV-RQ0"/>
                             <constraint firstItem="kIP-6r-F7c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="35" id="jQA-Eo-yAN"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2qz-KK-eew" secondAttribute="bottom" constant="20" id="nln-ub-GRe"/>
-                            <constraint firstItem="2qz-KK-eew" firstAttribute="top" secondItem="x4D-R7-3H8" secondAttribute="bottom" constant="38" id="tHG-9x-6UP"/>
+                            <constraint firstItem="2qz-KK-eew" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tP4-Dm-QGI"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <segue destination="wpI-vJ-xia" kind="presentation" identifier="showNew" id="saH-NZ-dzG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-990" y="371"/>
+            <point key="canvasLocation" x="-421" y="188"/>
         </scene>
         <!--Fb Login View Controller-->
         <scene sceneID="gNU-cP-MhA">
@@ -68,36 +74,27 @@
                         <viewControllerLayoutGuide type="bottom" id="RBr-S0-3f3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="G93-zW-1K0">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="12345" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vUA-Pa-yCu">
-                                <rect key="frame" x="20" y="285" width="560" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="94117" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vUA-Pa-yCu">
+                                <rect key="frame" x="20" y="263" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="jon@madlax.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LXi-e6-KNM">
-                                <rect key="frame" x="20" y="213" width="560" height="30"/>
+                                <rect key="frame" x="20" y="213" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5Q4-0A-nlB">
-                                <rect key="frame" x="20" y="157" width="560" height="29"/>
-                                <segments>
-                                    <segment title="PARENT"/>
-                                    <segment title="SITTER"/>
-                                </segments>
-                                <connections>
-                                    <action selector="parentOrSitter:" destination="wpI-vJ-xia" eventType="valueChanged" id="TcH-tS-03a"/>
-                                </connections>
-                            </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcU-sG-bYI">
-                                <rect key="frame" x="20" y="88" width="560" height="39"/>
-                                <color key="backgroundColor" red="0.96679055661320767" green="0.99804312269555195" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Update Preferences">
-                                    <color key="titleColor" red="0.1244093417" green="0.31610690790000001" blue="0.77349668559999996" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <rect key="frame" x="20" y="88" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.99607843137254903" green="1" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="RqL-ah-wmD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <state key="normal" title="Update Preferences"/>
                                 <connections>
                                     <action selector="userFbData:" destination="wpI-vJ-xia" eventType="touchUpInside" id="PoH-0P-oim"/>
                                     <segue destination="8KM-MP-zlj" kind="popoverPresentation" popoverAnchorView="BcU-sG-bYI" id="Olh-5b-cnB">
@@ -105,8 +102,8 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qO8-qV-yTL">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qO8-qV-yTL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="lSh-ws-wqy"/>
                                 </constraints>
@@ -119,7 +116,7 @@
                                                 </segue>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Go To Main Menu &gt;" id="VmV-ej-UWf">
+                                        <barButtonItem key="rightBarButtonItem" title="Main Menu" id="VmV-ej-UWf">
                                             <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="15"/>
                                             <connections>
                                                 <segue destination="8KM-MP-zlj" kind="popoverPresentation" popoverAnchorBarButtonItem="VmV-ej-UWf" id="pcA-mp-JaI">
@@ -130,8 +127,19 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5Q4-0A-nlB">
+                                <rect key="frame" x="20" y="157" width="374" height="29"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <segments>
+                                    <segment title="PARENT"/>
+                                    <segment title="SITTER"/>
+                                </segments>
+                                <connections>
+                                    <action selector="parentOrSitter:" destination="wpI-vJ-xia" eventType="valueChanged" id="TcH-tS-03a"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" red="0.9634864447" green="1" blue="0.5342192536" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="LXi-e6-KNM" secondAttribute="trailing" id="1YT-Zd-eHu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qO8-qV-yTL" secondAttribute="trailing" constant="-20" id="BvX-9z-ETY"/>
@@ -146,6 +154,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="BcU-sG-bYI" secondAttribute="trailing" id="zX4-Ui-Zgl"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="emailTextField" destination="LXi-e6-KNM" id="r3V-j9-lGW"/>
                         <outlet property="sitterStatus" destination="5Q4-0A-nlB" id="fCu-g6-zhR"/>
@@ -154,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cL-R1-TMD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-108" y="168"/>
+            <point key="canvasLocation" x="91" y="188"/>
         </scene>
         <!--Orange Controller-->
         <scene sceneID="8Cw-es-gxK">
@@ -165,11 +174,11 @@
                         <viewControllerLayoutGuide type="bottom" id="tZR-3O-Czx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JWf-af-VOT">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bMC-b7-qMJ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bMC-b7-qMJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="3Us-SX-2zT"/>
                                 </constraints>
@@ -180,7 +189,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem id="x7t-di-Hic">
-                                        <barButtonItem key="leftBarButtonItem" title="Edit Preferences" id="fHl-06-4io">
+                                        <barButtonItem key="leftBarButtonItem" title="Preferences" id="fHl-06-4io">
                                             <inset key="imageInsets" minX="0.0" minY="15" maxX="0.0" maxY="0.0"/>
                                             <connections>
                                                 <action selector="hamburgerMenuHome:" destination="8KM-MP-zlj" id="VrX-1m-yyS"/>
@@ -189,13 +198,40 @@
                                                 </segue>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="wmz-eF-XPl"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biP-Y6-7yL">
-                                <rect key="frame" x="20" y="546" width="560" height="41"/>
-                                <color key="backgroundColor" red="0.9634864447" green="1" blue="0.5342192536" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CNm-WH-kTe">
+                                <rect key="frame" x="115" y="289" width="185" height="157"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="SitterBook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXK-EA-hV3">
+                                <rect key="frame" x="20" y="108" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Main Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhq-YM-8Er">
+                                <rect key="frame" x="20" y="147" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tabBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gWF-D6-4QA">
+                                <rect key="frame" x="0.0" y="687" width="414" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="d47-rT-2FQ"/>
+                                    <tabBarItem systemItem="more" id="Qq4-j1-BOL"/>
+                                </items>
+                            </tabBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biP-Y6-7yL">
+                                <rect key="frame" x="20" y="631" width="374" height="41"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="1" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="Yrh-SF-Zmb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="Browse Sitters!"/>
                                 <connections>
                                     <segue destination="rzx-8l-PgG" kind="popoverPresentation" popoverAnchorView="biP-Y6-7yL" id="5Vc-eA-SDp">
@@ -203,31 +239,17 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="SitterBook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXK-EA-hV3">
-                                <rect key="frame" x="20" y="108" width="560" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Main Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhq-YM-8Er">
-                                <rect key="frame" x="20" y="147" width="560" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CNm-WH-kTe">
-                                <rect key="frame" x="208" y="221" width="185" height="157"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="tZR-3O-Czx" firstAttribute="top" secondItem="gWF-D6-4QA" secondAttribute="bottom" id="08q-77-adi"/>
+                            <constraint firstItem="gWF-D6-4QA" firstAttribute="top" secondItem="biP-Y6-7yL" secondAttribute="bottom" constant="15" id="2Mj-6t-8cI"/>
                             <constraint firstItem="Rhq-YM-8Er" firstAttribute="top" secondItem="fXK-EA-hV3" secondAttribute="bottom" constant="3" id="Er4-r3-wH7"/>
                             <constraint firstAttribute="leadingMargin" secondItem="biP-Y6-7yL" secondAttribute="leading" id="Esb-MD-gCB"/>
                             <constraint firstAttribute="leadingMargin" secondItem="fXK-EA-hV3" secondAttribute="leading" id="G4U-jh-wEJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="biP-Y6-7yL" secondAttribute="trailing" id="GE5-XZ-SEo"/>
                             <constraint firstItem="CNm-WH-kTe" firstAttribute="centerX" secondItem="JWf-af-VOT" secondAttribute="centerX" id="S24-zU-5uG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Rhq-YM-8Er" secondAttribute="trailing" id="TTG-l8-ee0"/>
-                            <constraint firstItem="tZR-3O-Czx" firstAttribute="top" secondItem="biP-Y6-7yL" secondAttribute="bottom" constant="13" id="Wmd-3e-xRL"/>
                             <constraint firstItem="CNm-WH-kTe" firstAttribute="top" secondItem="Rhq-YM-8Er" secondAttribute="bottom" constant="50" id="c2x-zh-7QH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fXK-EA-hV3" secondAttribute="trailing" id="d2l-Vh-Lzm"/>
                             <constraint firstItem="bMC-b7-qMJ" firstAttribute="top" secondItem="JWf-af-VOT" secondAttribute="topMargin" id="oZf-fU-hwO"/>
@@ -241,6 +263,7 @@
                     <navigationItem key="navigationItem" id="MAI-rf-9XJ"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="imageView" destination="CNm-WH-kTe" id="HLO-HX-VMq"/>
                     </connections>
@@ -258,20 +281,21 @@
                         <viewControllerLayoutGuide type="bottom" id="mWw-Wb-uN0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cjE-Vc-bO6">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="SGr-53-wPD">
-                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                                <rect key="frame" x="230" y="150" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" red="0.9634864447" green="1" blue="0.5342192536" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.99607843137254903" green="1" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="SGr-53-wPD" firstAttribute="centerY" secondItem="cjE-Vc-bO6" secondAttribute="centerY" id="7BV-u2-GJm"/>
                             <constraint firstItem="SGr-53-wPD" firstAttribute="centerX" secondItem="cjE-Vc-bO6" secondAttribute="centerX" id="aae-7V-eG1"/>
                         </constraints>
                     </view>
-                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="activityWheel" destination="SGr-53-wPD" id="HJm-46-Jvb"/>
                         <segue destination="yKG-Ry-GeA" kind="show" identifier="showSitter" id="gVr-rs-I32"/>
@@ -279,7 +303,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6gY-Zy-qmJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1222" y="188"/>
+            <point key="canvasLocation" x="1056" y="-482"/>
         </scene>
         <!--Sitter Matches Table View Controller-->
         <scene sceneID="arg-sO-2E4">
@@ -297,7 +321,7 @@
                                 <navigationItem title="Browse Sitters" id="ZkU-oq-DQ1">
                                     <barButtonItem key="leftBarButtonItem" title="Back" id="E42-Cl-RzH">
                                         <connections>
-                                            <segue destination="8KM-MP-zlj" kind="popoverPresentation" popoverAnchorBarButtonItem="E42-Cl-RzH" id="Eeu-rf-9cj">
+                                            <segue destination="8KM-MP-zlj" kind="popoverPresentation" popoverAnchorBarButtonItem="E42-Cl-RzH" id="2jJ-xQ-hAs">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                             </segue>
                                         </connections>
@@ -343,10 +367,12 @@
                             <outlet property="delegate" destination="yKG-Ry-GeA" id="euQ-m0-r0R"/>
                         </connections>
                     </tableView>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="1906" y="371"/>
+            <point key="canvasLocation" x="1048" y="188"/>
         </scene>
         <!--Show All SittersVC-->
         <scene sceneID="X8t-US-N7s">
@@ -357,11 +383,25 @@
                         <viewControllerLayoutGuide type="bottom" id="832-Vq-eIw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4bX-n4-DLT">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2eG-Bj-gRa">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Browse Sitter Book" id="X48-eN-0JO">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="hob-HU-V1B">
+                                            <connections>
+                                                <segue destination="8KM-MP-zlj" kind="popoverPresentation" popoverAnchorBarButtonItem="hob-HU-V1B" id="fV0-cH-H6g">
+                                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                </segue>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BFy-WA-8j5">
-                                <rect key="frame" x="0.0" y="44" width="600" height="512"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="512"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TNN-c2-kJm">
                                     <size key="itemSize" width="236" height="236"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -370,7 +410,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="aKL-TO-HUu" customClass="SitterPreviewCollectionCell" customModule="BabySitters_Club" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="15" width="236" height="236"/>
+                                        <rect key="frame" x="82" y="15" width="236" height="236"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="236" height="236"/>
@@ -420,20 +460,6 @@
                                     <outlet property="delegate" destination="S8T-de-aLR" id="rcn-hD-s9v"/>
                                 </connections>
                             </collectionView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2eG-Bj-gRa">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Browse Sitter Book" id="X48-eN-0JO">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="hob-HU-V1B">
-                                            <connections>
-                                                <segue destination="8KM-MP-zlj" kind="popoverPresentation" popoverAnchorBarButtonItem="hob-HU-V1B" id="fV0-cH-H6g">
-                                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                                </segue>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -441,97 +467,21 @@
                         <barButtonItem title="Back" id="Mbd-Cs-eFw"/>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="sitterCollectionView" destination="BFy-WA-8j5" id="g5h-oN-aXN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7B8-JZ-HDY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="467" y="1100"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="57q-No-d4a">
-            <objects>
-                <viewController id="Enn-nc-hIZ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QLm-er-yL4"/>
-                        <viewControllerLayoutGuide type="bottom" id="z6Q-SC-8aa"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="neL-x7-cQ2">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFf-O0-UYZ">
-                                <rect key="frame" x="20" y="351" width="552" height="53"/>
-                                <color key="backgroundColor" red="0.21805070835641852" green="0.33746764996016659" blue="0.52965198859999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="53" id="Tqz-za-j0N"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
-                                <state key="normal" title="Are You a Parent?">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value="10"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgg-Pb-GLp">
-                                <rect key="frame" x="20" y="496" width="552" height="53"/>
-                                <color key="backgroundColor" red="0.21805070839999999" green="0.33746765000000001" blue="0.52965198859999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="53" id="ymV-QT-zpT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
-                                <state key="normal" title="Are You a Sitter?">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKr-Hd-gqO">
-                                <rect key="frame" x="0.0" y="429" width="600" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="XPr-Kd-LCf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to SitterBook!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKN-Ft-f4a">
-                                <rect key="frame" x="0.0" y="159" width="600" height="47"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="47" id="Snb-xh-24f"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.96348644472429612" green="1" blue="0.53421925357298661" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="sKN-Ft-f4a" firstAttribute="trailing" secondItem="xKr-Hd-gqO" secondAttribute="trailing" id="1IB-5Y-nWe"/>
-                            <constraint firstItem="xKr-Hd-gqO" firstAttribute="top" secondItem="hFf-O0-UYZ" secondAttribute="bottom" constant="26" id="3hu-td-Oyr"/>
-                            <constraint firstItem="hFf-O0-UYZ" firstAttribute="trailing" secondItem="qgg-Pb-GLp" secondAttribute="trailing" id="4ua-JC-1K6"/>
-                            <constraint firstItem="hFf-O0-UYZ" firstAttribute="top" secondItem="sKN-Ft-f4a" secondAttribute="bottom" constant="145" id="6Xf-5I-Amm"/>
-                            <constraint firstItem="z6Q-SC-8aa" firstAttribute="top" secondItem="qgg-Pb-GLp" secondAttribute="bottom" constant="165" id="PhN-vO-QC9"/>
-                            <constraint firstItem="qgg-Pb-GLp" firstAttribute="top" secondItem="xKr-Hd-gqO" secondAttribute="bottom" constant="22" id="URs-ZP-bub"/>
-                            <constraint firstItem="hFf-O0-UYZ" firstAttribute="leading" secondItem="qgg-Pb-GLp" secondAttribute="leading" id="c30-cX-m7f"/>
-                            <constraint firstItem="xKr-Hd-gqO" firstAttribute="leading" secondItem="sKN-Ft-f4a" secondAttribute="leading" id="cq0-4k-faz"/>
-                            <constraint firstItem="hFf-O0-UYZ" firstAttribute="leading" secondItem="neL-x7-cQ2" secondAttribute="leadingMargin" id="h4T-C8-2Uu"/>
-                            <constraint firstItem="sKN-Ft-f4a" firstAttribute="leading" secondItem="neL-x7-cQ2" secondAttribute="leading" id="lhe-qP-ZLH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hFf-O0-UYZ" secondAttribute="trailing" constant="8" id="qLv-M8-fkY"/>
-                            <constraint firstAttribute="trailing" secondItem="sKN-Ft-f4a" secondAttribute="trailing" id="vHl-Ft-LZt"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gwW-P8-nID" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1373" y="-783"/>
+            <point key="canvasLocation" x="1048" y="994"/>
         </scene>
     </scenes>
     <resources>
         <image name="pages-2" width="107" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="saH-NZ-dzG"/>
-        <segue reference="Eeu-rf-9cj"/>
+        <segue reference="9dl-af-8fd"/>
+        <segue reference="2jJ-xQ-hAs"/>
     </inferredMetricsTieBreakers>
 </document>

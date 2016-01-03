@@ -8,78 +8,55 @@
 
 
 import UIKit
-//import FBSDKLoginKit
 
 class ViewController: UIViewController, FBSDKLoginButtonDelegate {
-    
-    
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-//        if (FBSDKAccessToken.currentAccessToken() != nil)
-//        {
-//             User is already logged in, do work such as go to next view controller.
-//            print("already logged in")
-//            self.performSegueWithIdentifier("showMenu", sender: self)
-//            returnUserData()
-//        }
-//        else
-//        {
-            let loginView : FBSDKLoginButton = FBSDKLoginButton()
-            self.view.addSubview(loginView)
-            loginView.center = self.view.center
-            loginView.readPermissions = ["public_profile"]
-            loginView.delegate = self
-//        }
+        if (FBSDKAccessToken.currentAccessToken() != nil)
+        {
+            print("already logged in")
+        let loginView : FBSDKLoginButton = FBSDKLoginButton()
+        self.view.addSubview(loginView)
+        //            loginView.center = self.view.center
+        let Y_Position:CGFloat? = 500.0 //use your Y position here
+
+        let X_Co = ((self.view.frame.size.width - loginView.frame.width)/2 - 60)
+        
+        loginView.frame = CGRectMake(X_Co, Y_Position!, 300, 40)
+        
+        loginView.readPermissions = ["public_profile"]
+        loginView.delegate = self
+        }
+        else
+        {
+            print("Error: No Facebook Access Token Find, You Must Login First!")
+        }
     
     }
 
-    
-    
-    
-    
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         print("User Logged In")
         
         if ((error) != nil)
-        {
-            // Process error
-        }
-        else if result.isCancelled {
+        { // Process error
+           
+        } else if result.isCancelled {
             // Handle cancellations
-        }
-        else {
+        } else {
             // If you ask for multiple permissions at once, you
             // should check if specific permissions missing
-            if result.grantedPermissions.contains("name")
-            {
+            if result.grantedPermissions.contains("name") {
                 print("email found")
-//                self.returnUserData()
                 self.performSegueWithIdentifier("showNew", sender: self)
-//                self.returnUserData()
                 returnUserData()
-              
-                
             }
         }
     }
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         print("User Logged Out")
-    }
-    
-
-    
-    func sendFacebookDATAtoFireBaseDB () {
-        //            var msg = msgInput.text
-        //
-        //            var postRef = self.ref.childByAppendingPath("Posts")
-        //            var newMsgValue = msg as String!
-        //            var newPostRef = postRef.childByAutoId()
-        //            newPostRef.setValue(newMsgValue)
     }
     
     func returnUserData()
@@ -97,14 +74,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
             }
         })
     }
-    
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-
 }
 
