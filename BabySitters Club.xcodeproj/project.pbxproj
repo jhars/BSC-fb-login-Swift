@@ -11,6 +11,8 @@
 		920EBFF51C32C6DC00E11412 /* SitterMatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920EBFF41C32C6DC00E11412 /* SitterMatchModel.swift */; };
 		920EBFFA1C32C76900E11412 /* SitterMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920EBFF91C32C76900E11412 /* SitterMatchViewController.swift */; };
 		920EBFFC1C32D25500E11412 /* SitterMatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920EBFFB1C32D25500E11412 /* SitterMatchesTableViewController.swift */; };
+		924D62441C38C1E200526111 /* ShowAllSittersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924D62431C38C1E200526111 /* ShowAllSittersVC.swift */; };
+		924D62481C38C25D00526111 /* SitterPreviewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924D62471C38C25D00526111 /* SitterPreviewCollectionCell.swift */; };
 		9279C0571C2BECA0007D9B55 /* BrowseSittersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9279C0561C2BECA0007D9B55 /* BrowseSittersViewController.swift */; };
 		927E54AD1C0FEB9F00843E0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E54AC1C0FEB9F00843E0D /* AppDelegate.swift */; };
 		927E54AF1C0FEB9F00843E0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E54AE1C0FEB9F00843E0D /* ViewController.swift */; };
@@ -42,6 +44,8 @@
 		920EBFF41C32C6DC00E11412 /* SitterMatchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SitterMatchModel.swift; sourceTree = "<group>"; };
 		920EBFF91C32C76900E11412 /* SitterMatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SitterMatchViewController.swift; sourceTree = "<group>"; };
 		920EBFFB1C32D25500E11412 /* SitterMatchesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SitterMatchesTableViewController.swift; sourceTree = "<group>"; };
+		924D62431C38C1E200526111 /* ShowAllSittersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowAllSittersVC.swift; sourceTree = "<group>"; };
+		924D62471C38C25D00526111 /* SitterPreviewCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SitterPreviewCollectionCell.swift; sourceTree = "<group>"; };
 		9279C0561C2BECA0007D9B55 /* BrowseSittersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseSittersViewController.swift; sourceTree = "<group>"; };
 		927E54A91C0FEB9F00843E0D /* BabySitters Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BabySitters Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		927E54AC1C0FEB9F00843E0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 				527EEC5E8D1BD3B1BF6F2E91 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		926E217A1C1908160067C071 /* Models */ = {
@@ -128,11 +133,14 @@
 		926E217E1C1908BF0067C071 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3325EB748391FDF19EFC4102 /* Pods */,
+				927E54AA1C0FEB9F00843E0D /* Products */,
 				926E217C1C19089A0067C071 /* Delegates */,
 				926E217A1C1908160067C071 /* Models */,
 				927E54B81C0FEBA000843E0D /* LaunchScreen.storyboard */,
 				927E54C81C0FF70400843E0D /* BabySitters Club-Bridging-Header.h */,
 				927E54BB1C0FEBA000843E0D /* Info.plist */,
+				92A3270B1C38772D007C3728 /* README.md */,
 			);
 			name = "Supporting Files";
 			path = "BabySitters Club";
@@ -144,8 +152,6 @@
 				927E54C71C0FEFCF00843E0D /* Frameworks */,
 				927E54AB1C0FEB9F00843E0D /* BabySitters Club */,
 				926E217E1C1908BF0067C071 /* Supporting Files */,
-				927E54AA1C0FEB9F00843E0D /* Products */,
-				3325EB748391FDF19EFC4102 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,6 +161,7 @@
 				927E54A91C0FEB9F00843E0D /* BabySitters Club.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		927E54AB1C0FEB9F00843E0D /* BabySitters Club */ = {
@@ -163,7 +170,7 @@
 				920662191C326773009533C8 /* Main.storyboard */,
 				927E54B61C0FEBA000843E0D /* Assets.xcassets */,
 				928D81291C2BBE9100AC9182 /* View Controllers */,
-				92A3270B1C38772D007C3728 /* README.md */,
+				92A3270A1C384677007C3728 /* Models */,
 			);
 			path = "BabySitters Club";
 			sourceTree = "<group>";
@@ -200,6 +207,8 @@
 		928D81291C2BBE9100AC9182 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				924D62471C38C25D00526111 /* SitterPreviewCollectionCell.swift */,
+				924D62431C38C1E200526111 /* ShowAllSittersVC.swift */,
 				92A327091C3845E5007C3728 /* SitterMatchControllers */,
 				928D81281C2BBE7300AC9182 /* SideMenuViewControllers */,
 				926E217D1C1908B30067C071 /* facebook-ViewControllers */,
@@ -212,7 +221,6 @@
 			children = (
 				920EBFF91C32C76900E11412 /* SitterMatchViewController.swift */,
 				920EBFFB1C32D25500E11412 /* SitterMatchesTableViewController.swift */,
-				92A3270A1C384677007C3728 /* Models */,
 			);
 			name = SitterMatchControllers;
 			sourceTree = "<group>";
@@ -350,6 +358,8 @@
 			files = (
 				928D81271C2BB42200AC9182 /* SideBarTableViewController.swift in Sources */,
 				9279C0571C2BECA0007D9B55 /* BrowseSittersViewController.swift in Sources */,
+				924D62441C38C1E200526111 /* ShowAllSittersVC.swift in Sources */,
+				924D62481C38C25D00526111 /* SitterPreviewCollectionCell.swift in Sources */,
 				928D81231C2BB3C700AC9182 /* orangeControllerViewController.swift in Sources */,
 				929CB2011C22B0D0000961DB /* fbLoginViewController.swift in Sources */,
 				920EBFFA1C32C76900E11412 /* SitterMatchViewController.swift in Sources */,

@@ -11,12 +11,12 @@ import UIKit
 class orangeController: UIViewController, SideBarDelegate {
     
     var sideBar:SideBar = SideBar()
-    var menuItemArray = ["first item","Second Item","3rd Team"]
+    var menuItemArray = ["Home","Browse Sitters","My Favorites", "Messages", "Settings"]
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.image = UIImage(named: "pack-BG")
+        imageView.image = UIImage(named: "pages-2")
         sideBar = SideBar(sourceView: view, menuItems: menuItemArray )
         sideBar.delegate = self
     }
@@ -28,14 +28,17 @@ class orangeController: UIViewController, SideBarDelegate {
     
     func sideBarDidSelectButtonAtIndex(index:Int){
         if index == 0 {
-            imageView.backgroundColor = UIColor.redColor()
-            imageView.image = nil
+             imageView.image = UIImage(named: "pack-BG")
+
         } else if index == 1 {
             imageView.backgroundColor = UIColor.clearColor()
             imageView.image = UIImage(named: "side-panel")
         } else if index == 2 {
             imageView.backgroundColor = UIColor.clearColor()
-            imageView.image = UIImage(named: "pack-BG")
+            imageView.image = UIImage(named: "pages-2")
+        } else if index == 3 {
+            imageView.backgroundColor = UIColor.redColor()
+            imageView.image = nil
         }
         
     }

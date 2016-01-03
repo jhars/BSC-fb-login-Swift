@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:SitterPreviewCollectionCell.swift">
+   </FileRef>
+   <FileRef
       location = "group:BabySitters Club.xcodeproj">
    </FileRef>
    <FileRef
