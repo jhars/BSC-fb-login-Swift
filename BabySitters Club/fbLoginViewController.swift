@@ -43,16 +43,15 @@ class fbLoginViewController: UIViewController {
             } else {
                 let userID : NSString = result.valueForKey("id") as! NSString
                 print("User ID is is: \(userID)")
-                
-//                let newData = userID
+
                 let userName : NSString = result.valueForKey("name") as! NSString
                 print("User Name is: \(userName)")
 //Create New User SignUp/Login on FireBase
                 let userEmail = self.emailTextField.text! as String
                 let userZip = self.zipTextField.text! as String
                 let userSitterStatus = self.sitterOrNot as Bool
+                let lastLogin = String(NSDate())
                 //ZIP CODE on Sign Up / Login
-//                let newZip = [ "zipIndex" : userZip as String]
 //=======Update USer INfo FireBase Ref ===========//
                 
                 let updateUserInfoUrl = "https://sitterbookapi.firebaseio.com/users/" + (userID as String)
@@ -64,20 +63,12 @@ class fbLoginViewController: UIViewController {
 //                    print("success sign up!"); print("User has been Created, result is \(result)")
                     self.ref.authUser(userEmail, password:"1111", withCompletionBlock: { (authData) -> Void in
 // ===== DATA WRITING ROUTES =========== //
-//                        self.ref.childByAppendingPath("users").childByAppendingPath(userID as String).setValue(userName as String)
-                        
+                        updateUserInfoRef.updateChildValues(["last-login": lastLogin])
                         updateUserInfoRef.updateChildValues(["user-name": userName])
                         updateUserInfoRef.updateChildValues(["email": userEmail])
                         updateUserInfoRef.updateChildValues(["sitter": userSitterStatus])
                         updateUserInfoRef.updateChildValues(["zip": userZip])
                         
-//                        self.ref.childByAppendingPath("users/\(userID as String)/name").setValue(userName as String)
-//                        self.ref.childByAppendingPath("users/\(userID as String)/email").setValue(userEmail as String)
-//                        self.ref.childByAppendingPath("users/\(userID as String)/sitter").setValue(userSitterStatus as Bool)
-//  MULTIPLE ZIP CODES
-//  self.ref.childByAppendingPath("users/\(userID as String)/zip").setValue(userZip as String)
-//                        self.ref.childByAppendingPath("users/\(userID as String)/zip").updateChildValues(newZip)
-//                self.ref.childByAppendingPath("users/\(userID as String)/zip").updateChildValues(userZip)
                     })
                 })
             }
