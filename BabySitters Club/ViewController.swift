@@ -1,11 +1,6 @@
-//
+
 //  ViewController.swift
 //  BabySitters Club
-//
-//  Created by Jon Harlan on 12/2/15.
-//  Copyright © 2015 Jon Harlan. All rights reserved.
-//
-
 
 import UIKit
 
@@ -14,26 +9,24 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if (FBSDKAccessToken.currentAccessToken() != nil)
-        {
+        if (FBSDKAccessToken.currentAccessToken() != nil) {
             print("already logged in")
-        let loginView : FBSDKLoginButton = FBSDKLoginButton()
-        self.view.addSubview(loginView)
-        //            loginView.center = self.view.center
-        let Y_Position:CGFloat? = 500.0 //use your Y position here
-
-        let X_Co = ((self.view.frame.size.width - loginView.frame.width)/2 - 60)
-        
-        loginView.frame = CGRectMake(X_Co, Y_Position!, 300, 40)
-        
-        loginView.readPermissions = ["public_profile"]
-        loginView.delegate = self
-        }
-        else
-        {
+               } else {
             print("Error: No Facebook Access Token Find, You Must Login First!")
         }
-    
+        
+        let loginView : FBSDKLoginButton = FBSDKLoginButton()
+        self.view.addSubview(loginView)
+        
+        loginView.center = self.view.center
+//        loginView.center = self.view.center
+        //        let X_Co = ((self.view.frame.size.width - loginView.frame.width)/2 - 60)
+        //        let Y_Position:CGFloat? = 500.0 //use your Y position here
+        //        let Y_Co = ((self.view.frame.size.height - loginView.frame.height)/2)
+        //        loginView.frame = CGRectMake(X_Co, Y_Co, 240, 40)
+        loginView.readPermissions = ["public_profile"]
+        loginView.delegate = self
+
     }
 
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
@@ -41,12 +34,9 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         if ((error) != nil)
         { // Process error
-           
-        } else if result.isCancelled {
-            // Handle cancellations
-        } else {
-            // If you ask for multiple permissions at once, you
-            // should check if specific permissions missing
+        } else if result.isCancelled {// Handle cancellations
+        } else {// If you ask for multiple permissions at once, you
+                // should check if specific permissions missing
             if result.grantedPermissions.contains("name") {
                 print("email found")
                 self.performSegueWithIdentifier("showNew", sender: self)
@@ -59,17 +49,12 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         print("User Logged Out")
     }
     
-    func returnUserData()
-    {
+    func returnUserData() {
         let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
-            if ((error) != nil)
-            {
-                // Process error
+            if ((error) != nil) {// Process error
                 print("Error: \(error)")
-            }
-            else
-            {
+            } else {
                 print("fetched user: \(result)")
             }
         })

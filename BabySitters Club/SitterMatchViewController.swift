@@ -16,8 +16,6 @@ class SitterMatchViewController: UIViewController {
     var currentUserId:String = ""
     var tempFireBaseUrlForCurrentUser:String = ""
     var cnxImageUrl:String = ""
-    
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +24,7 @@ class SitterMatchViewController: UIViewController {
         }
 //=================================================================\\
     func returnUserData() {
-        
-        
-        
+
         let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
         let task = graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
             
@@ -45,6 +41,9 @@ class SitterMatchViewController: UIViewController {
                 let firebaseRef = Firebase(url:(currentUserPath as String) + "/sitter-list/")
                 
                 firebaseRef.queryOrderedByValue().observeEventType(.ChildAdded, withBlock: { snapshot in
+                    
+                    //Need To ADD ERROR HANDLING HERE
+                    
                     let sitterObjDict = snapshot.value as! NSDictionary
                     //=================================================================\\
                     let imgUrlModel = sitterObjDict["image-url"] as! String

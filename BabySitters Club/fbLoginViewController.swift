@@ -38,41 +38,50 @@ class fbLoginViewController: UIViewController {
     func returnUserData() {
         let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
-            
             if ((error) != nil)
-            {   // Process error
-                print("Error: \(error)")
+            { print("Error: \(error)")
             } else {
-                
                 let userID : NSString = result.valueForKey("id") as! NSString
                 print("User ID is is: \(userID)")
                 
-                var newData = userID
+//                let newData = userID
                 let userName : NSString = result.valueForKey("name") as! NSString
                 print("User Name is: \(userName)")
 //Create New User SignUp/Login on FireBase
-                var userEmail = self.emailTextField.text! as String
-                var userZip = self.zipTextField.text! as String
-                var userSitterStatus = self.sitterOrNot as Bool
-                var newZip = [ "zipIndex" : userZip as String]
+                let userEmail = self.emailTextField.text! as String
+                let userZip = self.zipTextField.text! as String
+                let userSitterStatus = self.sitterOrNot as Bool
+                //ZIP CODE on Sign Up / Login
+//                let newZip = [ "zipIndex" : userZip as String]
+//=======Update USer INfo FireBase Ref ===========//
                 
+                let updateUserInfoUrl = "https://sitterbookapi.firebaseio.com/users/" + (userID as String)
+                var updateUserInfoRef = Firebase(url: updateUserInfoUrl)
+
+                //_________________________________________________//
+//FreBAse OAuth Signup & Login
                 self.ref.createUser(userEmail, password: "1111", withValueCompletionBlock:{(result) -> Void in
-                    print("success sign up!")
-                    print(result)
-                    print("result above")
-                self.ref.authUser(userEmail, password:"1111", withCompletionBlock: { (authData) -> Void in
+//                    print("success sign up!"); print("User has been Created, result is \(result)")
+                    self.ref.authUser(userEmail, password:"1111", withCompletionBlock: { (authData) -> Void in
 // ===== DATA WRITING ROUTES =========== //
-                self.ref.childByAppendingPath("users").childByAppendingPath(userID as String).setValue(userName as String)
-                self.ref.childByAppendingPath("users/\(userID as String)/name").setValue(userName as String)
-                self.ref.childByAppendingPath("users/\(userID as String)/email").setValue(userEmail as String)
-                self.ref.childByAppendingPath("users/\(userID as String)/sitter").setValue(userSitterStatus as Bool)
+//                        self.ref.childByAppendingPath("users").childByAppendingPath(userID as String).setValue(userName as String)
+                        
+                        updateUserInfoRef.updateChildValues(["user-name": userName])
+                        updateUserInfoRef.updateChildValues(["email": userEmail])
+                        updateUserInfoRef.updateChildValues(["sitter": userSitterStatus])
+                        updateUserInfoRef.updateChildValues(["zip": userZip])
+                        
+//                        self.ref.childByAppendingPath("users/\(userID as String)/name").setValue(userName as String)
+//                        self.ref.childByAppendingPath("users/\(userID as String)/email").setValue(userEmail as String)
+//                        self.ref.childByAppendingPath("users/\(userID as String)/sitter").setValue(userSitterStatus as Bool)
 //  MULTIPLE ZIP CODES
 //  self.ref.childByAppendingPath("users/\(userID as String)/zip").setValue(userZip as String)
-                self.ref.childByAppendingPath("users/\(userID as String)/zip").updateChildValues(newZip)
+//                        self.ref.childByAppendingPath("users/\(userID as String)/zip").updateChildValues(newZip)
+//                self.ref.childByAppendingPath("users/\(userID as String)/zip").updateChildValues(userZip)
+                    })
                 })
-            })
-        }
-    })
+            }
+        })
     }
 // ******************* SIGN-UP ********************** //
     func signUp(sender: AnyObject) {

@@ -24,9 +24,6 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pages-2" translatesAutoresizingMaskIntoConstraints="NO" id="x4D-R7-3H8">
-                                <rect key="frame" x="124" y="298" width="166" height="140"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qz-KK-eew">
                                 <rect key="frame" x="57" y="656" width="300" height="60"/>
                                 <color key="backgroundColor" red="0.99607843137254903" green="1" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
@@ -48,8 +45,6 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="kIP-6r-F7c" secondAttribute="trailing" id="9WE-Zt-46f"/>
-                            <constraint firstItem="x4D-R7-3H8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="D53-3C-1eT"/>
-                            <constraint firstItem="x4D-R7-3H8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wxz-YY-3mD"/>
                             <constraint firstAttribute="leadingMargin" secondItem="kIP-6r-F7c" secondAttribute="leading" id="eOe-5r-gXt"/>
                             <constraint firstItem="kIP-6r-F7c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="35" id="jQA-Eo-yAN"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2qz-KK-eew" secondAttribute="bottom" constant="20" id="nln-ub-GRe"/>
@@ -263,6 +258,7 @@
                     <navigationItem key="navigationItem" id="MAI-rf-9XJ"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="imageView" destination="CNm-WH-kTe" id="HLO-HX-VMq"/>
@@ -287,11 +283,28 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="SGr-53-wPD">
                                 <rect key="frame" x="230" y="150" width="20" height="20"/>
                             </activityIndicatorView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IXj-2d-6gK">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="7zl-hB-jbt">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="wM2-KP-GkJ">
+                                            <connections>
+                                                <segue destination="8KM-MP-zlj" kind="popoverPresentation" popoverAnchorBarButtonItem="wM2-KP-GkJ" id="Zda-hf-A0F">
+                                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                </segue>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843137254903" green="1" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="SGr-53-wPD" firstAttribute="centerY" secondItem="cjE-Vc-bO6" secondAttribute="centerY" id="7BV-u2-GJm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IXj-2d-6gK" secondAttribute="trailing" constant="-20" id="Kkz-Ic-xZw"/>
+                            <constraint firstItem="IXj-2d-6gK" firstAttribute="leading" secondItem="cjE-Vc-bO6" secondAttribute="leadingMargin" constant="-20" id="aHX-PE-jbM"/>
                             <constraint firstItem="SGr-53-wPD" firstAttribute="centerX" secondItem="cjE-Vc-bO6" secondAttribute="centerX" id="aae-7V-eG1"/>
+                            <constraint firstItem="IXj-2d-6gK" firstAttribute="top" secondItem="cjE-Vc-bO6" secondAttribute="topMargin" id="d3N-Fv-K6P"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -308,7 +321,6 @@
         <!--Sitter Matches Table View Controller-->
         <scene sceneID="arg-sO-2E4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QTM-x2-N0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="yKG-Ry-GeA" customClass="SitterMatchesTableViewController" customModule="BabySitters_Club" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="312" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hvh-IP-YCZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -371,6 +383,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QTM-x2-N0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1048" y="188"/>
         </scene>
@@ -477,11 +490,8 @@
             <point key="canvasLocation" x="1048" y="994"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="pages-2" width="107" height="100"/>
-    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9dl-af-8fd"/>
+        <segue reference="saH-NZ-dzG"/>
         <segue reference="2jJ-xQ-hAs"/>
     </inferredMetricsTieBreakers>
 </document>
