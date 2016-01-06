@@ -33,6 +33,7 @@ class SitterMatchViewController: UIViewController {
                 print("Error: \(error)")
             } else {
                 let userID : NSString = result.valueForKey("id") as! NSString
+//                let accessToken : NSString = result.
                 print("User ID is is: \(userID)")
                 self.currentUserId = userID as String
                 self.tempFireBaseUrlForCurrentUser = "https://sitterbookapi.firebaseio.com/users/" + (userID as String)

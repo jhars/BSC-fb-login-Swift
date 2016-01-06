@@ -42,7 +42,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="kIP-6r-F7c" secondAttribute="trailing" id="9WE-Zt-46f"/>
                             <constraint firstAttribute="leadingMargin" secondItem="kIP-6r-F7c" secondAttribute="leading" id="eOe-5r-gXt"/>
@@ -59,6 +59,123 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-421" y="188"/>
+        </scene>
+        <!--Node Facebook LoginVC-->
+        <scene sceneID="pcX-9I-hgJ">
+            <objects>
+                <viewController id="RWX-69-8di" customClass="NodeFacebookLoginVC" customModule="BabySitters_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qgz-Ox-Rgs"/>
+                        <viewControllerLayoutGuide type="bottom" id="sSi-yU-fYc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tw1-jz-KW0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="27d-ne-nDV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Facebook Login Via Server" id="2Ft-WF-bNy"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="re4-Ac-YB7">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="refresh" id="52t-kq-SpY">
+                                        <connections>
+                                            <action selector="refreshBtn:" destination="RWX-69-8di" id="bfz-MW-b2E"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxh-PC-Gpw">
+                                <rect key="frame" x="20" y="309" width="335" height="30"/>
+                                <state key="normal" title="Open in Webview"/>
+                                <connections>
+                                    <segue destination="Uep-nq-AFG" kind="show" identifier="webview" id="3o2-FX-64v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDb-kk-QGJ">
+                                <rect key="frame" x="25" y="419" width="330" height="30"/>
+                                <state key="normal" title="Open with SafariViewController"/>
+                                <connections>
+                                    <action selector="openInSafariVC:" destination="RWX-69-8di" eventType="touchUpInside" id="P5i-cx-m1z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vea-4Q-dis">
+                                <rect key="frame" x="20" y="174" width="335" height="30"/>
+                                <state key="normal" title="Open in Safari"/>
+                                <connections>
+                                    <action selector="openInSafari:" destination="RWX-69-8di" eventType="touchUpInside" id="oXJ-TS-CQ5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vea-4Q-dis" firstAttribute="top" secondItem="Tw1-jz-KW0" secondAttribute="top" constant="174" id="0gm-KN-D3T"/>
+                            <constraint firstItem="rDb-kk-QGJ" firstAttribute="leading" secondItem="Tw1-jz-KW0" secondAttribute="leadingMargin" constant="9" id="6s6-rN-2xR"/>
+                            <constraint firstItem="cxh-PC-Gpw" firstAttribute="leading" secondItem="Vea-4Q-dis" secondAttribute="leading" id="Akx-RH-z5O"/>
+                            <constraint firstItem="27d-ne-nDV" firstAttribute="top" secondItem="Tw1-jz-KW0" secondAttribute="top" id="Dau-Mq-6fi"/>
+                            <constraint firstItem="cxh-PC-Gpw" firstAttribute="top" secondItem="Tw1-jz-KW0" secondAttribute="top" constant="309" id="FgO-YK-Nd7"/>
+                            <constraint firstItem="Vea-4Q-dis" firstAttribute="trailing" secondItem="cxh-PC-Gpw" secondAttribute="trailing" id="JcI-WZ-AeB"/>
+                            <constraint firstAttribute="trailing" secondItem="27d-ne-nDV" secondAttribute="trailing" id="OYL-4F-Yg0"/>
+                            <constraint firstItem="Vea-4Q-dis" firstAttribute="centerX" secondItem="27d-ne-nDV" secondAttribute="centerX" id="PBM-S7-3ss"/>
+                            <constraint firstItem="Vea-4Q-dis" firstAttribute="leading" secondItem="Tw1-jz-KW0" secondAttribute="leadingMargin" constant="4" id="V1m-fN-4lO"/>
+                            <constraint firstItem="27d-ne-nDV" firstAttribute="leading" secondItem="re4-Ac-YB7" secondAttribute="leading" id="pa6-o0-zHZ"/>
+                            <constraint firstItem="cxh-PC-Gpw" firstAttribute="trailing" secondItem="rDb-kk-QGJ" secondAttribute="trailing" id="qNi-sD-ARg"/>
+                            <constraint firstItem="27d-ne-nDV" firstAttribute="trailing" secondItem="re4-Ac-YB7" secondAttribute="trailing" id="s7M-Rt-frg"/>
+                            <constraint firstItem="rDb-kk-QGJ" firstAttribute="top" secondItem="cxh-PC-Gpw" secondAttribute="bottom" constant="80" id="wXQ-IU-5ib"/>
+                            <constraint firstItem="re4-Ac-YB7" firstAttribute="leading" secondItem="Tw1-jz-KW0" secondAttribute="leading" id="ywz-MG-tND"/>
+                            <constraint firstItem="re4-Ac-YB7" firstAttribute="bottom" secondItem="sSi-yU-fYc" secondAttribute="top" id="zke-2C-vF4"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tlX-3m-4B1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-780.5" y="1078.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="d5V-3d-ZF5">
+            <objects>
+                <navigationController id="Uep-nq-AFG" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9fa-x8-Ri7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="trt-Gc-cSt" kind="relationship" relationship="rootViewController" id="vs3-cP-GG0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jCz-y6-Dtv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-359" y="1079"/>
+        </scene>
+        <!--Custom Web View Controller-->
+        <scene sceneID="jvF-yZ-K4O">
+            <objects>
+                <viewController id="trt-Gc-cSt" customClass="CustomWebViewController" customModule="BabySitters_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ejo-HG-fZO"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Po-Wt-WYV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="igM-Xm-tR5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qp3-d0-lNt">
+                        <barButtonItem key="leftBarButtonItem" title="Done" id="wCw-hq-yB4">
+                            <connections>
+                                <action selector="done:" destination="trt-Gc-cSt" id="KBT-6l-c3a"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a3i-o0-C6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="195" y="1045"/>
         </scene>
         <!--Fb Login View Controller-->
         <scene sceneID="gNU-cP-MhA">
@@ -134,7 +251,7 @@
                                 </connections>
                             </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="LXi-e6-KNM" secondAttribute="trailing" id="1YT-Zd-eHu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qO8-qV-yTL" secondAttribute="trailing" constant="-20" id="BvX-9z-ETY"/>
@@ -178,7 +295,7 @@
                                     <constraint firstAttribute="height" constant="75" id="3Us-SX-2zT"/>
                                 </constraints>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                                <color key="barTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="barTintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
                                 </textAttributes>
@@ -203,13 +320,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="SitterBook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXK-EA-hV3">
                                 <rect key="frame" x="20" y="108" width="374" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Main Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhq-YM-8Er">
                                 <rect key="frame" x="20" y="147" width="374" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tabBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gWF-D6-4QA">
@@ -353,7 +470,7 @@
                                             <rect key="frame" x="15" y="146" width="43" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xyv-ct-uMO">
@@ -365,7 +482,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" image="YES"/>
                                     <bool key="isElement" value="YES"/>
@@ -386,6 +503,107 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QTM-x2-N0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1048" y="188"/>
+        </scene>
+        <!--Test View Controller-->
+        <scene sceneID="noo-Ki-FZW">
+            <objects>
+                <viewController id="omH-Jt-RHz" customClass="ITRTestViewController" customModule="BabySitters_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iMr-3b-qi0"/>
+                        <viewControllerLayoutGuide type="bottom" id="zoS-xG-lPM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rig-c4-QUr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="19" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ist-6v-8wq">
+                                <rect key="frame" x="0.0" y="42" width="375" height="593"/>
+                                <color key="backgroundColor" red="0.05557919038843917" green="0.40331370684016332" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Deeplinking is becoming most important tool to enhance user interaction. Have you ever got interested by the shopping item displayed on the Facebook page or elsewhere and got into decision to buy it. But by clicking on that item, it takes to a huge collection of items where you lost your item into this ocean. Finally got frustrated shopping and gave up. Yeah I am sure, it happens quite often.        Deeplinking is becoming most important tool to enhance user interaction. Have you ever got interested by the shopping item displayed on the Facebook page or elsewhere and got into decision to buy it. But by clicking on that item, it takes to a huge collection of items where you lost your item into this ocean. Finally got frustrated shopping and gave up. Yeah I am sure, it happens quite often.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.033321733312331632" green="0.066787342114570866" blue="0.16816603535353536" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ig-R2-f0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="41.5" y="2198.5"/>
+        </scene>
+        <!--First View Controller-->
+        <scene sceneID="aKZ-Ml-ke3">
+            <objects>
+                <viewController storyboardIdentifier="FirstVC" id="ebw-vW-ghi" customClass="FirstViewController" customModule="BabySitters_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mf5-Rb-Sr7"/>
+                        <viewControllerLayoutGuide type="bottom" id="sVM-GE-sO5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eO6-Be-eb6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="19" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ig-XS-Klf">
+                                <rect key="frame" x="0.0" y="28" width="375" height="619"/>
+                                <color key="backgroundColor" red="0.56242558195179249" green="1" blue="0.78338329437708976" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Deeplinking is becoming most important tool to enhance user interaction. Have you ever got interested by the shopping item displayed on the Facebook page or elsewhere and got into decision to buy it. But by clicking on that item, it takes to a huge collection of items where you lost your item into this ocean. Finally got frustrated shopping and gave up. Yeah I am sure, it happens quite often.        Deeplinking is becoming most important tool to enhance user interaction. Have you ever got interested by the shopping item displayed on the Facebook page or elsewhere and got into decision to buy it. But by clicking on that item, it takes to a huge collection of items where you lost your item into this ocean. Finally got frustrated shopping and gave up. Yeah I am sure, it happens quite often.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4Ig-XS-Klf" firstAttribute="top" secondItem="Mf5-Rb-Sr7" secondAttribute="bottom" constant="8" symbolic="YES" id="Igs-pa-SgV"/>
+                            <constraint firstItem="4Ig-XS-Klf" firstAttribute="leading" secondItem="eO6-Be-eb6" secondAttribute="leading" id="ZPj-9I-qxm"/>
+                            <constraint firstItem="4Ig-XS-Klf" firstAttribute="bottom" secondItem="sVM-GE-sO5" secondAttribute="top" id="yFq-mg-8VB"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bpo-3E-SwM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="474.5" y="2198.5"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="Zvp-GD-LuO">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="wMc-OU-1yr" customClass="SecondViewController" customModule="BabySitters_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oRh-lz-8bo"/>
+                        <viewControllerLayoutGuide type="bottom" id="FBy-WX-Zhx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rjP-R5-K35">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.35300164470000001" blue="0.31239720389999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="47R-kf-6Wc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="893.5" y="2198.5"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="aez-Zo-j37">
+            <objects>
+                <viewController storyboardIdentifier="ThirdVIewController" id="lEW-4g-dj1" customClass="ThirdViewController" customModule="BabySitters_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UcK-Cn-NtM"/>
+                        <viewControllerLayoutGuide type="bottom" id="xUR-mc-Y53"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q4g-Sa-ehh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.99607843139999996" green="1" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rgX-Ls-59T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1346.5" y="2198.5"/>
         </scene>
         <!--Show All SittersVC-->
         <scene sceneID="X8t-US-N7s">
@@ -432,7 +650,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRw-Vb-kDA">
                                                     <rect key="frame" x="8" y="141" width="50" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePV-wC-hrX">
@@ -445,13 +663,13 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Open Days:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3v-D6-uve">
                                                     <rect key="frame" x="139" y="8" width="89" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cnx Rating:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Tb-Cq-6YN">
                                                     <rect key="frame" x="8" y="207" width="88" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ljl-fS-W3d">
@@ -491,7 +709,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="saH-NZ-dzG"/>
         <segue reference="2jJ-xQ-hAs"/>
+        <segue reference="9dl-af-8fd"/>
     </inferredMetricsTieBreakers>
 </document>

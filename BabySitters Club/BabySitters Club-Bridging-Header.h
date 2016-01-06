@@ -6,3 +6,13 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 #import <Firebase/Firebase.h>
+
+#import "ITRFlipper.h"
+
+
+//#import "MPAnimation.h"
+#import "MPTransition.h"
+
+//#import "MPTransition.h"
+//#import "MPFlipTransition.h"
+

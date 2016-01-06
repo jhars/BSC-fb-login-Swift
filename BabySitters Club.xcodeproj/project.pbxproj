@@ -13,6 +13,8 @@
 		920EBFFC1C32D25500E11412 /* SitterMatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920EBFFB1C32D25500E11412 /* SitterMatchesTableViewController.swift */; };
 		924D62441C38C1E200526111 /* ShowAllSittersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924D62431C38C1E200526111 /* ShowAllSittersVC.swift */; };
 		924D62481C38C25D00526111 /* SitterPreviewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924D62471C38C25D00526111 /* SitterPreviewCollectionCell.swift */; };
+		9263A5DF1C3B999C00F8FFAF /* MPTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9263A5DE1C3B999C00F8FFAF /* MPTransitionViewController.swift */; };
+		9263A5E11C3B9ADB00F8FFAF /* MPTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9263A5E01C3B9ADB00F8FFAF /* MPTransition.m */; };
 		9279C0571C2BECA0007D9B55 /* BrowseSittersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9279C0561C2BECA0007D9B55 /* BrowseSittersViewController.swift */; };
 		927E54AD1C0FEB9F00843E0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E54AC1C0FEB9F00843E0D /* AppDelegate.swift */; };
 		927E54AF1C0FEB9F00843E0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E54AE1C0FEB9F00843E0D /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 		927E54C41C0FEE0200843E0D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927E54C11C0FEE0200843E0D /* FBSDKCoreKit.framework */; };
 		927E54C51C0FEE0200843E0D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927E54C21C0FEE0200843E0D /* FBSDKLoginKit.framework */; };
 		927E54C61C0FEE0200843E0D /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 927E54C31C0FEE0200843E0D /* FBSDKShareKit.framework */; };
+		9281ADDA1C3C718C001172F4 /* NodeFacebookLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281ADD91C3C718C001172F4 /* NodeFacebookLoginVC.swift */; };
+		9281ADDC1C3C8987001172F4 /* CustomWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281ADDB1C3C8987001172F4 /* CustomWebViewController.swift */; };
 		928D81231C2BB3C700AC9182 /* orangeControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D81221C2BB3C700AC9182 /* orangeControllerViewController.swift */; };
 		928D81261C2BB42200AC9182 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D81241C2BB42200AC9182 /* SideBar.swift */; };
 		928D81271C2BB42200AC9182 /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D81251C2BB42200AC9182 /* SideBarTableViewController.swift */; };
@@ -34,6 +38,11 @@
 		92C8F0A91C274116005C0799 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8F0A81C274116005C0799 /* Security.framework */; };
 		92C8F0AB1C274148005C0799 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8F0AA1C274148005C0799 /* CFNetwork.framework */; };
 		92C8F0AD1C2742C5005C0799 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8F0AC1C2742C5005C0799 /* Firebase.framework */; };
+		92D202711C3B6673007F88CF /* ITRFlipper.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D202701C3B6673007F88CF /* ITRFlipper.m */; };
+		92D202731C3B678A007F88CF /* ITRTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D202721C3B678A007F88CF /* ITRTestViewController.swift */; };
+		92D202751C3B6C3F007F88CF /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D202741C3B6C3F007F88CF /* FirstViewController.swift */; };
+		92D202771C3B6C46007F88CF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D202761C3B6C46007F88CF /* SecondViewController.swift */; };
+		92D202791C3B6C50007F88CF /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D202781C3B6C50007F88CF /* ThirdViewController.swift */; };
 		C9BEACF665154657EED9886D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC4082825938DCF17A6230CF /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,18 +55,25 @@
 		920EBFFB1C32D25500E11412 /* SitterMatchesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SitterMatchesTableViewController.swift; sourceTree = "<group>"; };
 		924D62431C38C1E200526111 /* ShowAllSittersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowAllSittersVC.swift; sourceTree = "<group>"; };
 		924D62471C38C25D00526111 /* SitterPreviewCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SitterPreviewCollectionCell.swift; sourceTree = "<group>"; };
+		925F6B401C3B894B00C180B3 /* MPTransitionEnumerations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTransitionEnumerations.h; sourceTree = "<group>"; };
+		925F6B551C3B8F7F00C180B3 /* MPFlipEnumerations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPFlipEnumerations.h; sourceTree = "<group>"; };
+		9263A5D81C3B97C100F8FFAF /* MPTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPTransition.h; sourceTree = "<group>"; };
+		9263A5DE1C3B999C00F8FFAF /* MPTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPTransitionViewController.swift; sourceTree = "<group>"; };
+		9263A5E01C3B9ADB00F8FFAF /* MPTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTransition.m; sourceTree = "<group>"; };
 		9279C0561C2BECA0007D9B55 /* BrowseSittersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseSittersViewController.swift; sourceTree = "<group>"; };
 		927E54A91C0FEB9F00843E0D /* BabySitters Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BabySitters Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		927E54AC1C0FEB9F00843E0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		927E54AE1C0FEB9F00843E0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		927E54B41C0FEB9F00843E0D /* BabySitters_Club.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BabySitters_Club.xcdatamodel; sourceTree = "<group>"; };
-		927E54B61C0FEBA000843E0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		927E54B61C0FEBA000843E0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "BabySitters Club/Assets.xcassets"; sourceTree = "<group>"; };
 		927E54B91C0FEBA000843E0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		927E54BB1C0FEBA000843E0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		927E54C11C0FEE0200843E0D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../../../Documents/FacebookSDKs-iOS-20151111/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		927E54C21C0FEE0200843E0D /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../../Documents/FacebookSDKs-iOS-20151111/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		927E54C31C0FEE0200843E0D /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../../../../Documents/FacebookSDKs-iOS-20151111/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		927E54C81C0FF70400843E0D /* BabySitters Club-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BabySitters Club-Bridging-Header.h"; sourceTree = "<group>"; };
+		9281ADD91C3C718C001172F4 /* NodeFacebookLoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeFacebookLoginVC.swift; sourceTree = "<group>"; };
+		9281ADDB1C3C8987001172F4 /* CustomWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomWebViewController.swift; sourceTree = "<group>"; };
 		928D81221C2BB3C700AC9182 /* orangeControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = orangeControllerViewController.swift; sourceTree = "<group>"; };
 		928D81241C2BB42200AC9182 /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		928D81251C2BB42200AC9182 /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +86,12 @@
 		92C8F0A81C274116005C0799 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		92C8F0AA1C274148005C0799 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		92C8F0AC1C2742C5005C0799 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		92D2026F1C3B6673007F88CF /* ITRFlipper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITRFlipper.h; sourceTree = "<group>"; };
+		92D202701C3B6673007F88CF /* ITRFlipper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITRFlipper.m; sourceTree = "<group>"; };
+		92D202721C3B678A007F88CF /* ITRTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITRTestViewController.swift; sourceTree = "<group>"; };
+		92D202741C3B6C3F007F88CF /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		92D202761C3B6C46007F88CF /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		92D202781C3B6C50007F88CF /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		DC4082825938DCF17A6230CF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -112,6 +134,31 @@
 				924D62431C38C1E200526111 /* ShowAllSittersVC.swift */,
 			);
 			name = SitterCollectionViews;
+			sourceTree = "<group>";
+		};
+		925F6ADF1C3B850300C180B3 /* ITRFlipper */ = {
+			isa = PBXGroup;
+			children = (
+				92D2026F1C3B6673007F88CF /* ITRFlipper.h */,
+				92D202701C3B6673007F88CF /* ITRFlipper.m */,
+				92D202721C3B678A007F88CF /* ITRTestViewController.swift */,
+				92D202741C3B6C3F007F88CF /* FirstViewController.swift */,
+				92D202761C3B6C46007F88CF /* SecondViewController.swift */,
+				92D202781C3B6C50007F88CF /* ThirdViewController.swift */,
+			);
+			name = ITRFlipper;
+			sourceTree = "<group>";
+		};
+		925F6B351C3B894B00C180B3 /* MPFoldTransition */ = {
+			isa = PBXGroup;
+			children = (
+				925F6B401C3B894B00C180B3 /* MPTransitionEnumerations.h */,
+				925F6B551C3B8F7F00C180B3 /* MPFlipEnumerations.h */,
+				9263A5D81C3B97C100F8FFAF /* MPTransition.h */,
+				9263A5E01C3B9ADB00F8FFAF /* MPTransition.m */,
+				9263A5DE1C3B999C00F8FFAF /* MPTransitionViewController.swift */,
+			);
+			path = MPFoldTransition;
 			sourceTree = "<group>";
 		};
 		926E217A1C1908160067C071 /* Models */ = {
@@ -161,6 +208,8 @@
 				927E54C71C0FEFCF00843E0D /* Frameworks */,
 				927E54AB1C0FEB9F00843E0D /* BabySitters Club */,
 				926E217E1C1908BF0067C071 /* Supporting Files */,
+				927E54B61C0FEBA000843E0D /* Assets.xcassets */,
+				92A3270A1C384677007C3728 /* Models */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,9 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				920662191C326773009533C8 /* Main.storyboard */,
-				927E54B61C0FEBA000843E0D /* Assets.xcassets */,
 				928D81291C2BBE9100AC9182 /* View Controllers */,
-				92A3270A1C384677007C3728 /* Models */,
 			);
 			path = "BabySitters Club";
 			sourceTree = "<group>";
@@ -202,6 +249,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9281ADD81C3C7015001172F4 /* FlipperControllers */ = {
+			isa = PBXGroup;
+			children = (
+				925F6ADF1C3B850300C180B3 /* ITRFlipper */,
+				925F6B351C3B894B00C180B3 /* MPFoldTransition */,
+			);
+			name = FlipperControllers;
+			sourceTree = "<group>";
+		};
 		928D81281C2BBE7300AC9182 /* SideMenuViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,10 +272,13 @@
 		928D81291C2BBE9100AC9182 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9281ADD91C3C718C001172F4 /* NodeFacebookLoginVC.swift */,
+				9281ADDB1C3C8987001172F4 /* CustomWebViewController.swift */,
 				924D62491C38D8CD00526111 /* SitterCollectionViews */,
 				92A327091C3845E5007C3728 /* SitterMatchControllers */,
 				928D81281C2BBE7300AC9182 /* SideMenuViewControllers */,
 				926E217D1C1908B30067C071 /* facebook-ViewControllers */,
+				9281ADD81C3C7015001172F4 /* FlipperControllers */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -239,6 +298,7 @@
 				920EBFF41C32C6DC00E11412 /* SitterMatchModel.swift */,
 			);
 			name = Models;
+			path = "BabySitters Club";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,15 +424,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9263A5DF1C3B999C00F8FFAF /* MPTransitionViewController.swift in Sources */,
+				9263A5E11C3B9ADB00F8FFAF /* MPTransition.m in Sources */,
 				928D81271C2BB42200AC9182 /* SideBarTableViewController.swift in Sources */,
 				9279C0571C2BECA0007D9B55 /* BrowseSittersViewController.swift in Sources */,
 				924D62441C38C1E200526111 /* ShowAllSittersVC.swift in Sources */,
 				924D62481C38C25D00526111 /* SitterPreviewCollectionCell.swift in Sources */,
+				92D202791C3B6C50007F88CF /* ThirdViewController.swift in Sources */,
+				92D202731C3B678A007F88CF /* ITRTestViewController.swift in Sources */,
 				928D81231C2BB3C700AC9182 /* orangeControllerViewController.swift in Sources */,
 				929CB2011C22B0D0000961DB /* fbLoginViewController.swift in Sources */,
 				920EBFFA1C32C76900E11412 /* SitterMatchViewController.swift in Sources */,
+				92D202711C3B6673007F88CF /* ITRFlipper.m in Sources */,
+				92D202751C3B6C3F007F88CF /* FirstViewController.swift in Sources */,
 				920EBFFC1C32D25500E11412 /* SitterMatchesTableViewController.swift in Sources */,
 				92A3270C1C38772D007C3728 /* README.md in Sources */,
+				9281ADDC1C3C8987001172F4 /* CustomWebViewController.swift in Sources */,
+				92D202771C3B6C46007F88CF /* SecondViewController.swift in Sources */,
+				9281ADDA1C3C718C001172F4 /* NodeFacebookLoginVC.swift in Sources */,
 				920EBFF51C32C6DC00E11412 /* SitterMatchModel.swift in Sources */,
 				927E54AF1C0FEB9F00843E0D /* ViewController.swift in Sources */,
 				927E54AD1C0FEB9F00843E0D /* AppDelegate.swift in Sources */,
